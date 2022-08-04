@@ -11,7 +11,8 @@ import * as url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-require('yargs')
+import yargs from "yargs";
+var argv = yargs()
     .option('source', {
         alias: 's',
         description: 'File path to Spirits folder',
@@ -34,7 +35,7 @@ require('yargs')
         type: 'number'
     })
     .help()
-    .argv
+    .argv;
 
 // TODO make command line arguments
 const SpiritDataRoot = path.join(__dirname, argv.source);

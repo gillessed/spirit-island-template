@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "del": "^7.0.0",
-    "puppeteer": "^15.5.0"
+    "puppeteer": "^15.5.0",
+    "yargs": "^17.5.1"
   },
   "type": "module"
 }
