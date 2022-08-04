@@ -11,9 +11,36 @@ import * as url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const SpiritDataRoot = path.join(__dirname, '../Greg\'s Spirits');
-const SpiritImageOutput = path.join(__dirname, '../Greg\'s Spirit Images');
+require('yargs')
+    .option('source', {
+        alias: 's',
+        description: 'File path to Spirits folder',
+        demandOption: true,
+        default: '../Greg\'s Spirits',
+        type: 'string'
+    })
+    .option('destination', {
+        alias: 'd',
+        description: 'File path to Spirit Images folder',
+        demandOption: true,
+        default: '../Greg\'s Spirit Images',
+        type: 'string'
+    })
+    .option('cardWidth', {
+        alias: 'w',
+        description: 'Desired number of cards',
+        demandOption: true,
+        default: 4,
+        type: 'number'
+    })
+    .help()
+    .argv
 
+// TODO make command line arguments
+const SpiritDataRoot = path.join(__dirname, argv.source);
+const SpiritImageOutput = path.join(__dirname, argv.destination);
+
+// TODO make card width a command line argument to support != 4 cards
 const CardFront = ["card-front.html", { width: 2035, height: 750 }];
 const CardBack = ["card-back.html", { width: 2035, height: 750 }];
 const BoardFront = ["board-front.html", { width: 1827, height: 1237 }];
