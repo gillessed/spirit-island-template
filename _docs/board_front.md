@@ -168,6 +168,7 @@ Icons for invaders, elements, dahan, etc can be used by enclosing its name with 
 |Move a Presence|move-presence(x)|Move a presence x range, can be used in combinations.|Downpour cardplay track: values="1,move-presence(1),water,2,move-presence(1),3"|
 |Pay 2 to Gain Power Card|gain-card-pay-2|Pay 2 Energy to Gain Power Card|Many Minds cardplay track: values="1,2,gain-card-pay-2,3,3,4,5"|
 |Gain Card Play|gain-card-play|Gain an additional card play not in the normal way (think Stone or Finder)|Stone energy track: values="2,3,gain-card-play^minor,4,gain-card-play^minor,6,gain-card-play^minor"|
+||gain-card-play-pay-2|Pay 2 Energy to Gain an additional Card Play|
 |Gain Range|gain-range(x)|Gain +x range||
 ||gain-range(x;y)|Gain +x range on "y"|range(1,everything)|
 |Add Token|token(x)|Adds a token x to 1 of your lands||
