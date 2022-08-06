@@ -77,7 +77,7 @@ const mainArgv = yargs(hideBin(process.argv))
   )
   .command(
     "render-group <spirit-group>",
-    "Renders all of one person' spirits",
+    "Renders all of one person's spirits",
     () => {},
     (argv) => {
       renderSpiritGroup(argv["spirit-group"]);
