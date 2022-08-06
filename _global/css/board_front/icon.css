@@ -377,6 +377,13 @@ icon.gain-card-play {
   width:90px;
 }
 
+icon.gain-card-play-pay-2 {
+    background-image: url('../../images/board/NewIcons/gain-card-play-pay-2.png');
+    display: block;
+    height: 130px;
+    width: 92px;
+}
+
 icon.gain-card-play-blank {
   background-image: url('../../images/board/NewIcons/Cardplay Gain Blank.png');
   display: block;
