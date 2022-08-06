@@ -1251,6 +1251,17 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					}
 					subText = "+1 Card Play/Turn"
 					break;
+                case 'gain-card-play-pay-2':
+                    var matches = regExp.exec(splitOptions[0]);
+                    cardplay_text = splitOptions[0]
+                    if (matches) {
+                        var cardplay_text = matches[1].split(";");
+                        inner = "<icon class='" + option + " deep-layers'><icon class='" + cardplay_text + "'></icon></icon>";
+                    } else {
+                        inner = "<icon class='" + cardplay_text  + "'></icon>";
+                    }
+                    subText = "Pay 2 Energy to Gain a Card Play"
+                    break;
 				default:
 					var iconText = splitOptions[0];
 					inner = "<icon class='" + iconText + "'></icon>";
@@ -1358,6 +1369,9 @@ function IconName(str, iconNum = 1) {
 		case 'gain-card-play':
 			subText = "Gain a Card Play"
 			break;
+        case 'gain-card-play-pay-2':
+                subText = "Pay 2 Energy to Gain a Card Play"
+                break;
 		case 'reclaim-all':
 			subText = "Reclaim Cards"
 			break;

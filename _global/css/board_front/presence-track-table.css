@@ -125,6 +125,7 @@ card-icon.small {
     z-index: 2;
 }
 
+/* .gain-card-play-pay-2.small, */
 .gain-card-play.small {
 	height: 80px;
     width: 80px;
@@ -240,6 +241,14 @@ presence-node icon.gather>icon {
 }
 
 presence-node icon.gain-card-play>icon {
+    position: relative;
+    left: -39px;
+    top: -28px;
+    height: 40px;
+    width: 60px;
+}
+
+presence-node icon.gain-card-play-pay-2>icon {
     position: relative;
     left: -39px;
     top: -28px;
