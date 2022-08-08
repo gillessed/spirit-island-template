@@ -10,10 +10,10 @@
 <body>
 
   <quick-card speed="fast" cost="2" name="Hearty Land, Hearty People" image="hearty-land-hearty-people-cropped.jpeg"
-    elements="plant,sun" range="1" target="dahan" target-title="TARGET LAND"
+    elements="plant,sun" range="1" target="{dahan}" target-title="TARGET LAND"
     artist-name="GREG COLE">
     <rules>
-      Dahan have +2 Health
+      {dahan} have +2 Health
       <br>
       It takes 3 additional damage to add {blight}
     </rules>
@@ -41,10 +41,10 @@
       Target Spirit also gains +2 Energy.
   </quick-card>
 
-  <quick-card speed="fast" cost="0" name="Conduit of Power" image="conduit-of-power-cropped.jpeg" elements="animal,water,earth"
+  <quick-card speed="fast" cost="0" name="Conduit of Power" image="conduit-of-power-cropped.jpeg" elements="animal,water,air,plant"
     range="None" target="Another" target-title="TARGET SPIRIT" artist-name="GREG COLE">
     <rules>
-      Target Spirit gains {range-1} with all their powers.
+      Target Spirit gains {range-2} with all their powers.
     </rules>
     <threshold condition="2-air">
       Target Spirit may ignore targeting restrictions for 1 land-targeting power.
@@ -52,7 +52,7 @@
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="Knit Back the Earth" image="knit-back-the-earth-cropped.jpeg"
-    elements="water,moon" range="1" target="{no-sand}" target-title="TARGET LAND" artist-name="GREG COLE">
+    elements="water,moon,earth" range="1" target="{no-sand}" target-title="TARGET LAND" artist-name="GREG COLE">
     <rules>
       Remove 1 {blight}
     </rules>

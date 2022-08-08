@@ -67,7 +67,7 @@
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="2,3+any,4,5,6,any,7"></energy-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="2,2+any,4,5,6,any,7"></energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,any,gain-card-pay-2,3+any,gain-card-play-pay-2,4"></card-play-track>
       </presence-tracks>
 
@@ -78,20 +78,23 @@
 		-->
       <innate-powers>
         <quick-innate-power name="Communal Contributions" speed="slow" range="1" target="Any" target-title="TARGET LAND">
+          <level threshold="2-fire">
+            1 damage
+          </level>
           <level threshold="2-moon">
             Add 1 {strife}
           </level>
           <level threshold="2-animal">
             Add 1 {beast}
           </level>
-          <level threshold="2-fire">
-            Add 1 {badlands}
-          </level>
-          <level threshold="3-water">
+          <level threshold="2-water">
             Add 1 {disease}
           </level>
-          <level threshold="3-plant">
+          <level threshold="2-plant">
             Add 1 {wilds}
+          </level>
+          <level threshold="2-earth">
+            Add 1 {badlands}
           </level>
         </quick-innate-power>
         <quick-innate-power name="Unnerving Whispers in the Wind" speed="fast" range="1" target="Any" target-title="TARGET LAND">
