@@ -9,8 +9,8 @@
 
 <body>
 
-  <quick-card speed="fast" cost="0" name="Harvest to Prepare for Winter" image="harvest-image.jpg"
-    elements="water,sun,plant" range="1" target="{wetland}/{jungle}" target-title="TARGET LAND"
+  <quick-card speed="fast" cost="1" name="Harvest to Prepare for Winter" image="harvest-image.jpg"
+    elements="water,sun,plant" range="1" target="any" target-title="TARGET LAND"
     artist-name="GREG COLE">
     <rules>
       {town}/{city} and {dahan} have +3 health until the end of turn.
@@ -19,11 +19,12 @@
     </rules>
   </quick-card>
 
-  <quick-card speed="fast" cost="0" name="Perilous Journey into the Storm" image="perilous-image.jpg"
-    elements="water,air" range="none" target="YOURSELF" target-title="TARGET SPIRIT" artist-name="GREG COLE">
+  <quick-card speed="fast" cost="0" name="New Life Buds in Spring" image="life-image.jpg"
+    elements="water,air,plant" range="none" target="{blight}" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Any {explorer} moved into or placed into your lands are destroyed. This can happen once for every 2 {water} you
-      have.
+      Remove all {wild}. If you removed at least 1 {wild}, remove 1 {blight}.
+      <br>
+      Add 1 destroyed {presence}.
     </rules>
   </quick-card>
 
@@ -31,18 +32,18 @@
     range="1" target="ANY" target-title="TARGET LAND" artist-name="GREG COLE">
     <rules>
       This costs 1 less energy if targeting {mountain} and 1 more energy if targeting {sand}.
-      If the land has {wild}, destroy 1 {town}/{city}
+      If the land has {wild}, destroy 1 {town}/{city}.
       {or}
       1 damage to 2 different invaders.
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="1" name="Avoid the Blizzard" image="avoid-image.jpg" elements="air,sun"
+  <quick-card speed="slow" cost="1" name="Avoid the Blizzard" image="avoid-image.jpg" elements="air,sun,water"
     range="1" target="ANY" target-title="TARGET LAND" artist-name="GREG COLE">
     <rules>
-      Push up to 2 {explorer}/{town} from target land.
-      Gather 1 {presence} into target land.
-      The range of this power cannot be modified by any effect.
+      Push up to 2 {explorer}/{town}.
+      <br>
+      Gather 1 {presence} and 1 {wild}.
     </rules>
   </quick-card>
 </body>
