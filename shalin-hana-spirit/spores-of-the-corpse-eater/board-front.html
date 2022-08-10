@@ -61,14 +61,14 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick <u>One</u>)">
-        <growth-group values="reclaim;gain-power-card;move-presence(1)"></growth-group>
-        <growth-group values="add-presence(2);gain-energy(2)"></growth-group>
+        <growth-group values="reclaim;gain-power-card;move-presence(2)"></growth-group>
+        <growth-group values="add-presence(2);gain-energy(3)"></growth-group>
         <growth-group values="gain-power-card;add-presence(0)"></growth-group>
       </growth>
 
       <presence-tracks>
         <energy-track banner="example2.png" banner-v-scale="50%" values="2,plant,3,4,air,6"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,2,air,3,reclaim-one,4"></card-play-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,air,2,3,reclaim-one,4"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
@@ -90,10 +90,13 @@
         </quick-innate-power>
         <quick-innate-power name="Death Nourishes New Life" speed="fast" range="none" target="Self" target-title="TARGET SPIRIT">
           <level threshold="1-plant,1-air">
-            In each of your lands, if an Invader is destroyed, gain 1 Energy. You may do this a number of times per turn equal to {air}. 
+            In each of your lands, when an Invader / {dahan} / {beast} is destroyed, gain 1 Energy. You may do this a number of times per turn equal to {air}. 
+          </level>
+          <level threshold="2-plant,2-air">
+            In each of your lands, the first time an Invader / {dahan} / {beast} is destroyed this turn, gain a Power Card.
           </level>
           <level threshold="3-plant,3-air">
-            In each of your lands, if a {presence} is destroyed (including your own), you may add 1 {presence} at range 1. You may only do this once per turn.
+            In each of your lands, the first time a {presence} is destroyed (including your own) this turn, you may add 1 {presence} at range 1.
           </level>
         </quick-innate-power>
       </innate-powers>
