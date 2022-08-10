@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="fast" cost="0" name="Rockalanche" image="fungal-warriors.jpg"
+    elements="sun,earth" range="mountain-presence,1" target="Any" target-title="TARGET LAND"
+    artist-name="WOMBO">
+    <rules>
+      Push 1 {explorer} / {town}
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="2" name="Sudden Liquefaction" image="sudden-liquefaction-cropped.jpeg"
+    elements="water,earth" range="1" target="{sand-wetland}" target-title="TARGET LAND" artist-name="WOMBO">
+    <rules>
+      1 Damage to each {town} / {city}
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="3" name="Seismic Aftershocks" image="poisonous-lookalikes.jpg" 
+    elements="earth,water,air" range="1" target="Any" target-title="TARGET LAND" artist-name="WOMBO">
+    <rules>
+      2 {fear}
+      <br>
+      If your {presence} was destroyed this turn: Instead, 1 Damage to each {town} / {city}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="2" name="Waves Inside the Earth" image="waves-inside-the-earth-cropped.jpeg" 
+    elements="air,earth" range="none" target="Any" target-title="TARGET SPIRIT" artist-name="WOMBO">
+    <rules>
+      When Target Spirit's {presence} is destroyed this turn, each {destroyed-presence} deals 1 Damage {range-2}.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

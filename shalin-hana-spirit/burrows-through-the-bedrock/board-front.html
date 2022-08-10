@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="badgermole-cropped-square.jpeg" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Burrows Through the Bedrock
+    </spirit-name>
+    <artist-name>
+      wombo.art
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Fault Lines</special-rules-subtitle>
+      <special-rule>
+        {presence} can only be added on land borders and coastlines. {presence} is considered to be in both adjoining lands (Adjoining lands share a border). 2 or more {presence} must be on the same border to be a {sacred-site}.
+      </special-rule>
+      <special-rules-subtitle>Unstable Foundations</special-rules-subtitle>
+      <special-rule>
+        When your {presence} is destroyed, add 1 {badlands} in 1 adjoining land.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick <u>Two</u>)">
+        <growth-group values="reclaim;gain-energy(1)"></growth-group>
+        <growth-group values="add-presence(3)"></growth-group>
+        <growth-group values="gain-power-card"></growth-group>
+        <growth-group cost="1" 
+        values="add-presence(1,text,,destroyed-presence);gain-element(earth,2)">
+        </growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="2,plant,3,4,air,6">
+        </energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,2,air,3,reclaim-one,4">
+        </card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Earthquake"
+        speed="slow" range="none" target="Self" target-title="TARGET SPIRIT"
+        note="Destroy X (1 or more) of your {presence}; {destroyed-presence} checks how many {presence}
+        you destroyed. {destroyed-presence} must be contiguous.">
+          <level threshold="2-earth,2-destroyed-presence">
+            Each {destroyed-presence} deals 1 damage to {town} / {city} in each adjoining land.
+          </level>
+          <level threshold="4-earth,1-air,4-destroyed-presence">
+            Add 1 {badlands} in X adjoining lands.
+          </level>
+          <level threshold="8-earth,2-air,6-destroyed-presence">
+            Deal 2 damage to {town} / {city} in X adjoining lands.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Tectonic Shift" 
+        speed="fast" range="sacred-site,0" target="ANY" target-title="TARGET LAND">
+          <level threshold="3-earth">
+            Push 1 Invader 
+          </level>
+          <level threshold="5-earth,1-water">
+            For the rest of the game, Target Land and adjacent land are no longer adjacent.
+            (Place a scenario marker or extra game piece on the border as a reminder)
+          </level>
+          <level threshold="7-earth,3-water">
+            Push all Invaders/{dahan}
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

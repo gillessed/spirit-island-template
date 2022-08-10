@@ -403,6 +403,12 @@ function parseGrowthTags() {
 									presenceIcon += "<icon class='" + presenceOptions[i] + "'></icon>"
 								}
 								presenceIcon += "</display-custom>"
+                                if (presenceOptions[3] == 'destroyed-presence') {
+                                    presenceIcon += "</presence-req>";
+                                    growthIcons = presenceReqOpen + "<plus-presence>+{presence}</plus-presence>" + presenceIcon + "{range-" + presenceRange + "}" + presenceReqClose
+                                    growthText = "Add a Destroyed Presence" + presenceText
+                                    break;
+                                }
 							} else {
 								presenceIcon += "<span style='font-family: DK Snemand; font-size: 24pt; font-style: normal;'>!!!</span>";
 							}
