@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="oracle-image-cropped.jpg" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Oracle of the Constellations
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Foresight</special-rules-subtitle>
+      <special-rule>
+        During each spirit phase, you gain an event card. Look at the bottom 3 event cards, pick one and discard the
+        rest. If you are playing with any placed event cards, and you look through the whole deck, remember where the
+        placed card was, reshuffle the deck, and replace the placed event.
+      </special-rule>
+      <special-rules-subtitle>Karmic Payment</special-rules-subtitle>
+      <special-rule>
+        During spirit phase, you gain 2 energy that is kept in a separate pool. This energy can only be used to pay for
+        choice events.
+      </special-rule>
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick Two)">
+        <growth-group values="reclaim"></growth-group>
+        <growth-group values="add-presence(3)"></growth-group>
+        <growth-group values="gain-power-card"></growth-group>
+        <growth-group values="gain-element(any)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="0,0,1,1,2,3"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant+air,3,+1,4,5"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Accurate Foresight" speed="fast" range="0" target="any" target-title="TARGET LAND">
+          <level threshold="1-sun,1-moon">
+            Invaders' damage in target land cannot be modified this turn by powers, events or fear cards. If they would
+            do extra damage, that damage is then instead done to the invaders after they ravage.
+          </level>
+          <level threshold="2-fire">
+            Invaders in target land each do +1 damage.
+          </level>
+          <level threshold="4-fire,1-earth">
+            Invaders in target land each do +1 damage.
+          </level>
+          <level threshold="2-plant,2-air">
+            Repeat this power.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Tracing the Invisible Patterns" speed="fast" range="none" target="none"
+          target-title="TARGET">
+          <level threshold="2-sun,2-moon,1-plant">
+            Resolve a gained event card on your board only. Perform all of its effects as listed. When an effect says
+            each player, only do it for you. When an effect says each board, only do it on your board.
+          </level>
+          <level threshold="2-sun,2-moon,1-air">
+            Resolve a gained event card for all players.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>
