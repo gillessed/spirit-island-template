@@ -42,15 +42,11 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Lost in the Storm</special-rules-subtitle>
       <special-rule>
-        When invaders would explore into land with {wild} on a board you have {presence}, instead of removing the {wild}, they still explore, and you gain 1 energy per {wild} in that land.
+        When invaders would explore into land with {wild} on a board you have {presence}, instead of removing the {wild}, they still explore, and you gain 1 energy per {wild} in that land (max 4).
       </special-rule>
       <special-rules-subtitle>Snow Piles Up High</special-rules-subtitle>
       <special-rule>
-        Buildings do not heal damage in lands with your {presence} and {wilds} when time passes.
-      </special-rule>
-      <special-rules-subtitle>Lands of Cold</special-rules-subtitle>
-      <special-rule>
-        Whenever your {presence} is placed or moved into {sand}, they are destroyed unless you pay 1 energy per {presence}.
+        Buildings do not heal damage in lands with your {presence} and {wilds} when time passes. When {blight} is added to a land on your board from ravage, remove 1 {wild} from that land.
       </special-rule>
     </special-rules-container>
 
@@ -65,13 +61,13 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-power-card;gain-energy(1)"></growth-group>
+        <growth-group cost="1" values="reclaim;gain-power-card;add-presence(1,mountain,wetland,or)"></growth-group>
         <growth-group values="add-presence(1,token,wilds,and)"></growth-group>
-        <growth-group values="add-presence(3);gain-power-card"></growth-group>
+        <growth-group values="gain-power-card;add-presence(3)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2,water,3,air,5,any"></energy-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2,water,3,air,gather(wild),any"></energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,air,3,4+water,5"></card-play-track>
       </presence-tracks>
 
@@ -81,9 +77,9 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Massive Snowfall" speed="fast" range="1" target="any" target-title="TARGET LAND">
+        <quick-innate-power name="Cold Front" speed="fast" range="1" target="any" target-title="TARGET LAND">
           <level threshold="2-water,1-air">
-            Gather 1 {presence}. Destroy 1 {explorer}. Add {wilds}.
+            Gather 1 up to {presence}. Destroy 1 {explorer}. Add {wilds}.
           </level>
           <level threshold="3-water,2-air,1-moon">
             Destroy up to to 2 {explorer} in this land or ajdacent lands.
@@ -92,7 +88,7 @@
             Repeat this power.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Cold Front" speed="slow" range="0" target="{wild}" target-title="TARGET LAND">
+        <quick-innate-power name="Massive Snowfall" speed="slow" range="0" target="{wild}" target-title="TARGET LAND">
           <level threshold="2-water,1-moon">
             1 damage to each {town}.
           </level>

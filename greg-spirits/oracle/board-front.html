@@ -42,7 +42,7 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Foresight</special-rules-subtitle>
       <special-rule>
-        During each spirit phase, you gain an event card. Look at the bottom 3 event cards, pick one and discard the
+        During each spirit phase, you gain an event card. Look at the bottom 2 event cards, pick one and discard the
         rest. If you are playing with any placed event cards, and you look through the whole deck, remember where the
         placed card was, reshuffle the deck, and replace the placed event.
       </special-rule>
@@ -69,11 +69,12 @@
         <growth-group values="add-presence(3)"></growth-group>
         <growth-group values="gain-power-card"></growth-group>
         <growth-group values="gain-element(any)"></growth-group>
+        <growth-group values="gain-energy(2)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="0,0,1,1,2,3"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant+air,3,+1,4,5"></card-play-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2,+1 event energy,3,4,+1 event energy"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,3,+1-event-draft,4,5"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
@@ -82,7 +83,7 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Accurate Foresight" speed="fast" range="0" target="any" target-title="TARGET LAND">
+        <quick-innate-power name="Accurate Foresight" speed="fast" range="2" target="any" target-title="TARGET LAND">
           <level threshold="1-sun,1-moon">
             Invaders' damage in target land cannot be modified this turn by powers, events or fear cards. If they would
             do extra damage, that damage is then instead done to the invaders after they ravage.

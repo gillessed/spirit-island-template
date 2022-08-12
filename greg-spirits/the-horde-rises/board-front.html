@@ -42,16 +42,12 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>The Living Dead</special-rules-subtitle>
       <special-rule>
-        Whenever an invader or {dahan} is destroyed in your land, you can place them on your spirit board. During the
-        spirit phase, you may discard 2 health worth of invaders or {dahan} on your spirit board to place a {skeleton}
-        in one of your lands.
+        Whenever an invader or {dahan} is destroyed in a with with or adjacent to your presence, you can place them on
+        your spirit board. You may discard 2 health worth of invaders or {dahan} on your spirit board at any time to place
+        a {skeleton} in one of your lands.
         <br><br>
         You may only have as many {skeleton} as you have revealed {moon} on your presence tracks. If you would place a
         skeleton on the board that would push you above your limit, you must then sacrifice a skeleton.
-      </special-rule>
-      <special-rules-subtitle>Mindless Rage</special-rules-subtitle>
-      <special-rule>
-        During ravage, {skeleton} in lands without your {presence} count as {badland}.
       </special-rule>
     </special-rules-container>
 
@@ -66,15 +62,15 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-energy(1);move-presence(1)"></growth-group>
+        <growth-group values="reclaim;move-presence(1)"></growth-group>
         <growth-group values="add-presence(1);add-presence(1)"></growth-group>
         <growth-group values="move-presence(2);gain-power-card;gain-power-card"></growth-group>
       </growth>
 
       <presence-tracks>
         <energy-track banner="example2.png" banner-v-scale="50%"
-          values="1+moon,2+moon,3,moon,5,6+moon+moon,8+moon+moon"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+moon,3,4+moon,5+moon,6+moon+moon">
+          values="1+moon,2+moon,3,moon,4,moon+moon,5+moon+moon"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+moon,3,4+moon,moon+moon,5+moon">
         </card-play-track>
       </presence-tracks>
 
@@ -85,23 +81,20 @@
 		-->
       <innate-powers>
         <quick-innate-power name="The Dead Wander" speed="fast" range="0" target="any" target-title="TARGET LAND">
-          <level threshold="1-skeleton">
-            1 {fear}. Push 1 {skeleton}.
-          </level>
-          <level threshold="3-skeleton,1-earth">
-            3 {fear}. Push 3 {skeleton}.
+          <level threshold="1-moon">
+            Gather up to 1 {skeleton} per {earth}. Push up to 1 {skeleton} per {fire}.
           </level>
           <level threshold="2-earth">
-            Defend 2 in an adjacent land with {skeleton}.
+            1 {fear}. Defend 2 in an adjacent land with {skeleton}.
           </level>
-          <level threshold="3-earth">
-            Defend 2 in an adjacent land with {skeleton}.
+          <level threshold="3-earth,1-fire">
+            1 {fear}. Defend 3 in an adjacent land with {skeleton}.
           </level>
           <level threshold="4-earth,2-fire">
-            Defend 2 in an adjacent land with {skeleton}.
+            1 {fear}. Defend 4 in an adjacent land with {skeleton}.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Night of the Living Dead" speed="slow" range="0" target="{town}/{city}"
+        <quick-innate-power name="Night of the Living Dead" speed="slow" range="1" target="{town}/{city}"
           target-title="TARGET LAND">
           <level threshold="2-skeleton">
             Destroy up to 1 {town}. Destroy 1 {skeleton}.
@@ -113,7 +106,7 @@
             Destroy up to 1 {town}/{city}. Destroy 1 {skeleton}.
           </level>
           <level threshold="8-skeleton,10-moon">
-            Push all {skeleton} to as many different lands as you can. Each skeleton pushed this way does 2 damage in its destination land. 1 {fear} for each {town}/{city} destroyed this way.
+            Push all {skeleton} to as many different lands as you can. Each skeleton pushed this way does 2 damage in its destination land.
           </level>
         </quick-innate-power>
       </innate-powers>
