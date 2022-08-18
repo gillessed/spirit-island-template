@@ -46,7 +46,7 @@
       </special-rule>
       <special-rules-subtitle>Unstable Foundations</special-rules-subtitle>
       <special-rule>
-        When your {presence} is destroyed, add 1 {badlands} in 1 adjoining land.
+        When your {presence} is destroyed, in 1 adjoining land, if there are no {badlands}, add 1 {badlands}.
       </special-rule>
     </special-rules-container>
 
@@ -63,14 +63,14 @@
       <growth title="Growth (Pick <u>Two</u>)">
         <growth-group values="reclaim;gain-energy(1)"></growth-group>
         <growth-group values="add-presence(3)"></growth-group>
-        <growth-group values="gain-power-card"></growth-group>
-        <growth-group cost="1" 
-        values="add-presence(1,text,,destroyed-presence);gain-element(earth,2)">
+        <growth-group values="gain-power-card;gain-energy(3)"></growth-group>
+        <growth-group cost="2" 
+        values="add-presence(1,text,,destroyed-presence);add-presence(1,text,,destroyed-presence);gain-element(earth,2)">
         </growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2+earth,move-presence(1),3+earth,air+water,5,earth+earth">
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,3+earth,move-presence(1),4+earth,air+water,5,earth+earth">
         </energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,earth,2,water,reclaim-one,3">
         </card-play-track>
@@ -86,27 +86,27 @@
         speed="slow" range="none" target="Self" target-title="TARGET SPIRIT"
         note="Destroy X (1 or more) of your {presence}; {destroyed-presence} checks how many {presence}
         you destroyed. {destroyed-presence} must be contiguous.">
-          <level threshold="2-earth,2-destroyed-presence">
-            Each {destroyed-presence} deals 1 damage to {town} / {city} in each adjoining land.
+          <level threshold="3-earth,2-destroyed-presence">
+            Each {destroyed-presence} deals 1 damage to {town} / {city} in 1 adjoining land.
           </level>
           <level threshold="4-earth,1-air,4-destroyed-presence">
-            Add 1 {badlands} in X adjoining lands.
+            Each {destroyed-presence} adds 1 {badlands} in 1 adjoining land.
           </level>
           <level threshold="8-earth,2-air,6-destroyed-presence">
-            Deal 2 damage to {town} / {city} in X adjoining lands.
+            Each {destroyed-presence} deals 2 damage to {town} / {city} in 1 adjoining land.
           </level>
         </quick-innate-power>
         <quick-innate-power name="Tectonic Shift" 
-        speed="fast" range="sacred-site,0" target="ANY" target-title="TARGET LAND">
-          <level threshold="3-earth">
-            Push 1 Invader 
+        speed="fast" range="0" target="{presence} {presence}" target-title="TARGET LAND">
+          <level threshold="2-earth">
+            Push 1 {explorer} / {town} / {dahan} 
           </level>
           <level threshold="5-earth,1-water">
-            For the rest of the game, Target Land and adjacent land are no longer adjacent.
+            For the rest of the game, Target Land and adjacent land are no longer adjacent for Invaders or Push / Gather.
             (Place a scenario marker or extra game piece on the border as a reminder)
           </level>
           <level threshold="7-earth,3-water">
-            Push all Invaders/{dahan}
+            Push all Invaders/{dahan}. Invaders / {dahan} that cannot be pushed are destroyed.
           </level>
         </quick-innate-power>
       </innate-powers>
