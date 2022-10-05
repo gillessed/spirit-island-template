@@ -52,22 +52,23 @@
 			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
 					 </sub-growth>
 		-->
-      <growth title="Growth (Pick Three)">
-        <growth-group values="reclaim"></growth-group>
+      <growth title="Growth (Pick Four)">
+        <sub-growth title="You may pick the same option more than once" bordered/>
+        <growth-group values="reclaim-one"></growth-group>
         <growth-group values="add-presence(2,no-presence)"></growth-group>
         <growth-group values="add-presence(0,presence)"></growth-group>
         <growth-group values="custom(Return Presence to Track,presence)"></growth-group>
         <growth-group values="move-presence(1)"></growth-group>
-        <growth-group values="move-presence(1)"></growth-group>
-        <growth-group values="gain-power-card"></growth-group>
+        <growth-group values="custom(+1 or +2 to a pillar,presence)"></growth-group>
+        <growth-group values="custom(-1 or -2 to a pillar,presence)"></growth-group>
       </growth>
 
       <presence-tracks>
         <energy-track banner="example2.png" banner-v-scale="50%"
-          values="2,star^energy(1),star^energy(2),star^energy(2),star^energy(2),star^energy(3),star^energy(4)">
+          values="2,star^energy(1),star^energy(2),star^energy(2),star^energy(3),star^energy(4)">
         </energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%"
-          values="2,3,custom(Major Slot;{gain-power-card})^energy(-1),custom(Major Slot;{gain-power-card})^energy(-1)">
+          values="2,custom(Major Draft;{gain-power-card})^energy(-1),star^energy(5),star^energy(6),star^energy(7)">
         </card-play-track>
       </presence-tracks>
 

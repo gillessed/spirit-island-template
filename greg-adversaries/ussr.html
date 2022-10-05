@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <link href="../_global/css/global.css" rel="stylesheet" />
+  <link href="../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../_global/js/general.js"></script>
+  <script type="text/javascript" src="../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The USSR"
+    base-difficulty="2"
+    flag-image="./ussr-flag.png"
+	>
+	<loss-condition
+	name="Commumism Succeeded"
+	rules="If there is an invader in every land, invaders win."
+	></loss-condition>
+
+	<escalation-effect
+	name="The comrade effect"
+	rules="After explore, in each land with {dahan}, add 1 explorer, then gather 1 {dahan} into an land which explored this turn."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="3/4/3"
+	name="Seizing the Means of Production"
+	rules="When you build in a land, one adjacent land with invaders not matching a ravage card also builds. This can only happen at most once per turn, but does cause builds in lands without invaders."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="3/4/4"
+	name="For the Motherland"
+	rules="When invaders build a {city} in any land, push all {explorer} from the land to as many different adjacent lands as possible."
+	></level-2>
+
+	<level-3
+	difficulty="5"
+	fear-cards="3/4/4"
+	name="Rapid Industrialization"
+	rules="During setup, perform a second additional explore action. Once during this explore action, add a {town} instead of an {explorer}."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="Disposable populace"
+	rules="Whenever invaders are destroyed, for every 3 health of invaders destroyed (round up), add 1 {explorer} in an adjacent land, with no invaders if possible. They must be placed in as many different lands as possible."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="4/4/5"
+	name="Corrupted dictators"
+	rules="During ravage, if a land matches the ravage card, and has no invaders on it, add {blight} and {explorer} to that land if it is adjacent to {town}/{city}."
+	></level-5>
+	
+	<level-6
+	difficulty="10"
+	fear-cards="4/5/5"
+	name="Gulags"
+	rules="For the above rules and event cards (including pushing and gathering), invaders are considered adjacent to a land if they are up to range 2 away, and not just range 1."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

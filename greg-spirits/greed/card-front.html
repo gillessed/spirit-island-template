@@ -9,33 +9,43 @@
 
 <body>
 
-  <quick-card speed="fast" cost="0" name="Promise of Riches" image="promise-image.jpg"
-    elements="plant,earth,air" range="1" target="any" target-title="TARGET LAND"
+  <quick-card speed="slow" cost="0" name="Invaders Build a Mighty Metropolis" image="cities-image.jpg"
+    elements="plant,earth,air" range="1" target="any" target-title="target land"
     artist-name="GREG COLE">
     <rules>
-      Add 1 {explorer}.
+      Gather up to 1 {presence}. Gain 2 energy.
+      <br>
+      Build in target land. This affects lands with no invaders.
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="0" name="Cities Breed Plagues" image="cities-image.jpg"
-    elements="plant,animal" range="1" target="any" target-title="target land" artist-name="GREG COLE">
+  <quick-card speed="slow" cost="2" name="Promise of Riches" image="promise-image.jpg"
+    elements="plant,animal,sun,fire" range="0" target="any" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Add 1 {disease}. Gain 1 energy.
+      Gather up to 5 {explorer}/{town}.
     </rules>
+    <threshold condition="3-animal">
+      Replace up to 5 {explorer}/{town} invaders with 2 {city}.
+    </threshold>
   </quick-card>
 
-  <quick-card speed="slow" cost="3" name="Invaders Defend Their Wealth" image="invaders-image.jpg" elements="animal"
+  <quick-card speed="slow" cost="3" name="Invaders Defend Their Wealth" image="invaders-image.jpg" elements="animal,earth,moon"
     range="0" target="any" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Pick 1 land adjacant to target land. Do 1 damage to each invader in that land for each invader in target land.
+      Invaders in target land do damage to invaders in a land within {range} 2.
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="1" name="The Poor and Sick Pass Away" image="sick-image.jpg" elements="plant,water"
-    range="1" target="ANY" target-title="TARGET LAND" artist-name="GREG COLE">
+  <quick-card speed="slow" cost="2" name="Squalid Conditions Breed Disease" image="sick-image.jpg" elements="plant,water,moon,air"
+    range="0" target="ANY" target-title="TARGET LAND" artist-name="GREG COLE">
     <rules>
-      Remove up to 1 {disease} from target land. If you did, destroy 1 {explorer}/{town}, otherwise destroy 1 {explorer}.
+      For every {town}, destroy 1 {explorer}.
+      <or/>
+      For every {city}, destroy 1 {town}.
     </rules>
+    <threshold condition="1-disease">
+      You may do both.
+    </threshold>
   </quick-card>
 </body>
 

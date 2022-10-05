@@ -259,3 +259,7 @@ icon.range-1, icon.range-2, icon.range-3 {
   height:15px;
   width:28px;
 }
+
+icon.ship {
+  background-image: url('../images/ship-token.svg');
+}

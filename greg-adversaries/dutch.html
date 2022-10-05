@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <link href="../_global/css/global.css" rel="stylesheet" />
+  <link href="../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../_global/js/general.js"></script>
+  <script type="text/javascript" src="../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Dutch"
+    base-difficulty="2"
+    flag-image="./dutch-flag.svg"
+	>
+	<loss-condition
+	name="Masters of the Seas"
+	rules="The Dutch have no level 0. You must play against minimum level 1. If there are two {ship} on every coastal land, invaders win"
+	></loss-condition>
+
+	<escalation-effect
+	name="Landing on New Shores"
+	rules="On each board, add 1 {ship} and 1 {town} to a coastal land without invaders. If not such land exists, instead
+	add 1 {ship} and build in the coastal land with the fewest invaders."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="4/4/3"
+	name="Masters of the Seas"
+	rules="When playing against the Dutch, island boards should be separate and have no adjacent edges. Instead, all 
+	coastal lands are considered adjacent to one another. Additionally, the highest numbered land is now
+	considered an ocean land, and adjacent lands are considered coastal. Whenever invaders build in a costal land,
+	if there is a {town} and a {city}, add {ship}. {ship} is an invader, can only be in coastal lands, and
+	have 2 health. They do not count as sources of exploration. Invaders do +1 damage during ravage for each {ship}
+	in the land. {ship} generate 1 {fear} when destroyed."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="4/4/3"
+	name="Exploring the Oceans"
+	rules="When invaders explore into a coastal land, if that land didn't have any invaders, gather 1 ship."
+	></level-2>
+
+	<level-3
+	difficulty="5"
+	fear-cards="4/4/4"
+	name="Native Spice Trade"
+	rules="Invaders in lands with {dahan} have +1 health and each do -1 damage (min 1) during ravage. If invaders successfully
+	build in an inland land with {dahan}, they build an additional time."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="5/5/4"
+	name="Hearty Populace"
+	rules="Whenever a ship is added or moved into a land, add 1 disease. Ignore disease in lands with ships."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="5/6/4"
+	name="Persistent Explorers"
+	rules="Setup the invader deck as 111-2C222-33333. After the coastal invader card is discarded for the first time, move it instead back to the build slot."
+	></level-5>
+	
+	<level-6
+	difficulty="11"
+	fear-cards="6/6/5"
+	name="Resources for Great Fleets"
+	rules="Whenever invaders add blight in inland jungles or mountains from a ravage, add a ship to every coastal land adjacent to that land."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

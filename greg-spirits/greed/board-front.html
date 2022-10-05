@@ -42,9 +42,14 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Distracted by Wealth</special-rules-subtitle>
       <special-rule>
-        For each of your lands, if that land has no {explorer}, you may pay 1 energy per invader in that land to have invaders skip a ravage action.
+        For each of your lands, if that land has no {explorer}, for each invader, you may pay 1 energy to have that invader not participate in a ravage action.
+        If you spend 4 or more energy this way in a turn, you may gain a power card at the end of that turn.
         <br><br>
         Invaders in your lands have +2 health.
+      </special-rule>
+      <special-rules-subtitle>Greed Lingers in the Hearts of the Invaders</special-rules-subtitle>
+      <special-rule>
+        Whenever an invaders are moved out of one of your lands, you may move up to 1 {presence} with them for each invader moved.
       </special-rule>
     </special-rules-container>
 
@@ -60,9 +65,8 @@
 		-->
       <growth title="Growth (Pick One)">
         <growth-group values="reclaim;add-presence(1)"></growth-group>
-        <growth-group values="gain-power-card;add-presence(2)"></growth-group>
-        <growth-group values="add-presence(1,disease,and)"></growth-group>
-        <growth-group values="gain-energy(3)"></growth-group>
+        <growth-group values="gain-power-card;add-presence(2);gather(explorer)"></growth-group>
+        <growth-group values="add-presence(1,token,explorer,and);gain-energy(2)"></growth-group>
       </growth>
 
       <presence-tracks>
@@ -77,27 +81,30 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Explorers Invest in the Land" speed="fast" range="1" target="any" target-title="TARGET LAND">
+        <quick-innate-power name="Explorers Invest in the Land" speed="fast" range="0" target="any" target-title="TARGET LAND">
           <level threshold="1-plant">
-            If target land has {town} and exactly 1 {explorer}, replace 1 {explorer} with 1 {town}.
+            Gather up to 1 {explorer}. If target land has {town} and exactly 1 {explorer}, replace 1 {explorer} with 1 {town}.
           </level>
           <level threshold="2-plant,1-earth">
-            Replace 2 {explorer} with 1 {town}.
+            Replace 3 {explorer} with 1 {town}.
           </level>
           <level threshold="3-plant,2-earth,1-animal">
-            Replace replace 3 health of invaders with 1 {city}.
+            Replace up to 2 invaders with 1 {city}.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Overcrowding" speed="slow" range="1" target="any"
+        <quick-innate-power name="Overcrowding" speed="slow" range="0" target="any"
           target-title="TARGET LAND">
           <level threshold="2-animal,1-earth">
-            If target land has at least two {town}, destroy 1 {town}.
+            If target land has at least two {town}/{city}, destroy 1 {town}.
           </level>
           <level threshold="3-animal,2-earth">
-            If target land has at least two {city}, destroy 1 {city}. If the land has {disease}, destroy 1 {town}.
+            If target land has at least two {town}/{city}, destroy 1 {city}.
           </level>
-          <level threshold="1-disease">
-            Destroy 1 {town}.
+          <level threshold="4-animal,3-earth">
+            If target land has at least two {town}/{city}, destroy 1 {town}/{city}.
+          </level>
+          <level threshold="4-plant">
+            Repeat this power.
           </level>
         </quick-innate-power>
       </innate-powers>
