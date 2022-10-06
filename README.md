@@ -9,12 +9,13 @@
 
 ### Getting Started
 
-1. Download the ZIP file (on GitHub.com, Code > Download ZIP) and extract it on your computer.
-2. Open the folder "spirit-island-template-master". You should see folders such as "_docs", "_examples", "_global", and "My Custom Content". 
-3. Open the 'My Custom Content' folder and then open the folder for spirits, adversary, etc.
-4. Open the examples in a browser to view the stylized content. Open the examples in a text editor to modify.
-     **NOTE:** The folder depth is important. You can create new folders but the .html files must be at the same folder depth (ie. 2 deeper than the root folder).
-5. You can copy the examples again from the "_examples" folder.
+1. Create a new spirit group folder "my-name-spirits", and add that to `rendering/constants.js:SpiritGroups`.
+2. Create a folder within there with the name of your spirit. Copy over existing card and board html files.
+3. When you want to generate a pdf of a spirit, you can run a script to have it automatically create a pdf of your file.
+   1. To do this you will need nodejs and npm installed.
+   2. After installing those, go into rendering.
+   3. Run `npm install`
+4. Run `node render.js render-all` and your pdfs should end up in `spirit-pdfs`.
 
 ### Tips for Maintenance
 
