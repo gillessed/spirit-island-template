@@ -3,8 +3,8 @@ import * as url from "url";
 
 export const SpiritGroups = ["greg-spirits", "shalin-hana-spirit"];
 
-const CardScale = 0.95;
-const BoardScale = 0.85;
+const CardScale = 0.97;
+const BoardScale = 0.88;
 
 export const CardFront = ["card-front.html", { width: 2035, height: 750 }, CardScale];
 export const CardFront1 = ["card-front-1.html", { width: 2035, height: 750 }, CardScale];
