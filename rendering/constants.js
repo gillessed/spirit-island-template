@@ -18,5 +18,5 @@ export const BoardRules = ["board-rules.html", { width: 1827, height: 1237 }, Bo
 export const SourceFiles = [CardFront, CardBack, BoardFront, BoardLore, BoardRules, CardFront1, CardFront2, CardBack1, CardBack2];
 
 export const ScriptDir = url.fileURLToPath(new URL(".", import.meta.url));
-export const ProjectDir = path.resolve(`../`);
+export const ProjectDir = path.resolve(ScriptDir, `../`);
 export const SpiritPdfDir = path.join(ProjectDir, "spirit-pdfs");
