@@ -42,13 +42,10 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Bound by the Deepest Roots</special-rules-subtitle>
       <special-rule>
-        All lands with your {sacred-site} are considered to be part of the World Tree. Any power that targets a land that is part of the World Tree is copied and targets all lands that are part of the World Tree, regardless of targeting restrictions. You may move any tokens or invaders (not {presence}) between World Tree lands at any time. Any land adjacent to any World Tree land is considered adjacent to all of them.
+        Your powers allow you to place scenario tokens on lands. All lands with scenario tokens are considered part of the world tree, and the same land. That composite land is considered the
+        union of all constituent land types. These constituent lands need not be adjacent on the board. The world tree land can be considered both coastal and inland if its constituent lands are both.
         <br><br>
-        If invaders would perform an invader action in a World Tree land, they do it in every World Tree land.
-      </special-rule>
-      <special-rules-subtitle>The World Tree Encompasses Its Land</special-rules-subtitle>
-      <special-rule>
-        All power cards you play that target a land have {range-0} and cost 1 less energy to play if they are a minor power, and 2 less energy to play if they are a major power (min 0). The range modifier can be modified by other abilities.
+        Your powers cannot target lands that aren't are part of the world tree unless otherwise specified.
       </special-rule>
     </special-rules-container>
 
@@ -69,8 +66,8 @@
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="0,0,1,1,2,3"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant+air,3,+1,4,5"></card-play-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="0,air,1,water,2,plant+air"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant,3,+1,4,5"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
@@ -79,15 +76,18 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="The Roots Burgeon" speed="fast" range="0" target="any" target-title="TARGET LAND">
-          <level threshold="4-plant,3-water,2-earth">
-            2 damage
-          </level>
+        <quick-innate-power name="The Roots Cradle the Earth" speed="fast" range="0" target="any" target-title="TARGET LAND">
           <level threshold="2-plant,2-moon">
-            Defend 2
+            Defend 1 per land in the world tree.
           </level>
           <level threshold="4-plant,3-moon">
-            Instead, defend 3
+            Defend 1 per invader in the world tree.
+          </level>
+          <level threshold="4-plant,3-water,1-earth">
+            1 damage per land in the world tree.
+          </level>
+          <level threshold="4-air">
+            Repeat this power.
           </level>
         </quick-innate-power>
         <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="TARGET LAND">
