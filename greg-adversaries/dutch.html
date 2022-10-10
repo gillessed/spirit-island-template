@@ -14,12 +14,12 @@
 	>
 	<loss-condition
 	name="Masters of the Seas"
-	rules="The Dutch have no level 0. You must play against minimum level 1. If there are two {ship} on every coastal land, invaders win"
+	rules="The Dutch have no level 0. You must play against minimum level 1. If there is are {ship} on at 3 coastal lands on every board, invaders win."
 	></loss-condition>
 
 	<escalation-effect
 	name="Landing on New Shores"
-	rules="On each board, add 1 {ship} and 1 {town} to a coastal land without invaders. If not such land exists, instead
+	rules="On each board, gather 1 {ship} from the ocean and 1 {town} to a coastal land without invaders. If not such land exists, instead
 	add 1 {ship} and build in the coastal land with the fewest invaders."
 	></escalation-effect>
 
@@ -27,40 +27,42 @@
 	difficulty="2"
 	fear-cards="4/4/3"
 	name="Masters of the Seas"
-	rules="When playing against the Dutch, island boards should be separate and have no adjacent edges. Instead, all 
-	coastal lands are considered adjacent to one another. Additionally, the highest numbered land is now
-	considered an ocean land, and adjacent lands are considered coastal. Whenever invaders build in a costal land,
-	if there is a {town} and a {city}, add {ship}. {ship} is an invader, can only be in coastal lands, and
-	have 2 health. They do not count as sources of exploration. Invaders do +1 damage during ravage for each {ship}
-	in the land. {ship} generate 1 {fear} when destroyed."
+	rules="When playing against the Dutch, the archipelago rules must be used. Additionally, the highest numbered land on each board is now
+	considered a coastal land. The Dutch have a fourth type of invader, {ship}. They have 2 health, and are considered sources of exploration. When
+	ravaging in a land, each normal invader does +1 damage for each {ship} in the land. {ship} generates 1 {fear} when destroyed. {ship} can be targeted
+	by any spirit power, event or fear action that can target a {town}. {ship} can be placed in, pushed to and gathered from the ocean, and cannot be placed on inland lands.
+	At the beginning of the game, place a {ship} in land #1, and then 3 {ship} in the ocean for each board. When invaders explore into a coastal land without
+	{town}/{city}, gather 1 {ship} from the ocean."
 	></level-1>
 
 	<level-2
 	difficulty="3"
 	fear-cards="4/4/3"
-	name="Exploring the Oceans"
-	rules="When invaders explore into a coastal land, if that land didn't have any invaders, gather 1 ship."
+	name="Mighty Shipwrights"
+	rules="When invaders build in a land that has at least 2 {town}/{city}, add 2 {ship}."
 	></level-2>
+
 
 	<level-3
 	difficulty="5"
 	fear-cards="4/4/4"
-	name="Native Spice Trade"
-	rules="Invaders in lands with {dahan} have +1 health and each do -1 damage (min 1) during ravage. If invaders successfully
-	build in an inland land with {dahan}, they build an additional time."
+	name="Evacuation"
+	rules="When {town}/{city} would be destroyed in a land with {ship}, move that ship to a coastal land at range 2 or more, and add that many health of {explorer} in that land.
+	Whenever a {ship} is destroyed in a land without {town}/{city}, instead move the ship to a coastal land at range 2 or more."
 	></level-3>
 	
 	<level-4
 	difficulty="6"
 	fear-cards="5/5/4"
-	name="Hearty Populace"
-	rules="Whenever a ship is added or moved into a land, add 1 disease. Ignore disease in lands with ships."
+	name="Reinforcements from Overseas"
+	rules="When players reach Terror Level 2 and Terror Level 3, if there are fewer than 2 {ship} per board in the ocean, add 1 {ship} per board to the ocean, then on half the boards,
+	rounding up, gather 1 {ship} from the ocean onto a coastal land."
 	></level-4>
 	
 	<level-5
 	difficulty="8"
 	fear-cards="5/6/4"
-	name="Persistent Explorers"
+	name="Persistent Navigators"
 	rules="Setup the invader deck as 111-2C222-33333. After the coastal invader card is discarded for the first time, move it instead back to the build slot."
 	></level-5>
 	
@@ -68,7 +70,7 @@
 	difficulty="11"
 	fear-cards="6/6/5"
 	name="Resources for Great Fleets"
-	rules="Whenever invaders add blight in inland jungles or mountains from a ravage, add a ship to every coastal land adjacent to that land."
+	rules="Whenever invaders add blight in an inland land from a ravage, gather 1 {ship} from the ocean into every adjacent coastal land."
 	></level-6>
   </quick-adversary>
 

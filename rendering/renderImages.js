@@ -1,11 +1,10 @@
+import { promises as fs } from "fs";
+import os from "os";
 import path from "path";
 import puppeteer from "puppeteer";
-import { promises as fs } from "fs";
-import { deleteAsync } from "del";
-import { SourceFiles, ProjectDir } from "./constants.js";
-import { exists } from "./utils.js";
-import os from "os";
 import { v4 as uuidv4 } from 'uuid';
+import { ProjectDir, SourceFiles } from "./constants.js";
+import { exists } from "./utils.js";
 
 async function screenshot(sourceHtml, destinationFile, screensize) {
   const browser = await puppeteer.launch();
@@ -39,8 +38,8 @@ export async function renderImages(spiritGroup, spiritName) {
       continue;
     }
     const destPng = sourceType.substring(0, sourceType.length - 5) + ".png";
-    console.log("  Rendering " + destPng);
     const destImage = path.join(destDir, destPng);
+    console.log("  Rendering " + destImage);
     await screenshot(source, destImage, windowSize);
     imageFiles.push({
       file: destImage,

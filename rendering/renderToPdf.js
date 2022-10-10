@@ -24,9 +24,10 @@ export async function renderToPdf(spiritName, imageDatas) {
   console.log("Rendering " + spiritName + " to PDF " + destination);
 
   const doc = new jsPDF("landscape");
-  for (let i = 0; i < imageDatas.length; i++) {
+  for (let i = 0; i < imageDatas.length; i++) {    
     const { file, windowSize, pageScale } = imageDatas[i];
     const aspectRatio = windowSize.height / windowSize.width;
+
     const imageFileData = await fs.readFile(file);
 
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -39,6 +40,7 @@ export async function renderToPdf(spiritName, imageDatas) {
     const offsetY = (pageHeight - imageHeight) / 2;
 
     doc.addImage(imageFileData, 'JPEG', offsetX, offsetY, imageWidth, imageHeight);
+
     if (i < imageDatas.length - 1) {
       doc.addPage();
     }
