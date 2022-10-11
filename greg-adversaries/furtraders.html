@@ -13,20 +13,20 @@
     flag-image="./hbc-flag.png"
 	>
 	<loss-condition
-	name="Successfull Investment in the New World"
+	name="Successfully Conquering the Island"
 	rules="Whenever 1 or more {dahan} are destroyed, place 1 {dahan} on this card. If there are more {dahan} on this card than players, or no {dahan} on the island, the invaders win."
 	></loss-condition>
 
 	<escalation-effect
 	name="Curiousity in the Newcomers"
-	rules="On each board, add 1 {dahan} in a card matching a ravage card."
+	rules="On each board, add 1 {dahan} in a card matching an explore card."
 	></escalation-effect>
 
 	<level-1
 	difficulty="2"
 	fear-cards="4/4/3"
-	name="Pillage the Natives for their Wares"
-	rules="{town} and {city} do 1 extra damage per {dahan} in that land (total for the land)."
+	name="Pillage the Dahan for their Wares"
+	rules="Lands with {town}/{city} do 1 extra damage per {dahan} in that land (total for the land)."
 	></level-1>
 
 	<level-2
@@ -39,7 +39,7 @@
 	<level-3
 	difficulty="6"
 	fear-cards="4/4/4"
-	name="Turn the Natives against Themselves"
+	name="Turn the Dahan against Themselves"
 	rules="Lands with 4 or more {dahan} match the ravage card regardless of the land type."
 	></level-3>
 	
@@ -53,15 +53,15 @@
 	<level-5
 	difficulty="8"
 	fear-cards="5/6/4"
-	name="Hunting for Game across the Land"
-	rules="On each board, at the start of the game, add a scenario token in an inland land. Whenever {dahan} are moved into or added to than land, add 1 {town}, and remove the scenario token. At the end of that turn, place the scenario token into a different land."
+	name="Military Response"
+	rules="On each board, after setup, add a scenario token in a land with invaders. Whenever {dahan} are moved into or added to than land, add 1 {town}, and remove the scenario token. At the end of that turn, place the scenario token into a different land with invaders. If there are no invaders on that board, the scenario token is permanentely removed."
 	></level-5>
 	
 	<level-6
 	difficulty="11"
 	fear-cards="6/6/5"
-	name="Tracking the Natives' Progress"
-	rules="Whenever {dahan} leave a land with invaders, add 1 {explorer} in the lands moved to for each {dahan} than moved."
+	name="Distrust of the Dahan"
+	rules="Whenever {dahan} are moved from a land with invaders to a land without invaders, add {explorer} to the land moved to for each {dahan} moved into that land."
 	></level-6>
   </quick-adversary>
 

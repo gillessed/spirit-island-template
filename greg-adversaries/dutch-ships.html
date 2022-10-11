@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <link href="../_global/css/global.css" rel="stylesheet" />
+  <link href="../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../_global/js/general.js"></script>
+  <script type="text/javascript" src="../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Dutch"
+    base-difficulty="2"
+    flag-image="./dutch-flag.svg"
+	>
+	<loss-condition
+	name=""
+	rules=""
+	></loss-condition>
+
+	<escalation-effect
+	name=""
+	rules=""
+	></escalation-effect>
+
+	<level-1
+	difficulty="1"
+	fear-cards="1"
+	name="Ships"
+	rules="When playing against the Dutch, the archipelago rules must be used. The Dutch have a fourth type of invader, {ship}. They have 2 health, and are considered sources of exploration. When
+	ravaging in a land, each normal invader does +1 damage for each {ship} in the land. {ship} generates 1 {fear} when destroyed. {ship} can be targeted
+	by any spirit power, event or fear action that can target a {town}. {ship} can be placed in, pushed to and gathered from the ocean, and cannot be placed on inland lands."
+	></level-1>
+
+  </quick-adversary>
+
+</body>
+</html>

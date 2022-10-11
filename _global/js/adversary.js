@@ -17,6 +17,8 @@ function resize(){
 	dynamicSizing(document.querySelectorAll('top-info')[0],55)
 }
 
+const MaxLevels = 6;
+
 function buildAdversary(quickAdversary) {
 adversaryName = quickAdversary.getAttribute('name')
 flagImage = quickAdversary.getAttribute('flag-image')
@@ -52,18 +54,15 @@ html = `
         <div>Game Effects <span class="cumulative">(cumulative)</span></div>
       </header>`;
 
-		html+= buildLevel(quickAdversary.querySelectorAll('level-1')[0])
-		html+=`<line></line>`
-		html+= buildLevel(quickAdversary.querySelectorAll('level-2')[0])
-		html+=`<line></line>`
-		html+= buildLevel(quickAdversary.querySelectorAll('level-3')[0])
-		html+=`<line></line>`
-		html+= buildLevel(quickAdversary.querySelectorAll('level-4')[0])
-		html+=`<line></line>`
-		html+= buildLevel(quickAdversary.querySelectorAll('level-5')[0])
-		html+=`<line></line>`
-		html+= buildLevel(quickAdversary.querySelectorAll('level-6')[0])
-
+		for (let i = 1; i <= MaxLevels; i++) {
+			const level = quickAdversary.querySelectorAll(`level-${i}`)[0];
+			if (level != null) {
+				if (i > 0) {
+					html+=`<line></line>`
+				}
+				html+= buildLevel(level)
+			}
+		}
     html+=`</adversary-levels>`
 
 	return html
