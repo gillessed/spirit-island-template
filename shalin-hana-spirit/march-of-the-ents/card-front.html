@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="slow" cost="2" name="Crops Mutate" 
+    image="thorny-vines-on-buildings-cropped.jpeg"
+    elements="water,air,plant" range="1" target="Any" target-title="TARGET LAND"
+    artist-name="WOMBO">
+    <rules>
+      Downgrade 1 {town} / {city}. Add 1 {wilds}
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="1" name="Don't be hasty" 
+    image="dont-be-hasty.jpg" artist-name="WOMBO"
+    elements="air,plant" range="none" target="Any" target-title="TARGET SPIRIT">
+    <rules>
+      This turn, target Spirit may use 1 {fast} power as if it were {slow}. 
+      If they do, they may repeat it by paying its cost again.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="1" name="Business with the Orcs" 
+    image="business-with-orcs-cropped.jpeg" artist-name="WOMBO"
+    elements="air,plant" range="1" target="Any" target-title="TARGET LAND">
+    <rules>
+      Gather up to 2 {wilds}. 2 Damage
+        <br>
+    <small>They come with fire, they come with axes... gnawing, biting, breaking, hacking, burning!</small>
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="0" name="Go Tree-ish" 
+    image="go-tree-ish-cropped.jpeg" artist-name="WOMBO"
+    elements="water,plant" range="-" target="self" target-title="TARGET SPIRIT">
+    <rules>
+      Add 1 {wilds} to 1 of your lands. Destroy 1 of your {presence} in that land.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

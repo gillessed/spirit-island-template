@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="march-of-the-ents-mystical-cropped-square.jpeg" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      March of the Ents
+    </spirit-name>
+    <artist-name>
+      wombo.art
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Destroyers and Usurpers, curse them!</special-rules-subtitle>
+      <special-rule>
+        Place {destroyed-presence} here. When your {presence} is moved, in the land it goes to:
+        <ul>
+            <li>Do 1 damage for every 2 {destroyed-presence}, round up.</li>
+            <li>Push all {dahan} / {explorer}.</li>
+        </ul>
+        <special-rules-track values="0,1,1,2,2,3,3,4,4,5,5,6"></special-rules-track>
+      </special-rule>
+      <special-rules-subtitle>The trees! They're moving!</special-rules-subtitle>
+      <special-rule>
+        {wilds} may move with your {presence}. (Whenever your {presence} moves from one of your lands to another land, you may move 1 {wilds} along with it.)
+      </special-rule>
+      <special-rules-subtitle>Fear the trees</special-rules-subtitle>
+      <special-rule>
+        On boards with your {presence}, {wilds} also counts as {badlands}
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth">
+        <sub-growth title="Always" bordered>
+            <growth-group values="add-presence(3,wilds)"></growth-group>
+        </sub-growth>
+        <sub-growth title="Plus One of:" bordered>
+            <growth-group values="reclaim;gain-power-card;custom(Return half your destroyed presence (round up) to your presence track,destroyed-presence)"></growth-group>
+            <growth-group values="add-presence(2)^2;destroy-presence"></growth-group>
+            <growth-group values="gain-power-card;gain-energy(2);destroy-presence"></growth-group>
+        </sub-growth>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,1,2,plant,3,3"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+plant,air,3,3,plant,4"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Waters of the Entwine" speed="slow" 
+        range="1" target="{jungle}/{wetland}" target-title="TARGET LAND">
+          <level threshold="1-water,2-plant">
+            Add 1 {wilds}
+          </level>
+          <level threshold="1-sun,2-plant">
+            Add 1 {dahan}
+          </level>
+          <level threshold="2-water,3-plant">
+            Add 1 {wilds} within {range-1}.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="The Ents are going to war" speed="slow" 
+        range="1" target="Any" target-title="TARGET LAND">
+          <level threshold="1-air,2-plant">
+            Gather any number of your {presence}. Destroy 1 {wilds} if any {town} / {city} are destroyed.
+          </level>
+          <level threshold="2-air,4-plant">
+            Repeat this Power.
+          </level>
+          <level threshold="3-air,6-plant">
+            Repeat this Power again.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>
