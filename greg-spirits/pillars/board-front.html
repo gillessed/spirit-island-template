@@ -29,7 +29,7 @@
 
 <body>
 
-  <board spirit-image="sacred-image.jpg" spirit-image-scale="120%" spirit-border="example2.png">
+  <board spirit-image="pillars-image.png" spirit-image-scale="120%" spirit-border="example2.png">
 
     <spirit-name>
       Pillars of Sacred Geometry
@@ -55,20 +55,20 @@
       <growth title="Growth (Pick Three)">
         <growth-group values="reclaim-one"></growth-group>
         <growth-group values="reclaim-one"></growth-group>
-        <growth-group values="add-presence(1)"></growth-group>
         <growth-group values="add-presence(2)"></growth-group>
         <growth-group values="custom(Swap Two Elements on Track,any)"></growth-group>
         <growth-group values="custom(Add Element Token to One of Your Lands,any)"></growth-group>
         <growth-group values="custom(Adjust Land Height by 1,presence)"></growth-group>
+        <growth-group values="custom(Adjust Land Height by 2,presence)"></growth-group>
         <growth-group values="gain-power-card"></growth-group>
       </growth>
 
       <presence-tracks>
         <energy-track banner="example2.png" banner-v-scale="50%"
-          values="2,star^energy(1),star^energy(2),star^energy(3),star^energy(4),star^energy(5),star^energy(6),star^energy(7)">
+          values="1,star^energy(1),star^energy(2),star^energy(3),star^energy(4),star^energy(5),star^energy(6),star^energy(7)">
         </energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%"
-          values="1,2,3">
+          values="2,+1,+1,+1">
         </card-play-track>
       </presence-tracks>
 
@@ -98,13 +98,12 @@
           target-title="target land" note="This power cannot target the same land as Awe and Wonder">
           <level threshold="0-any">
             If you have at least three adjacent lands each with a different height, you may resolve of your saved major power cards now
-            by paying its cost, targeting the same land as this power, regardless of targeting restrictions. You do gain the elements
-            on the power card, but must have all the elements to get the major power's unlock.
+            by paying its cost, targeting the same land as this power, regardless of targeting restrictions. You gain the elements on the card.
           </level>
           <level threshold="0-any">
             In one adjacent land with your {presence}, you may add or remove the cost of the major power resolved from the height
-            of that land. If that land has {sacred-site}, you can adjust by any number between 0 and the power's cost. If you did not resolve a
-            major power card, adjust by 1.
+            of that land. If that land has {sacred-site}, instead adjust by any number between 0 and the power's cost. If you did not resolve a
+            major power card, instead adjust by 1.
           </level>
         </quick-innate-power>
       </innate-powers>
