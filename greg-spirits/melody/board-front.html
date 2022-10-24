@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="melody-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Melody of Nature
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Invaders Cannot Withstand Nature's Beauty</special-rules-subtitle>
+      <special-rule>
+        Your damage dealing powers do +1 damage if the target land has 2 of {wilds}/{beast}/{disease}/{badlands}. They do an additional +1 if the land has all four.
+      </special-rule>
+      <special-rules-subtitle>Great Harmony</special-rules-subtitle>
+      <special-rule>
+        You have <range-plus-1></range-plus-1> to target lands with {wilds}, {disease}, {beast} or {badlands}.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;gain-power-card"></growth-group>
+        <growth-group values="add-presence(4);gain-power-card;gain-element(plant,animal,air)"></growth-group>
+        <growth-group values="add-presence(1);add-presence(1);gain-energy(1)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,sun,2,sun,3,any,4"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,2,3,3,4+reclaim-one,5"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="The Song Weaves Through the Land" speed="fast" range="0" target="{presence}" target-title="target land">
+          <level threshold="1-sun">
+            Take one element token from target land. Add an element token of your choice to any land without {presence}.
+          </level>
+          <level threshold="3-sun">
+            Repeat this power.
+          </level>
+          <level threshold="5-sun">
+            Repeat this power.
+          </level>
+          <level threshold="7-sun">
+            Repeat this power.
+          </level>
+          <level threshold="7-sun,2-plant,2-animal,2-air">
+            Repeat this power.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Invaders Transmuted" speed="slow" range="0" target="any" target-title="target land">
+          <level threshold="2-plant,2-sun">
+            Discard any number of {plant} element tokens, then replace that many health of invaders with {wilds}.
+          </level>
+          <level threshold="2-animal,2-sun">
+            Discard any number of {animal} element tokens, then replace that many health of invaders with {beast}. 1 {fear} for each {town}/{city} replaced this way.
+          </level>
+          <level threshold="2-air,2-sun">
+            Discard any number of {air} element tokens, then replace that many health of invaders with {disease}.
+          </level>
+          <level threshold="2-earth,2-sun">
+            Discard any number of {earth} element tokens, then replace that many health of invaders with {badlands}.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>
