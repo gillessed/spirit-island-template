@@ -53,13 +53,13 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick Three)">
-        <growth-group values="reclaim-one"></growth-group>
-        <growth-group values="reclaim-one"></growth-group>
+        <growth-group values="reclaim"></growth-group>
         <growth-group values="add-presence(2)"></growth-group>
         <growth-group values="custom(Swap Two Elements on Track,any)"></growth-group>
         <growth-group values="custom(Add Element Token to One of Your Lands,any)"></growth-group>
         <growth-group values="custom(Adjust Land Height by 1,presence)"></growth-group>
         <growth-group values="custom(Adjust Land Height by 2,presence)"></growth-group>
+        <growth-group values="custom(Split Pillar Into 2,sacred-site)"></growth-group>
         <growth-group values="gain-power-card"></growth-group>
       </growth>
 
@@ -82,7 +82,7 @@
           target-title="target land">
           <level threshold="0-any">
             For each land with a different height adajcent to target land, you may push 1 {explorer}/{town}/{dahan}.
-            1 {fear} per {explorer}/{town}/{dahan} moved. If one of your adjacent lands has a height of 10 or
+            1 {fear} per {explorer}/{town}/{dahan} moved. If one of your adjacent lands has a height of 8 or
             more, you may also push {city} with this power. {city} generate 2 {fear} for moving.
           </level>
           <level threshold="0-any">
@@ -94,14 +94,14 @@
             the height of this pillar.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="The Pillars Align" speed="slow" range="1" target="{no-presence}"
-          target-title="target land" note="This power cannot target the same land as Awe and Wonder">
+        <quick-innate-power name="The Pillars Align" speed="fast" range="1" target="{no-presence}"
+          target-title="target land" note="This power cannot target the same land as Awe and Wonder.">
           <level threshold="0-any">
-            If you have at least three adjacent lands each with a different height, you may resolve of your saved major power cards now
-            by paying its cost, targeting the same land as this power, regardless of targeting restrictions. You gain the elements on the card.
+            If you have at least three adjacent lands each with a different height, you may play your saved major power cards now
+            by paying its cost, targeting the same land as this power, regardless of targeting restrictions, but resolve it during the approriate phase
           </level>
           <level threshold="0-any">
-            In one adjacent land with your {presence}, you may add or remove the cost of the major power resolved from the height
+            In one adjacent land with your {presence}, you may add or remove the cost of the major power played from the height
             of that land. If that land has {sacred-site}, instead adjust by any number between 0 and the power's cost. If you did not resolve a
             major power card, instead adjust by 1.
           </level>
