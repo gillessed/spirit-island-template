@@ -9,33 +9,40 @@
 
 <body>
 
-  <quick-card speed="fast" cost="1" name="Raucous Howling" image="howling.png"
+  <quick-card speed="slow" cost="1" name="Raucous Howling" image="howling.png"
     elements="animal,sun,air" range="1" target="any" target-title="target land"
     artist-name="greg cole">
     <rules>
-      For each {beast} in target land, 1 {fear} (<i>max 4</i>). Push 1 {explorer}/{town} per {beast}.
+      For each {beast} in target land, 1 {fear} (<i>max 4</i>). Push 1 {explorer}/{town}, plus 1 {explorer}/{town} per {beast}. Push 1 {beast}.
+      <br>
+      If target land has {animal} element tokens, take one.
     </rules>
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="Nature's Smallest Predators" image="predator.png"
     elements="sun,earth,plant" range="1" target="any" target-title="target land" artist-name="greg cole">
     <rules>
-      Remove 1 {disease}. If you do, do 1 damage plus 1 damage per remaining {disease} in the land.
+      1 damage, plus 1 damage per {disease} in the land. Remove 1 {disease}.
+      <br>
+      If target land has {air} element tokens, take one.
     </rules>
   </quick-card>
 
   <quick-card speed="fast" cost="1" name="Overgrown With Wildlife" image="overgrown.png" elements="sun,plant,animal"
     range="1" target="any" target-title="target land" artist-name="greg cole">
     <rules>
-      For every {wilds} in target land, gather up to 1 {explorer}/{town}. If you have 2 or more {wilds} in target land,
-      remove 1 of them and to 1 damage.
+      Gather 1 {explorer}, then gather 1 {explorer}/{town} per {wild}. You may remove 1 {wild} to do 1 damage.
+      <br>
+      If target land has {plant} element tokens, take one.
     </rules>
   </quick-card>
 
   <quick-card speed="fast" cost="1" name="Great Crags Swallow Whole" image="crags.png" elements="sun,earth,air"
     range="1" target="any" target-title="target land" artist-name="greg cole">
     <rules>
-      If target land has {badlands}, do 1 damage. You may repeat this power targeting an adjacent land during the {slow} phase.
+      1 damage. You may remove a {badlands} in target land to do 1 damage in target land during the {slow} phase.
+      <br>
+      If target land has {earth} element tokens, take one.
     </rules>
   </quick-card>
 </body>

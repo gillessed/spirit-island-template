@@ -46,7 +46,7 @@
       </special-rule>
       <special-rules-subtitle>Great Harmony</special-rules-subtitle>
       <special-rule>
-        You have <range-plus-1></range-plus-1> to target lands with {wilds}, {disease}, {beast} or {badlands}.
+        You have <range-plus-1></range-plus-1> to target from lands with {wilds}, {disease}, {beast} or {badlands}.
       </special-rule>
     </special-rules-container>
 
@@ -62,13 +62,13 @@
 		-->
       <growth title="Growth (Pick One)">
         <growth-group values="reclaim;gain-power-card"></growth-group>
-        <growth-group values="add-presence(4);gain-power-card;gain-element(plant,animal,air)"></growth-group>
+        <growth-group values="add-presence(4);gain-power-card;gain-element(plant,animal,air,earth)"></growth-group>
         <growth-group values="add-presence(1);add-presence(1);gain-energy(1)"></growth-group>
       </growth>
 
       <presence-tracks>
         <energy-track banner="example2.png" banner-v-scale="50%" values="1,sun,2,sun,3,any,4"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,2,3,3,4+reclaim-one,5"></card-play-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,2,3,3,4,5+reclaim-one"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
@@ -77,35 +77,32 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="The Song Weaves Through the Land" speed="fast" range="0" target="{presence}" target-title="target land">
+        <quick-innate-power name="The Song Weaves Through the Land" speed="fast" range="1" target="any" target-title="target land" note="This power cannot target the origin land of this power.">
           <level threshold="1-sun">
-            Take one element token from target land. Add an element token of your choice to any land without {presence}.
+            Take one element token from target land. Move at least 1 {presence} from origin land into target land. Add an element token to a land without your {presence}.
           </level>
           <level threshold="3-sun">
-            Repeat this power.
-          </level>
-          <level threshold="5-sun">
-            Repeat this power.
+            Repeat this power, using the target land as the origin land. This cannot target a land that was an origin for this power already this turn.
           </level>
           <level threshold="7-sun">
-            Repeat this power.
+            Repeat this power, with the above conditions.
           </level>
-          <level threshold="7-sun,2-plant,2-animal,2-air">
-            Repeat this power.
+          <level threshold="8-sun">
+            Repeat this power, with the above conditions.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Invaders Transmuted" speed="slow" range="0" target="any" target-title="target land">
-          <level threshold="2-plant,2-sun">
-            Discard any number of {plant} element tokens, then replace that many health of invaders with {wilds}.
+        <quick-innate-power name="Invaders Transmuted" speed="slow" range="0" target="any" target-title="target land" note="Each threshold counts as a separate power">
+          <level threshold="1-sun,2-plant">
+            Discard any number of {plant} element tokens, then replace that many health of invaders with 1 {wilds}.
           </level>
-          <level threshold="2-animal,2-sun">
-            Discard any number of {animal} element tokens, then replace that many health of invaders with {beast}. 1 {fear} for each {town}/{city} replaced this way.
+          <level threshold="1-sun,2-animal">
+            Discard any number of {animal} element tokens, then replace that many health of invaders with 1 {beast}. 1 {fear} for each {town}/{city} replaced this way.
           </level>
-          <level threshold="2-air,2-sun">
-            Discard any number of {air} element tokens, then replace that many health of invaders with {disease}.
+          <level threshold="1-sun,2-air">
+            Discard any number of {air} element tokens, then replace that many health of invaders with 1 {disease}.
           </level>
-          <level threshold="2-earth,2-sun">
-            Discard any number of {earth} element tokens, then replace that many health of invaders with {badlands}.
+          <level threshold="1-sun,2-earth">
+            Discard any number of {earth} element tokens, then replace that many health of invaders with 1 {badlands}.
           </level>
         </quick-innate-power>
       </innate-powers>
