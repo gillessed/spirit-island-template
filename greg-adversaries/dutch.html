@@ -14,13 +14,12 @@
 	>
 	<loss-condition
 	name="Masters of the Seas"
-	rules="The Dutch have no level 0. You must play against minimum level 1. If there is are {ship} on at 3 coastal lands on every board, invaders win."
+	rules="The Dutch have no level 0. You must play against minimum level 1. If there is are {ship} on at least 3 coastal lands on every board, invaders win."
 	></loss-condition>
 
 	<escalation-effect
 	name="Landing on New Shores"
-	rules="On each board, gather 1 {ship} from the ocean and 1 {town} to a coastal land without invaders. If not such land exists, instead
-	add 1 {ship} and build in the coastal land with the fewest invaders."
+	rules="If there are less than 2n {ship} in the open ocean, where n is the number of players, add n {ship} to the ocean."
 	></escalation-effect>
 
 	<level-1
@@ -36,16 +35,16 @@
 	difficulty="3"
 	fear-cards="4/4/3"
 	name="Mighty Shipwrights"
-	rules="When invaders build in a land that has at least 2 {town}/{city}, add 2 {ship}."
+	rules="When invaders build a {city} in a land with {ship}, add 1 {ship} to that land."
 	></level-2>
 
 
 	<level-3
 	difficulty="5"
-	fear-cards="4/4/4"
+	fear-cards="5/4/3"
 	name="Evacuation"
-	rules="When {town}/{city} would be destroyed in a land with {ship}, move that ship to a coastal land at range 2 or more, and add that many health of {explorer} in that land.
-	Whenever a {ship} is destroyed in a land without {town}/{city}, instead move the ship to a coastal land at range 2 or more."
+	rules="When {town}/{city} are destroyed in a land with {ship}, move one {ship} to a coastal land at range 2 or more, and add a number of {explorer} corresponding to the health of
+	the destroyed {town}/{city} in that land. Whenever a {ship} is destroyed in a land without {explorer}/{town}/{city}, instead move the ship to a coastal land at range 2 or more."
 	></level-3>
 	
 	<level-4
@@ -60,12 +59,12 @@
 	difficulty="8"
 	fear-cards="5/6/4"
 	name="Persistent Navigators"
-	rules="Setup the invader deck as 111-2C222-33333. After the coastal invader card is discarded for the first time, move it instead back to the build slot."
+	rules="Setup the invader deck as 111-C22-33333. After the coastal invader card is discarded for the first time, put it back on top of the invader deck."
 	></level-5>
 	
 	<level-6
 	difficulty="11"
-	fear-cards="6/6/5"
+	fear-cards="5/6/5"
 	name="Resources for Great Fleets"
 	rules="Whenever invaders add blight in an inland land from a ravage, gather 1 {ship} from the ocean into every adjacent coastal land."
 	></level-6>
