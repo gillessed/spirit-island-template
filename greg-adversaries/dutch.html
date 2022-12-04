@@ -19,7 +19,7 @@
 
 	<escalation-effect
 	name="Landing on New Shores"
-	rules="If there are less than 2n {ship} in the open ocean, where n is the number of players, add n {ship} to the ocean."
+	rules="If there are less than 2 {ship} per board in the ocean, add a {ship} to the ocean for each board."
 	></escalation-effect>
 
 	<level-1
@@ -27,7 +27,8 @@
 	fear-cards="4/4/3"
 	name="Masters of the Seas"
 	rules="The highest numbered land on each board is now considered a coastal land. At the beginning of the game, place a
-	{ship} in land #1, and then 3 {ship} per board in the ocean."
+	{ship} in land #1, and then 3 {ship} per board in the ocean. When invaders explore into a coastal land without
+	{town}/{city}, gather 1 {ship} from the ocean. Ships do not count as {town} for this rule."
 	></level-1>
 
 	<level-2
@@ -37,13 +38,12 @@
 	rules="When invaders build a {city} in a land with {ship}, add 1 {ship} to that land."
 	></level-2>
 
-
 	<level-3
 	difficulty="5"
 	fear-cards="5/4/3"
 	name="Evacuation"
-	rules="When {town}/{city} are destroyed in a land with {ship}, move one {ship} to a coastal land at range 2 or more, and add a number of {explorer} corresponding to the health of
-	the destroyed {town}/{city} in that land. {city} have +1 maximum health per {ship} in their land. If there are 2 or more {ships} in land, effect that would destroy a {city} instead do 3 damage to it."
+	rules="When {town}/{city} are destroyed in a land with {ship}, move one {ship} to a coastal land at range 2 or more, then add {explorer} to that land. Ships have +1
+	health in lands with {city}. In lands with {city}, if a destroy effect would destroy {ship}, it instead takes 2 damage. Ships do not count as {town} for this rule."
 	></level-3>
 	
 	<level-4
@@ -58,14 +58,14 @@
 	difficulty="8"
 	fear-cards="5/6/4"
 	name="Persistent Navigators"
-	rules="Setup the invader deck as 111-C22-33333. After the coastal invader card is discarded for the first time, put it back on top of the invader deck."
+	rules="Setup the invader deck as 11-C222-33333. After the coastal invader card is discarded for the first time, put it back on top of the invader deck."
 	></level-5>
 	
 	<level-6
 	difficulty="11"
 	fear-cards="5/6/5"
 	name="Resources for Great Fleets"
-	rules="Whenever invaders add blight in an inland land from a ravage, gather 1 {ship} from the ocean into every adjacent coastal land."
+	rules="Whenever invaders blight and inland land during a ravage action, gather 1 {ship} into every adjacent coastal land."
 	></level-6>
   </quick-adversary>
 

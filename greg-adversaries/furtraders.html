@@ -19,14 +19,14 @@
 
 	<escalation-effect
 	name="Curiousity in the Newcomers"
-	rules="On each board, add 1 {dahan} in a card matching an build card."
+	rules="On each board, add 1 {dahan} in a card matching a build card."
 	></escalation-effect>
 
 	<level-1
 	difficulty="2"
 	fear-cards="4/4/3"
 	name="Pillage the Dahan for their Wares"
-	rules="Lands with {town}/{city} do 1 extra damage per {dahan} in that land (total for the land)."
+	rules="Lands with {town}/{city} do +1 damage per {dahan} in that land (total for the land)."
 	></level-1>
 
 	<level-2
@@ -40,21 +40,22 @@
 	difficulty="6"
 	fear-cards="4/4/4"
 	name="Turn the Dahan against Themselves"
-	rules="Lands with 4 or more {dahan} match the ravage card regardless of the land type. When ravaging in lands with 4 or more {dahan}, {dahan} each do 1 damage to the land."
+	rules="Lands with 4 or more {dahan} match the ravage card regardless of the land type. When ravaging in lands without invaders, {dahan} each do 1 damage to the land."
 	></level-3>
 	
 	<level-4
 	difficulty="6"
 	fear-cards="5/5/4"
 	name="Build on Conquered land"
-	rules="When invaders successfully explore into a land with {dahan}, once per turn, add 1 {town} to once of those lands."
+	rules="After the Explore step, if invaders succesfully explored into a land with {dahan}, add 1 {town} to one of those lands."
 	></level-4>
 	
 	<level-5
 	difficulty="8"
 	fear-cards="5/6/4"
 	name="Military Response"
-	rules="On each board, after setup, add a scenario token in a land with invaders. Whenever {dahan} are moved into or added to than land, add 1 {town}, and remove the scenario token. At the end of that turn, place the scenario token into a different land with invaders. If there are no invaders on that board, the scenario token is permanentely removed."
+	rules="On each board, after setup, add a scenario token in a land with invaders. Whenever {dahan} are moved into or added to than land, add 1 {town}, and remove
+	the scenario token. At the end of that turn, place the scenario token into a different land with invaders. If there are no invaders on that board, the scenario token is permanently removed."
 	></level-5>
 	
 	<level-6
