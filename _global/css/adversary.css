@@ -263,3 +263,15 @@ icon.range-1, icon.range-2, icon.range-3 {
 icon.ship {
   background-image: url('../images/ship-token.svg');
 }
+
+icon.fort {
+  background-image: url('../images/fort-token.png');
+}
+
+icon.oil {
+  background-image: url('../images/oil-token.png');
+}
+
+icon.wendigo {
+  background-image: url('../images/wendigo.png')
+}

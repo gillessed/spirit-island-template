@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Conquistadors"
+    base-difficulty="2"
+    flag-image="./conquistador-flag.jpeg"
+	>
+	<loss-condition
+	name="None"
+	rules="No additional loss condition. Minimum level 1."
+	></loss-condition>
+
+	<escalation-effect
+	name="Foreign Exports"
+	rules="The invaders earn 1 gold for each coastal land with invaders."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="3/4/3"
+	name="Search for Gold"
+	rules="If invaders ravage, for every damage they do to a land, they accumlate 1 gold. Use energy tokens to track their gold. After setup, after the build step, the invaders spend their gold. For every 3 gold they have earned,
+	they spend it to upgrade an invader on the island. Invaders must spend as must gold as they can."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="3/4/4"
+	name="Royal Wealth"
+	rules="The invaders begin the game with 1 gold, and an additional 2 gold per board."
+	></level-2>
+
+	<level-3
+	difficulty="6"
+	fear-cards="3/4/4"
+	name="Plundering for Gold"
+	rules="When invaders ravage in a land with {dahan}, they earn 2 gold."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="3/5/4"
+	name="Buying Devotion"
+	rules="When time passes, if the invaders have mote than 2 gold per spirit, spirits each have -1 energy income and -1 card play the next round, then invaders lose 2 gold per spirit. This cannot reduce card plays below 1."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="3/5/4"
+	name="Finding El Dorado"
+	rules="Place a scenario token on land #8 on each board. If there are 2 or more invaders in one of those lands, remove the scenario token. When the last scenario token on the island is removed,
+	the invaders earn 8 gold per board."
+	></level-5>
+	
+	<level-6
+	difficulty="11"
+	fear-cards="3/5/5"
+	name="Opulence"
+	rules="Invaders may uprade a {city} into 2 {town}."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Roman Empire"
+    base-difficulty="2"
+    flag-image="./roman-flag.svg"
+	>
+	<loss-condition
+	name="Conquering the Known World"
+	rules="If there are more than 2 {fort} per board on the island, invaders win."
+	></loss-condition>
+
+	<escalation-effect
+	name="Fortifying their Conquests"
+	rules="After the explore step, on each board, add {fort} and {explorer} to a land with {explorer} and no {town}/{city}."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="4/3/3"
+	name="Roman Phalanx"
+	rules="Each {explorer} does +1 damage for each other {explorer} in the land."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="4/4/3"
+	name="Conquering Britannia"
+	rules="During setup, add 2 {explorer} and 1 {fort} to land #7. Add 1 {town} to land 6. Move any {dahan} from land #7 to land #8."
+	></level-2>
+
+	<level-3
+	difficulty="6"
+	fear-cards="4/4/3"
+	name="Deploy the Legions"
+	rules="After setup, if invaders explorer into a land with no invaders, add an additional {explorer} for each adjacent {city}."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="Setting up Camp"
+	rules="After the build phase, add a {fort} to all lands with 3 or more {explorer} and no {town}/{city}/{fort}."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="4/4/4"
+	name="Salt the Lands of Carthage"
+	rules="It only takes 1 damage for invaders to blight a coastal land during ravage."
+	></level-5>
+	
+	<level-6
+	difficulty="11"
+	fear-cards="4/4/4"
+	name="All Roads Lead to Rome"
+	rules="The land with the most {town}/{city} (min. 2) on each board matches the ravage card, regardless of land type."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

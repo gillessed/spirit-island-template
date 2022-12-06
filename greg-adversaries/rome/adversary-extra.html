@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Roman Empire"
+    base-difficulty="2"
+    flag-image="./roman-flag.svg"
+	>
+	<loss-condition
+	name=""
+	rules=""
+	></loss-condition>
+
+	<escalation-effect
+	name=""
+	rules=""
+	></escalation-effect>
+
+	<level-1
+	difficulty="1"
+	fear-cards="1"
+	name="Forts"
+	rules="The Roman Empire have a special kind of token, forts {fort}. Forts are a special kind of token that act as shields
+	for explorers. They have 2 health. Explorers cannot be destroyed in lands with {fort}. Any effect that wouild destroy an
+	explorer in a land with {fort} can be used to do 1 damage to a {fort}. Any effect that does damage to explorers can also be used to damage {fort}.
+	{fort} do not heal damage when time passes. {fort} generates 1 {fear} when destroyed."
+	></level-1>
+
+  </quick-adversary>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="America"
+    base-difficulty="2"
+    flag-image="./america-flag.svg"
+	>
+	<loss-condition
+	name="Economic Conquest"
+	rules="If the invaders harvested most than 1 {oil} per board, invaders win. Minimum level 1."
+	></loss-condition>
+
+	<escalation-effect
+	name="Propsecting"
+	rules="Gather 2 invaders into a land with {oil}."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="4/3/3"
+	name="Oil Based Economy"
+	rules="during setup, add an {oil} token to land #1, land #4 and land #8. If invaders blight in a land with {oil}, they harvest it, and remove it from the board. In lands with {oil}, each invader does +1 damage."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="3/4/4"
+	name="Occupation Force"
+	rules="During setup, add {city} to land #5 and a {town} to land #3."
+	></level-2>
+
+	<level-3
+	difficulty="6"
+	fear-cards="3/4/4"
+	name="Modern Warfare"
+	rules="If invaders ravage, for every 4 damage they do to a land in excess of 2, add a blight to an adjacent land. This can harvest {oil}."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="Local Informants"
+	rules="when invaders ravage in a land with {dahan}, 1 {dahan} ravages with the invaders (does damage and receives damage as an invader)."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="4/5/4"
+	name="Installing Democracy"
+	rules="If {dahan} are moved into a land, if the land has 3 or more {dahan}, add {town} to that land. If there are 6 or more {dahan}, instead add 1 {city}."
+	></level-5>
+	
+	<level-6
+	difficulty="11"
+	fear-cards="5/5/4"
+	name="Unlimited Defense Budget"
+	rules="When invaders explore into a land, add 1 {town} to each adjacent land with {oil}."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

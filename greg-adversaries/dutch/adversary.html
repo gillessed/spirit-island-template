@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
-  <link href="../_global/css/global.css" rel="stylesheet" />
-  <link href="../_global/css/adversary.css" rel="stylesheet" />
-  <script type="text/javascript" src="../_global/js/general.js"></script>
-  <script type="text/javascript" src="../_global/js/adversary.js"></script>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
 </head>
 <body>
 
@@ -42,8 +42,8 @@
 	difficulty="5"
 	fear-cards="5/4/3"
 	name="Evacuation"
-	rules="When {town}/{city} are destroyed in a land with {ship}, move one {ship} to a coastal land at range 2 or more, then add {explorer} to that land. Ships have +1
-	health in lands with {city}. In lands with {city}, if a destroy effect would destroy {ship}, it instead takes 2 damage. Ships do not count as {town} for this rule."
+	rules="When {town}/{city} are destroyed in a land with {ship}, move one {ship} to a coastal land at range 2 or more without invaders, then add {explorer} to that land. Ships have +1
+	health per {city} in lands with {city}. In lands with {city}, if a destroy effect would destroy {ship}, it instead takes 2 damage. Ships do not count as {town} for this rule."
 	></level-3>
 	
 	<level-4
@@ -65,7 +65,7 @@
 	difficulty="11"
 	fear-cards="5/6/5"
 	name="Resources for Great Fleets"
-	rules="Whenever invaders blight and inland land during a ravage action, gather 1 {ship} into every adjacent coastal land."
+	rules="Whenever invaders successfully build in an inland land, add 1 {ship} in an adjacent coastal land, with invaders if possible."
 	></level-6>
   </quick-adversary>
 
