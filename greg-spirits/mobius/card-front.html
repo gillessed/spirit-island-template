@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="fast" cost="1" name="Pinch" image="cornices.png"
+    elements="air" range="0" target="any" target-title="target land"
+    artist-name="Greg Cole">
+    <rules>
+      For the rest of this turn, swap the land number of target land Lₜ and another land on the same board Lₛ where
+      <br>
+      Lₜ = Lₛ mod K/2
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="2" name="Asymptote" image="blazing.png"
+    elements="air,sun" range="none" target="any" target-title="target land" artist-name="Greg Cole">
+    <rules>
+      1 damage to X different invaders where X in the minimum range between the source and target land.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="0" name="Additive Inverse" image="night.png" elements="sun,air"
+    range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
+    <rules>
+      You may pay an additional X energy when you play this card. When invaders would do D damage in target land this turn, they instead do D + 2 + X mod K damage.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="4" name="Rotate" image="deep.png" elements="air,sun,fire,plant,water"
+    range="1" target="any" target-title="target board" artist-name="Greg Cole">
+    <rules>
+      In each land on target move, move all {presence} from Lₛ to Lₛ + 1 mod K. Then do 1 damage in each land on that board for each of your {presence} in that land.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

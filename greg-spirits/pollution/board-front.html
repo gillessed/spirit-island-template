@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="pollution-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Pollution Corrupts the Lands
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Corrupted Land</special-rules-subtitle>
+      <special-rule>
+        Your {presence} counts as {blight} for all actions and powers. If your {presence} is removed as if it were {blight}, if there is room, it is
+        returned to the growth track, otherwise it is destroyed.
+        <br><br>
+        Adding blight during growth does not remove your {presence} or cause cascades.
+      </special-rule>
+      <special-rules-subtitle>Pollution Proliferates</special-rules-subtitle>
+      <special-rule>
+        Once per round, if your {presence} would be destroyed from adding {blight}, you can push up to 1 of those {presence} instead.
+      </special-rule>
+      <special-rules-subtitle>Profusion of Waste</special-rules-subtitle>
+      <special-rule>
+        During growth, if the island is blighted, you gain +1 energy.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;custom(Remove 1 blight from one of your lands,blight)"></growth-group>
+        <growth-group values="add-presence(3,blight);gain-energy(1);"></growth-group>
+        <growth-group values="add-presence(2);gain-power-card;gather(blight)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,1,2,earth,air,3">
+        </energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant,3,4,5">
+        </card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Poisonous Ground" speed="fast" range="0" target="{blight}" target-title="target land">
+          <level threshold="2-earth">
+            1 damage.
+          </level>
+          <level threshold="2-earth,2-air">
+            1 damage per {blight}{earth}.
+          </level>
+          <level threshold="2-earth,4-air">
+            2 damage. If the island is blighted, 1 damage per {blight}{earth}.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Slow Healing" speed="slow" range="1" target="any"
+          target-title="target land">
+          <level threshold="2-earth,1-blight">
+            Add 1 {destroyed-presence}. If you do, remove 1 {blight}.
+          </level>
+          <level threshold="2-plant">
+            Gather 1 {blight}.
+          </level>
+          <level threshold="4-plant,1-air">
+            Gather up to 3 {blight}.
+          </level>
+          <level threshold="5-earth">
+            If the island is blighted, add 1 {blight} to the blight pool from the box.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

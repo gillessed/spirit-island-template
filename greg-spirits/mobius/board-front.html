@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="mobius-ring.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      The Mobius Field
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Single Dimension</special-rules-subtitle>
+      <special-rule>
+        Any capital L with a subscript refers to that land's number on the board. When referring to movement or targeting, Lₛ is the source land, and Lₜ is the target land. Kₓ refers to the number of
+        boards on the board of Lₓ.
+        <br><br>
+        When targeting from land L₁ to L₂, if they are on the same board and L₁ ≠ L₂ the range between those lands is the smallest R such that (|L₁ - L₂| - R = 0 mod K). If L₁ = L₂, but the lands are on different boards,
+        the range between those lands is considered to be 1. You can combine these rules to figure out range to different numbered lands on different boards.
+        <br><br>
+        In lands with your {presence}, adjacency and range of lands for all actions is determined by the above rule instead of the normal board adjacency.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;gain-power-card"></growth-group>
+        <growth-group values="add-presence(3);add-presence(0)"></growth-group>
+        <growth-group values="add-presence(0);gain-card-play;gain-energy(1)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="2,3+sun,air,4,air,5,air">
+        </energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,move-presence(1),sun,move-presence(1),2,move-presence(2),3+fire">
+        </card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Guided Passage" speed="fast" range="0" target="any" target-title="target land">
+          <level threshold="1-sun">
+            For each {air}, move an invader from target land from target land (Lₛ) to another land on the same board (Lₜ) where
+            <br>
+            Lₜ = (Lₛ +/- {presence}ₛ mod Kₛ)
+            <br>
+            You can move up to one {presence} with the invaders.
+          </level>
+          <level threshold="3-sun,3-fire">
+            Repeat this power.
+          </level>
+          <level threshold="4-sun">
+            Lₛ and Lₜ may be on different boards.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Finite Field" speed="slow" range="1" target="any"
+          target-title="target land">
+          <level threshold="0-any">
+            When you use this power, pick a prime number P >= 3.
+          </level>
+          <level threshold="3-sun">
+            Invaders in target land Lₛ and another land on the same board Lₜ each do damage to one another where Lₜ exists on the board and
+            <br>
+            Lₜ . Lₛ = 1 mod P.
+          </level>
+          <level threshold="4-air">
+            Lₛ and Lₜ may be on different boards.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>
