@@ -15,14 +15,14 @@
     <rules>
       For the rest of this turn, swap the land number of target land Lₜ and another land on the same board Lₛ where
       <br>
-      Lₜ = Lₛ mod K/2
+      Lₜ = Lₛ mod K/2 <i>(rounded down)</i>
     </rules>
   </quick-card>
 
   <quick-card speed="fast" cost="2" name="Asymptote" image="blazing.png"
     elements="air,sun" range="none" target="any" target-title="target land" artist-name="Greg Cole">
     <rules>
-      1 damage to X different invaders where X in the minimum range between the source and target land.
+      This power can target any land. 1 damage to X different invaders where X in the shortest range between target land and any of your {presence}.
     </rules>
   </quick-card>
 
@@ -36,7 +36,7 @@
   <quick-card speed="slow" cost="4" name="Rotate" image="deep.png" elements="air,sun,fire,plant,water"
     range="1" target="any" target-title="target board" artist-name="Greg Cole">
     <rules>
-      In each land on target move, move all {presence} from Lₛ to Lₛ + 1 mod K. Then do 1 damage in each land on that board for each of your {presence} in that land.
+      In each land on target board, move all {presence} from Lₛ to Lₛ + 1 mod K on the same board. Then do 1 damage in each land on that board for each of your {presence} in that land.
     </rules>
   </quick-card>
 </body>

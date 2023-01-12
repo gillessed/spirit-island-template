@@ -42,18 +42,20 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Corrupted Land</special-rules-subtitle>
       <special-rule>
-        Your {presence} counts as {blight} for all actions and powers. If your {presence} is removed as if it were {blight}, if there is room, it is
-        returned to the growth track, otherwise it is destroyed.
-        <br><br>
-        Adding blight during growth does not remove your {presence} or cause cascades.
+        Your {presence} counts as {blight} for all actions and powers. The only exception is that it does count as {blight} when it is added to a land. 
+        If your {presence} is removed as if it were {blight}, if there is room, it is returned to the growth track, otherwise it is destroyed.
       </special-rule>
       <special-rules-subtitle>Pollution Proliferates</special-rules-subtitle>
       <special-rule>
-        Once per round, if your {presence} would be destroyed from adding {blight}, you can push up to 1 of those {presence} instead.
+        Once per turn, if your {presence} would be destroyed from adding {blight}, you can push up to 1 of those {presence} instead.
       </special-rule>
       <special-rules-subtitle>Profusion of Waste</special-rules-subtitle>
       <special-rule>
         During growth, if the island is blighted, you gain +1 energy.
+      </special-rule>
+      <special-rules-subtitle>Toxic Biproducts</special-rules-subtitle>
+      <special-rule>
+        Whenever {blight} is added during ravage to a land with your {presence}, it does 2 damage to invaders in that land.
       </special-rule>
     </special-rules-container>
 
@@ -69,8 +71,8 @@
 		-->
       <growth title="Growth (Pick One)">
         <growth-group values="reclaim;custom(Remove 1 blight from one of your lands,blight)"></growth-group>
-        <growth-group values="add-presence(3,blight);gain-energy(1);"></growth-group>
-        <growth-group values="add-presence(2);gain-power-card;gather(blight)"></growth-group>
+        <growth-group values="add-presence(3,blight);gain-energy(1)"></growth-group>
+        <growth-group values="add-presence(1);gain-power-card;custom(Add blight to 1 of your lands,blight)"></growth-group>
       </growth>
 
       <presence-tracks>
@@ -99,7 +101,7 @@
         </quick-innate-power>
         <quick-innate-power name="Slow Healing" speed="slow" range="1" target="any"
           target-title="target land">
-          <level threshold="2-earth,1-blight">
+          <level threshold="2-earth">
             Add 1 {destroyed-presence}. If you do, remove 1 {blight}.
           </level>
           <level threshold="2-plant">
