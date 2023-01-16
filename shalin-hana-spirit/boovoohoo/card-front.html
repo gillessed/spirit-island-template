@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="fast" cost="1" name="Spore Cloud" image="sporecloud-cropped.jpeg"
+    elements="plant,animal" range="1" target="{dahan}" target-title="TARGET LAND"
+    artist-name="WOMBO">
+    <rules>
+      Add 1 {blight}. In target land and every adjacent land, replace each {dahan} with a {wilds}. 
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="2" name="Fungal Bloom" image="fungalbloom-cropped.jpeg"
+    elements="plant,air,moon" range="none" target="{dahan}" target-title="TARGET LAND" artist-name="WOMBO">
+    <rules>
+      Add 1 {wilds} in a land with no {presence}. Destroy all {dahan}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="1" name="Thorny Tendrils" image="thornytendrils-cropped.jpeg" elements="air,plant"
+    range="1" target="{dahan}" target-title="TARGET LAND" artist-name="WOMBO">
+    <rules>
+      All {dahan} in target land and adjacent lands cannot be moved. During <i>Time Passes</i> replace each of these {dahan} with a {wilds}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="2" name="Reconstitute Self" image="reconstitute_self-cropped.jpeg" elements="fire,plant"
+    range="1" target="Any" target-title="TARGET LAND" artist-name="WOMBO">
+    <rules>
+      Gather 1 {wilds}.
+
+      If there are now at least 3 {wilds}. Add 1 of your {destroyed-presence} and remove 3 {wilds}.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

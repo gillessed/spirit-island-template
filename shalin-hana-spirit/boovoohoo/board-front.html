@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="boovoohoo-square.jpeg" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Boovoo'hoo
+    </spirit-name>
+    <artist-name>
+      wombo.art
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Ooze</special-rules-subtitle>
+      <special-rule>
+        During the spirit phase, place 1 {wilds} in a land adjacent to one of your lands. Destroy all {dahan} in that land and add 1 {dahan} in a random adjacent land.
+      </special-rule>
+      <special-rules-subtitle>Mindless Destruction</special-rules-subtitle>
+      <special-rule>
+        Damage dealing powers also damage {dahan}. Generate 1 {fear} per {dahan} destroyed by your powers. <i>(This applies to Ooze special rule.)</i>
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick <u>One</u>)">
+        <growth-group values="reclaim;gain-power-card;move-presence(1)"></growth-group>
+        <growth-group values="add-presence(1);gain-energy(3)"></growth-group>
+        <growth-group values="add-presence(2,dahan);move-presence(1)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="2,animal,3,4,plant,6"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,air,2,3,reclaim-one,4"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Split into Oozemorphs" speed="fast" 
+        range="0" target="Any" target-title="TARGET LAND">
+          <level threshold="2-plant,1-moon">
+            Remove 1 of your {presence}. Add 1 {dahan} per {wilds}.
+          </level>
+          <level threshold="3-plant,2-air">
+            Push all {dahan}.
+          </level>
+          <level threshold="4-plant,3-air">
+            For each {dahan} pushed by this power, remove up to 1 health of Invaders.
+          </level>
+          <level threshold="5-plant">
+            Repeat this power.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Splitting Slime" speed="slow" 
+        range="none" target="Self" target-title="TARGET SPIRIT">
+          <level threshold="1-plant,1-water">
+            In one of your lands with {dahan}, add 1 {dahan}.
+          </level>
+          <level threshold="3-plant,2-water">
+            In one of your lands with 2 or more {dahan}, add 1 {dahan}.
+          </level>
+          <level threshold="5-plant,2-water,1-animal">
+            In one of your lands with 3 or more {dahan}, add 1 {dahan}.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

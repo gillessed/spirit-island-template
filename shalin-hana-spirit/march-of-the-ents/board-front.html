@@ -42,12 +42,13 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Destroyers and Usurpers, curse them!</special-rules-subtitle>
       <special-rule>
-        Place {destroyed-presence} here. When your {presence} is moved, in the land it goes to:
+        <!-- Place {destroyed-presence} here.  -->
+        When your {presence} is moved, in the land it goes to:
         <ul>
-            <li>Do 1 damage for every 2 {destroyed-presence}, round up.</li>
+            <li>Do damage equal to the highest uncovered number on your Energy track.</li>
             <li>Push all {dahan} / {explorer}.</li>
         </ul>
-        <special-rules-track values="0,1,1,2,2,3,3,4,4,5,5,6"></special-rules-track>
+        <!-- <special-rules-track values="0,1,1,2,2,3,3,4,4,5,5,6"></special-rules-track> -->
       </special-rule>
       <special-rules-subtitle>Shepherd of the trees</special-rules-subtitle>
       <special-rule>
@@ -81,8 +82,8 @@
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,1,2,plant,3,3"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+plant,air,3,3,plant,4"></card-play-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,1,1,2,plant,2,3,4"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+water,air,3,plant,plant"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
