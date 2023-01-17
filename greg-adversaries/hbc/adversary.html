@@ -14,7 +14,8 @@
 	>
 	<loss-condition
 	name="Successfully Conquering the Island"
-	rules="Whenever 1 or more {dahan} are destroyed by a ravage action, place 1 {dahan} on this card. If there are more {dahan} on this card than players, or any board has no {dahan}, the invaders win."
+	rules="Whenever 1 or more {dahan} are destroyed by a ravage action, place 1 {dahan} on this card. If there are more {dahan} on this card than players, or any board has no {dahan}, the invaders win.
+	This does not count {dahan} who were destroyed while ravagin with the invaders."
 	></loss-condition>
 
 	<escalation-effect
@@ -24,30 +25,31 @@
 
 	<level-1
 	difficulty="2"
-	fear-cards="4/3/3"
-	name="Pillage the Dahan for their Wares"
-	rules="Lands with {town}/{city} do +1 damage per {dahan} in that land (total for the land)."
+	fear-cards="3/3/3"
+	name="Turn the Dahan Against Themselves"
+	rules="When invaders ravage in a land with {dahan}, if there are at least as many invaders as {dahan}, 1 {dahan} deals and receives damage with the invaders. If damage would be dealt
+	to the invaders, it must be dealt to the {dahan} fighting with them first."
 	></level-1>
 
 	<level-2
 	difficulty="3"
 	fear-cards="4/3/3"
-	name="Unfair Trade Agreements"
-	rules="When invaders build in a land, gather 1 {dahan} from an adjacent land not matching a ravage card. If you cannot, build again."
+	name="Establishing Dominions"
+	rules="Lands with {town}/{city} do +1 damage per {dahan} in that land (total for the land)"
 	></level-2>
 
 	<level-3
 	difficulty="6"
-	fear-cards="4/3/3"
-	name="Turn the Dahan Against Themselves"
-	rules="Lands with 4 or more {dahan} match the ravage card regardless of the land type. When ravaging in these lands, if they have no invaders, each {dahan} does 1 damage to the land."
+	fear-cards="4/4/3"
+	name="Unfair Trade Agreements"
+	rules="When invaders build in a land, gather 1 {dahan} from an adjacent land not matching a ravage card. If you cannot, build again."
 	></level-3>
 	
 	<level-4
 	difficulty="6"
 	fear-cards="4/4/4"
 	name="Build on Conquered land"
-	rules="After setup, when invaders succesfully explored into a land with {dahan}, add 1 {town} to one of those lands."
+	rules="After setup, after the normal explore step, if invaders successfully explored into a land with {dahan}, add 1 {town} to one of those lands."
 	></level-4>
 	
 	<level-5
