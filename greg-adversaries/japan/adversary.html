@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="America"
+    base-difficulty="2"
+    flag-image="./japan-flag.png"
+	>
+	<loss-condition
+	name="e"
+	rules=""
+	></loss-condition>
+
+	<escalation-effect
+	name="Conquering the North"
+	rules="On each board, add {explorer} in a land with no invaders."
+	></escalation-effect>
+
+	<level-1
+	difficulty="2"
+	fear-cards="3/3/3"
+	name="Spirit of the Bushi"
+	rules="When an invader is the only invader in its land, it does +2 damage in that land. When invaders build in a land, push 1 {explorer} from that land to a land not matching a build card."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="3/4/4"
+	name="Shoreline Castles"
+	rules="After setup, on each board, add {town} to land #1 and land #3."
+	></level-2>
+
+	<level-3
+	difficulty="6"
+	fear-cards="3/4/4"
+	name="Local Daimyos"
+	rules="If an invader is alone in a land, and there are at least 2 adjacent buildings, that land matches the ravage card."
+	></level-3>
+	
+	<level-4
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="The Duel"
+	rules="When invaders ravage in a land alone, at most 1 {dahan} can participate in that ravage."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="4/4/4"
+	name="Sengoku Jidai"
+	rules="If {dahan} are moved into a land, if the land has 3 or more {dahan}, add {town} to that land. If there are 6 or more {dahan}, instead add 1 {city}."
+	></level-5>
+	
+	<level-6
+	difficulty="11"
+	fear-cards="4/5/4"
+	name="Kamikaze"
+	rules="If {explorer} ravages in a land alone, if there is at least 2 {presence} in that land, if {blight} was not added from the ravage, add 1 {blight} and destroy the {explorer}, and generate 1 {fear}."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>
