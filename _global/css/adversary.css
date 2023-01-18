@@ -275,3 +275,7 @@ icon.oil {
 icon.wendigo {
   background-image: url('../images/wendigo.png')
 }
+
+icon.gold {
+  background-image: url('../images/gold-token.png');
+}

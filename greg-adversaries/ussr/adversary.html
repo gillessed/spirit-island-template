@@ -19,49 +19,49 @@
 
 	<escalation-effect
 	name="The Comrade effect"
-	rules="After the explore step, on each board, add 1 {explorer} and 1 {town} to a land with {dahan} and no invaders."
+	rules="On each board, add 1 {explorer} with {dahan} and no invaders."
 	></escalation-effect>
 
 	<level-1
 	difficulty="2"
 	fear-cards="3/4/4"
 	name="Seizing the Means of Production"
-	rules="After the Build step, invaders build in a land adjacent to a land they succesfully built in. This affects lands without invaders."
+	rules="After the normal build step, add an {explorer} to a land with no invaders adjacent to a land where invaders successfully built."
 	></level-1>
 
 	<level-2
 	difficulty="3"
 	fear-cards="3/4/5"
 	name="For the Motherland"
-	rules="When invaders build a {city} in any land, push all {explorer} from the land to as many different adjacent lands as possible."
+	rules="For each board, if invaders built {city} during the normal build step, the level 1 rule triggers a second time."
 	></level-2>
 
 	<level-3
 	difficulty="5"
 	fear-cards="3/4/5"
 	name="Rapid Industrialization"
-	rules="During setup, perform a second additional explore action. Once during this explore action, add a {town} instead of an {explorer}."
+	rules="During setup, perform an additional explore action."
 	></level-3>
 	
 	<level-4
 	difficulty="6"
 	fear-cards="4/4/5"
-	name="Disposable populace"
-	rules="Whenever {town}/{city} are destroyed, for every 3 health of invaders destroyed (round up), add 1 {explorer} in an adjacent land, with no invaders if possible."
+	name="Disposable Populace"
+	rules="Whenever a {city} is destroyed, add 1 {explorer} in an adjacent land, with no invaders if possible."
 	></level-4>
 	
 	<level-5
 	difficulty="8"
 	fear-cards="4/5/5"
-	name="Corrupted dictators"
-	rules="During ravage, if a land matches the ravage card, and has no invaders on it, add {blight} and {explorer} to that land if it is adjacent to {town}/{city}."
+	name="Corrupt Dictators"
+	rules="During ravage, if a land matches the ravage card, and has no invaders on it, add {explorer} to that land if it is adjacent to {town}/{city}."
 	></level-5>
 	
 	<level-6
 	difficulty="10"
 	fear-cards="4/4/5"
 	name="Gulags"
-	rules="For the above rules and event cards (including pushing and gathering), invaders are considered adjacent to a land if they are up to range 2 away."
+	rules="When invaders build a {city} in a land, destroy 1 {presence} from each spirit in that land."
 	></level-6>
   </quick-adversary>
 
