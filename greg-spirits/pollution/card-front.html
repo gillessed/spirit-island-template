@@ -13,9 +13,9 @@
     elements="earth,air" range="none" target="another {spirit}" target-title="target spirit"
     artist-name="Greg Cole">
     <rules>
-      Target spirit gets +1 damage to all damage dealing powers target lands with {blight} this turn.
+      Target spirit gets +2 damage to all damage dealing powers that target lands with {blight} this turn.
       <or>
-      If the island is blighted, target spirit may add up to 3 {destroyed-presence} in a land with {blight}. 1 damage in target land.
+      If the island is blighted, target spirit may add up to 3 {destroyed-presence} in a land with {blight}. Remove 1 {blight} from that land.
     </rules>
   </quick-card>
 
@@ -23,13 +23,15 @@
     elements="earth" range="0" target="ANY" target-title="target land" artist-name="Greg Cole">
     <rules>
       {blight} does not cascade when added to target land this turn.
+      <br>
+      You may pay 1 energy to repeat this power in an adjacent land.
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="2" name="Wave of Vitriol" image="vitriol-image.png" elements="earth,air"
+  <quick-card speed="slow" cost="2" name="Wave of Vitriol" image="vitriol-image.png" elements="earth,air,plant"
     range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
     <rules>
-      Gather up to 3 {blight}. 1 damage per {blight} gathered.
+      1 damage per {blight} <i>(max 6)</i>.
     </rules>
   </quick-card>
 

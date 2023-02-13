@@ -42,8 +42,7 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Corrupted Land</special-rules-subtitle>
       <special-rule>
-        Your {presence} counts as {blight} for all actions and powers. The only exception is that it does count as {blight} when it is added to a land. 
-        If your {presence} is removed as if it were {blight}, if there is room, it is returned to the growth track, otherwise it is destroyed.
+        Your {presence} counts as {blight} for all spirit powers (not growth). When {blight} is added to a land with your {presence}, it cascades.
       </special-rule>
       <special-rules-subtitle>Pollution Proliferates</special-rules-subtitle>
       <special-rule>
@@ -51,7 +50,7 @@
       </special-rule>
       <special-rules-subtitle>Profusion of Waste</special-rules-subtitle>
       <special-rule>
-        During growth, if the island is blighted, you gain +1 energy.
+        When the island becomes blighted, immediately gain a minor power. During growth, if the island is blighted, you gain +1 energy.
       </special-rule>
       <special-rules-subtitle>Toxic Biproducts</special-rules-subtitle>
       <special-rule>
@@ -70,13 +69,13 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;custom(Remove 1 blight from one of your lands,blight)"></growth-group>
-        <growth-group values="add-presence(3,blight);gain-energy(1)"></growth-group>
-        <growth-group values="add-presence(1);gain-power-card;custom(Add blight to 1 of your lands,blight)"></growth-group>
+        <growth-group values="reclaim;custom(Replace 1 blight in one of your lands with your presence,blight)"></growth-group>
+        <growth-group values="add-presence(4,blight);gain-energy(1)"></growth-group>
+        <growth-group values="add-presence(1);gain-power-card;custom(Add 1 blight to a land adjacent to your presence,blight)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,1,2,earth,air,3">
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,earth,2,earth,air,3,earth">
         </energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant,3,4,5">
         </card-play-track>
@@ -101,16 +100,16 @@
         </quick-innate-power>
         <quick-innate-power name="Slow Healing" speed="slow" range="1" target="any"
           target-title="target land">
-          <level threshold="2-earth">
-            Add 1 {destroyed-presence}. If you do, remove 1 {blight}.
+          <level threshold="1-plant">
+            Add 1 {destroyed-presence}. Remove 1 {blight}.
           </level>
           <level threshold="2-plant">
             Gather 1 {blight}.
           </level>
           <level threshold="4-plant,1-air">
-            Gather up to 3 {blight}.
+            Gather up to 2 {blight}.
           </level>
-          <level threshold="5-earth">
+          <level threshold="6-earth">
             If the island is blighted, add 1 {blight} to the blight pool from the box.
           </level>
         </quick-innate-power>
