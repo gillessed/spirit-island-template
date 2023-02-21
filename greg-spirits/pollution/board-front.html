@@ -43,6 +43,8 @@
       <special-rules-subtitle>Corrupted Land</special-rules-subtitle>
       <special-rule>
         Your {presence} counts as {blight} for all spirit powers (not growth). When {blight} is added to a land with your {presence}, it cascades.
+        <br><br>
+        This can allow powers to remove your blight and put your {presence} into the blight pool. The next time {blight} is added to the island, your {presence} can be added instead, but it does count as {blight} when this happens.
       </special-rule>
       <special-rules-subtitle>Pollution Proliferates</special-rules-subtitle>
       <special-rule>
@@ -75,7 +77,7 @@
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,earth,2,earth,air,3,earth">
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,earth,2,air,earth,3,earth">
         </energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant,3,4,5">
         </card-play-track>
@@ -89,25 +91,28 @@
       <innate-powers>
         <quick-innate-power name="Poisonous Ground" speed="fast" range="0" target="{blight}" target-title="target land">
           <level threshold="2-earth">
-            1 damage.
+            1 damage. If the island is blighted, 1 damage.
           </level>
           <level threshold="2-earth,2-air">
             1 damage per {blight}{earth}.
           </level>
+          <level threshold="5-earth,2-air">
+            2 damage.
+          </level>
           <level threshold="2-earth,4-air">
-            2 damage. If the island is blighted, 1 damage per {blight}{earth}.
+            If the island is blighted, 1 damage per {blight}{earth}.
           </level>
         </quick-innate-power>
         <quick-innate-power name="Slow Healing" speed="slow" range="1" target="any"
           target-title="target land">
           <level threshold="1-plant">
-            Add 1 {destroyed-presence}. Remove 1 {blight}.
+            Gather up to 1 {blight}.
           </level>
-          <level threshold="2-plant">
-            Gather 1 {blight}.
+          <level threshold="2-plant,1-air">
+            Gather up to 1 {blight} per {plant}.
           </level>
-          <level threshold="4-plant,1-air">
-            Gather up to 2 {blight}.
+          <level threshold="3-air">
+            This power has {gain-range-1}.
           </level>
           <level threshold="6-earth">
             If the island is blighted, add 1 {blight} to the blight pool from the box.
