@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="fast" cost="1" name="Sudden Surge" image="surge-image.png"
+    elements="fire,water" range="2" target="any" target-title="target land"
+    artist-name="Greg Cole">
+    <rules>
+      If the land has no pressure token, add 1 pressure counter.
+      <br>
+      Add 1 pressure counter. Gather up to 1 {presence}.
+      <br>
+      If the target land is not the origin land, add 1 pressure counter.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="0" name="Signs of Buildup" image="signs-image.png"
+    elements="earth,fire,air" range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
+    <rules>
+      For each pressure token, 1 {fear} <i>(max 5)</i> and push up to 1 {explorer}/{town}/{dahan}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="1" name="Harmful Environment" image="vapors-image.png" elements="water,air,plant"
+    range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
+    <rules>
+      For every 2 pressure tokens in target land, add {wilds}/{disease}.
+    </rules>
+    <threshold condition="2-air">
+      You may push up to 2 tokens added.
+    </threshold>
+  </quick-card>
+
+  <quick-card speed="slow" cost="1" name="Dormant Vents Awake" image="recycle-image.png" elements="earth,fire,water"
+    range="2" target="ANY" target-title="target land" artist-name="Greg Cole">
+    <rules>
+      This power must target a land with a pressure token.
+      <br>
+      Add up to 1 {destroyed-presence}. 1 damage. 1 damage if the land has at least 3 pressure tokens.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

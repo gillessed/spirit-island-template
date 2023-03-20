@@ -13,16 +13,16 @@
     elements="plant,moon,earth" range="0" target="any" target-title="target land"
     artist-name="GREG COLE">
     <rules>
-      Add a scenario token to a land without one. You may target lands outside of the world tree with this power.
+      Push 1 of your {presence}. In the land pushed to, gather 1 {explorer}/{town}.
     </rules>
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="The World Tree's Boon" image="boon.jpg"
-    elements="air,water" range="none" target="another {spirit}" target-title="target spirit" artist-name="GREG COLE">
+    elements="air,water" range="none" target="another {spirit}" target-title="target land" artist-name="GREG COLE">
     <rules>
-      If target spirit has {presence} in the world tree, they gain 2 energy.
+      Target spirit with {presence} in target land gains 2 energy.
       <br>
-      They may pay X energy to move X {explorer}/{town} from one of their lands to the World Tree land.
+      That spirit may pay X energy to move X {explorer}/{town} to target land.
     </rules>
     <threshold condition="4-air">
       Target spirit may also move {city} with this power.
@@ -32,14 +32,14 @@
   <quick-card speed="fast" cost="0" name="The Tree's Vast Lands" image="vast-lands.png" elements="sun,plant,moon"
     range="none" target="any {spirit}" target-title="target spirit" artist-name="GREG COLE">
     <rules>
-      Each spirit with {presence} in the world tree gains 1 energy for each different spirit's {presence} in the world tree.
+      Each spirit with {presence} in your lands gains 1 energy for each spirit that isn't you with {presence} in your lands.
     </rules>
   </quick-card>
 
   <quick-card speed="fast" cost="1" name="The Trees Move Silently" image="silent.png" elements="moon,sun,plant,air"
     range="none" target="YOURSELF" target-title="TARGET SPIRIT" artist-name="GREG COLE">
     <rules>
-      You may push a scenario token from the world tree to an adjacent land. Any tokens and markers in the world tree remain within the world tree, and should be moved accordingly.
+      Push 1 of your {presence}. In the land pushed to, gather 1 {explorer}/{town}.
     </rules>
   </quick-card>
 </body>

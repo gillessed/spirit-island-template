@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="pollution-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Pressure Builds in the Earth
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Slow Buildup</special-rules-subtitle>
+      <special-rule>
+        Lands with your {presence} can have pressure tokens placed on them. Track this with energy or dice, or a custom game token. If your {presence} is removed from a land,
+        the pressure tokens remain on the land.
+        <br><br>
+        If a invaders ravage in a land with your {presence}, add a pressure token to the land.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;custom(Remove a pressure token from one of your lands,presence);gain-energy(1)"></growth-group>
+        <growth-group values="add-presence(2);add-presence(2)"></growth-group>
+        <growth-group values="add-presence(1);gain-power-card;custom(Add 1 blight to a land adjacent to your presence,blight)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,water,fire,2,fire,water,3">
+        </energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,3,reclaim-one,4,5,reclaim-one">
+        </card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Geothermal Activity" speed="fast" range="1" target="any" target-title="target land">
+          <level threshold="1-fire,2-water">
+            Add 1 pressure token. 1 {fear} if invaders are present.
+          </level>
+          <level threshold="2-fire,3-water">
+            Repeat this power.
+          </level>
+          <level threshold="3-fire,4-water,1-air">
+            Repeat this power.
+          </level>
+          <level threshold="4-fire,5-water,3-air">
+            Repeat this power.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="The Land Releases Its Energy" speed="slow" range="0" target="any"
+          target-title="target land">
+          <level threshold="3-fire,1-water">
+            For each pressure token in target land, do 1 damage. Remove all pressure tokens. Destroy 1 of your {presence} and 1 {dahan}.
+          </level>
+          <level threshold="6-fire,4-water,2-earth">
+            1 damage for each adjacent land with at least 2 pressure tokens.
+          </level>
+          <level threshold="4-earth">
+            In each adjacent land with at least 2 pressure tokens, 1 damage per pressure token. Remove 1 pressure token from each of those lands.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

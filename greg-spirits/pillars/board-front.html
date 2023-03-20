@@ -87,7 +87,7 @@
           </level>
           <level threshold="0-any">
             If you have at least two adjacent lands each with a different height, gain 1
-            energy. If you have four such lands, instead gain 2 energy.
+            energy. If you have four such lands, instead gain 2 energy. This energy can only be used to play major powers using "The Pillars Align".
           </level>
           <level threshold="0-any">
             Gather all {presence} from one adjacent land with your {presence} into target land. You may add or remove 1 from
@@ -98,12 +98,13 @@
           target-title="target land" note="This power cannot target the same land as Awe and Wonder.">
           <level threshold="0-any">
             If you have at least three adjacent lands each with a different height, you may play your saved major power cards now
-            by paying its cost, targeting the same land as this power, regardless of targeting restrictions, but resolve it during the approriate phase
+            by paying its cost, targeting the same land as this power, regardless of targeting restrictions. One of your adjacent lands must have height >= the card cost.
+            You still resolve it during the normal phase of the power card.
           </level>
           <level threshold="0-any">
-            In one adjacent land with your {presence}, you may add or remove the cost of the major power played from the height
-            of that land. If that land has {sacred-site}, instead adjust by any number between 0 and the power's cost. If you did not resolve a
-            major power card, instead adjust by 1.
+            In one adjacent land with your {presence}, you may adjust the height of that land by the cost of the major power played.
+            If that land has {sacred-site}, instead adjust by any number between 0 and the power's cost.
+            If you did not resolve a major power card, instead adjust by 1.
           </level>
         </quick-innate-power>
       </innate-powers>

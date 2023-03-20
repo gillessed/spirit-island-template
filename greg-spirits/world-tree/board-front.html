@@ -42,10 +42,12 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>Bound by the Deepest Roots</special-rules-subtitle>
       <special-rule>
-        Your powers allow you to place scenario tokens on lands. All lands with scenario tokens are considered part of the world tree, and the same land. That composite land is considered the
-        union of all constituent land types. These constituent lands need not be adjacent on the board. The world tree land can be considered both coastal and inland if its constituent lands are both.
+        Any powers that target your lands that grants defense, does damage or gathers/pushes invaders, or adds or removes tokens, must instead do so as evenly
+        as possible between all of you lands, but broken up into integer chunks. For example, if you wouldgrant defend 7 to one of your lands, if you have 4 lands, you must grant defend
+        2 to 3 of your lands, and defend 1 to the other. If you card has an effect based on the number of invaders, for example, 1 damage to each invader, instead you must total that up first,
+        and then divide the effect between your lands.
         <br><br>
-        Your powers cannot target lands that aren't are part of the world tree unless otherwise specified.
+        Your powers can never target lands without your {presence}.
       </special-rule>
       <special-rules-subtitle>Thriving Ecosystem</special-rules-subtitle>
       <special-rule>
@@ -80,29 +82,33 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="The Roots Cradle the Earth" speed="fast" range="0" target="any" target-title="target land" note="This power can only target the world tree land.">
+        <quick-innate-power name="Deep Connection" speed="fast" range="0" target="any" target-title="target land" note="This power can only target the world tree land.">
           <level threshold="2-plant,2-moon">
-            Defend 1 per constituent land in the world tree.
+            Choose another target land with your {presence}. Defend 1 in each of those lands. All damage invaders would do during ravage in any of those lands is instead totalled up and divided as equally as possible among
+            the two target lands. All damage that {dahan} do in each of those lands is also totalled up and divided evenly between the target lands.
           </level>
           <level threshold="4-plant,3-moon">
-            Defend 2 per different spirit's {presence} in the world tree.
+            Instead, choose two other target lands.
           </level>
-          <level threshold="4-plant,3-water,1-earth">
-            1 damage per constituent land in the world tree.
+          <level threshold="5-plant,3-moon,1-water">
+            Instead, choose three other target lands.
           </level>
-          <level threshold="5-plant,4-air">
-            2 damage per different spirit's {presence} in the world tree.
+          <level threshold="3-plant,1-water,4-earth">
+            Defend 1 in each of the targeted lands.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="target land"  note="This power can only target the world tree land.">
+        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="target land"  note="Each use of this power can be targeted separately.">
           <level threshold="1-air">
             Gather 1 {explorer}
           </level>
           <level threshold="2-air">
-            Gather 1 {town}
+            Gather 1 {explorer}/{town}
           </level>
-          <level threshold="3-air">
-            Gather 1 {city}
+          <level threshold="3-air,1-earth">
+            Gather 1 {town}/{city}
+          </level>
+          <level threshold="4-air,4-earth">
+            Gather up to 3 invaders.
           </level>
         </quick-innate-power>
       </innate-powers>
