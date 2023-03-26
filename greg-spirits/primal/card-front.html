@@ -9,21 +9,22 @@
 
 <body>
 
-  <quick-card speed="slow" cost="2" name="Rage Amongst the Invaders" image="rage.png"
+  <quick-card speed="slow" cost="1" name="A Great Battle Unfolds" image="rage.png"
     elements="animal" range="2" target="any" target-title="target land"
-    artist-name="GREG COLE">
+    artist-name="Greg Cole">
     <rules>
-      Gather up to 2 {explorer}.
+      Gather up to 1 {explorer}.
       Gather up to 1 {town}.
       Gather up to 1 {beast}.
+      Gather up to 2 {dahan}
     </rules>
-    <threshold condition="2-fire,1-sun">
+    <threshold condition="2-air">
       Gather 1 {city}.
     </threshold>
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="The Scarred Land Fights Back" image="scarred.png"
-    elements="animal,plant" range="2" target="{blight}" target-title="target land" artist-name="GREG COLE">
+    elements="animal,plant" range="2" target="{blight}" target-title="target land" artist-name="Greg Cole">
     <rules>
       Remove 1 {blight}. You may add a destroyed {presence} to target land.
     </rules>
@@ -33,16 +34,16 @@
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="Ritual Worship" image="ritual.png" elements="animal,fire"
-    range="1" target="any" target-title="target land" artist-name="GREG COLE">
+    range="1" target="{dahan}" target-title="target land" artist-name="Greg Cole">
     <rules>
-      If target land has {dahan}, add 1 {dahan}.
+      Add 1 {dahan}.
       <br>
       Push up to 4 {dahan}.
     </rules>
   </quick-card>
 
   <quick-card speed="fast" cost="2" name="Tame the Beasts" image="tame.png" elements="animal,air"
-    range="1" target="{dahan}" target-title="target land" artist-name="GREG COLE">
+    range="1" target="{dahan}" target-title="target land" artist-name="Greg Cole">
     <rules>
       Add 1 {beast} and gather 1 {presence} into target land.
     </rules>

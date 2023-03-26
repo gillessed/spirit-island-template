@@ -10,24 +10,27 @@
 <body>
 
     <board>
-        <img class="spirit-image" src="pollution-image.png" />
+        <img class="spirit-image" src="venerable-ancient.png" />
         <spirit-name>
-            Pressure Builds in the Earth
+            Venerable Ancient Passes on Knowledge
         </spirit-name>
         <lore-description>
-            Heat from the planet's core constantly heats up pressurized pockets of water, blowing up in steam vents that cause havoc among the invaders.
+            Some spirits have been on the island for as long as anyone can remember. They may haved waned in power, but are wise an knowledge and can aid their younger brethren to fend off the invaders.
         </lore-description>
         <second-section-container>
             <setup>
                 <setup-title>SETUP:</setup-title>
                 <setup-description>
-                    Put 1 {presence} in the highest numbered mountain on your starting board. Add 1 pressure token to that land.
+                    You have only 1 unique power. During setup, draw 12 minor powers, and 1 major power, and begin the game with them in your hand. You begin
+                    the game with all 13 of your {presence} on your board, distributed in any way you like. Your growth options require you to
+                    instead return {presence} to your tracks. As you do, you return them to the left-most slot with a value, and the current
+                    value of your growth tracks is the left-most uncovered value.
                 </setup-description>
             </setup>
             <play-style>
                 <play-style-title>Play Style:</play-style-title>
                 <play-style-description>
-                    Slowly builds up to cause lots of small pockets of damage.
+                    Supports other spirits with its diversity of powers.
                 </play-style-description>
             </play-style>
         </second-section-container>
@@ -36,13 +39,13 @@
 			<!-- "value" is used to size the red box 								-->
 			<!-- "descriptor" is the text inside the red box 						-->
 			<!-- Official complexity descriptors: Low, Moderate, High, Very High 	-->
-            <complexity value="4" descriptor="Height"></complexity>
+            <complexity value="4" descriptor="High"></complexity>
 
 			<!-- SUMMARY OF POWERS 													-->
 			<!-- "values" will be used to size the colored boxes (roughly 1-10)		-->
 			<!-- "uses" will note tokens used by the spirit							-->
 			<!-- The order of values: offense, control, fear, defense, utility		-->
-            <summary-of-powers values="6,3,3,1,2"></summary-of-powers>
+            <summary-of-powers values="5,6,4,2,2" uses="invaders"></summary-of-powers>
 
         </third-section-container>
     </board>

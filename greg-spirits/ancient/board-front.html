@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="faith-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Venerable Ancient Passes on Knowledge
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Knowledge Pool</special-rules-subtitle>
+      <special-rule>
+        Whenever time passes, put all non-unique powers played into your knowledge pool instead of your discard. Whenever another spirit gains a power card,
+        if they have {presence} in one of your lands, they may gain a specific card from your knowledge pool instead. If that power
+        is a major power card, they may gain it without forgetting a card if they pay 2 energy.
+      </special-rule>
+      <special-rules-subtitle>Growing Old</special-rules-subtitle>
+      <special-rule>
+        Whenever an action allows you to add {presence} from your track, you may instead return {presence} from the board to one of
+        your tracks.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick Two)">
+        <growth-group values="reclaim"></growth-group>
+        <growth-group values="gain-element(sun)"></growth-group>
+        <growth-group values="gain-element(moon)"></growth-group>
+        <growth-group values="custom(Return Presence To Track,presence)"></growth-group>
+        <growth-group values="custom(Draw 2 minor power - 1 in your hand - 1 in your knowledge pool,gain-card-play)"></growth-group>
+        <growth-group values="custom(Draw 1 major power and put it in your knolwedge pool,gain-card-play)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2,sun+moon,3,4,sun+moon,gain-card-play"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="2,3,sun+moon,4,5,sun+moon,6"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Spring Into Action Once Again" speed="fast" range="none" target="self" target-title="target spirit" note="As a cost to use this ability, you must remove 2 {presence} from your track from the game. Cards played with this power are forgotten when time passes.">
+          <level threshold="1-moon,1-sun">
+            You may play a power card from your knowledge pool without paying its cost.
+          </level>
+          <level threshold="3-moon,3-sun">
+            Repeat this power.
+          </level>
+          <level threshold="5-moon,5-sun">
+            Repeat this power.
+          </level>
+          <level threshold="7-moon,7-sun">
+            Repeat this power.
+          </level>
+          <level threshold="9-moon,9-sun">
+            Repeat this power.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

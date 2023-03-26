@@ -20,27 +20,30 @@
   <quick-card speed="slow" cost="1" name="The World Tree's Boon" image="boon.jpg"
     elements="air,water" range="none" target="another {spirit}" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Target spirit with {presence} in target land gains 2 energy.
+      A spirit with {presence} in target land gains 2 energy.
       <br>
-      That spirit may pay X energy to move X {explorer}/{town} to target land.
+      That spirit may pay X energy to move X {explorer}/{town} from one of their lands to target land.
     </rules>
-    <threshold condition="4-air">
-      Target spirit may also move {city} with this power.
+    <threshold condition="3-air">
+      That spirit may also move {city} with this power.
     </threshold>
   </quick-card>
 
-  <quick-card speed="fast" cost="0" name="The Tree's Vast Lands" image="vast-lands.png" elements="sun,plant,moon"
+  <quick-card speed="fast" cost="0" name="The Tree's Vast Power" image="vast-lands.png" elements="sun,plant,moon"
     range="none" target="any {spirit}" target-title="target spirit" artist-name="GREG COLE">
     <rules>
-      Each spirit with {presence} in your lands gains 1 energy for each spirit that isn't you with {presence} in your lands.
+      Each spirit with {presence} in your lands gains 1 energy. You gain 2 energy.
     </rules>
   </quick-card>
 
-  <quick-card speed="fast" cost="1" name="The Trees Move Silently" image="silent.png" elements="moon,sun,plant,air"
-    range="none" target="YOURSELF" target-title="TARGET SPIRIT" artist-name="GREG COLE">
+  <quick-card speed="slow" cost="1" name="The Trees  Silently" image="silent.png" elements="moon,sun,plant,air"
+    range="0" target="any" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Push 1 of your {presence}. In the land pushed to, gather 1 {explorer}/{town}.
+      Push {explorer}/{town}.
     </rules>
+    <threshold condition="2-earth">
+      Instead, push 3 {explorer}/{town}.
+    </threshold>
   </quick-card>
 </body>
 

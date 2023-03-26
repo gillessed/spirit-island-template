@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="faith-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      Betrayed by Faith in the Spirits
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Conversion</special-rules-subtitle>
+      <special-rule>
+        Your abilities can convert enemy invaders to your side. Enemies that are converted only remain so as long as they are in lands with your {presence}. Whenever an action moves
+        invaders, it can move both normal and corrupted invaders. Whenever corrupted invaders move out of your lands, you can move up to 1 {presence} per invader with them. Converted
+        invaders do still count towards win conditions, and still generate fear when destroyed.
+      </special-rule>
+      <special-rule>
+        During ravage, converted invaders do damage at the same time as normal invaders. If there are no normal invaders in the land, converted invaders do damage as
+        normal to the land and {dahan}, and are counterattacked. If there are normal invaders in the land, the corrupted invaders only do damage to the normal invaders in
+        the land. The normal invaders in that land do damage to the land, but the damage they would do to {dahan} is first dealt to corrupted invaders, and then.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;gain-power-card"></growth-group>
+        <growth-group values="add-presence(4,invaders);custom(Add converted explorer to one of your lands,explorer)"></growth-group>
+        <growth-group values="add-presence(1);gain-energy(2)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,animal,2,fire,3,animal,4"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,3+air,4,5,air+reclaim-one"></card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Touched by Faith" speed="fast" range="1" target="any" target-title="target land">
+          <level threshold="2-animal,1-sun">
+            Gather up to one of your {presence}. Convert 1 {explorer}.
+          </level>
+          <level threshold="3-animal,1-sun">
+            Convert 1 {town}.
+          </level>
+          <level threshold="5-animal,1-sun">
+            Convert 1 {town}.
+          </level>
+          <level threshold="1-air">
+            Push up to 1 converted invader per {air}.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Inquisition" speed="slow" range="0" target="any" target-title="target land">
+          <level threshold="2-fire">
+            If you have at least 1 converted {town} in target land, destroy up to 2 {explorer}.
+          </level>
+          <level threshold="3-fire">
+            If you have at least 2 converted {town} in target land, destroy up to 1 {town}.
+          </level>
+          <level threshold="5-fire">
+            If you have at least 3 converted {town} in target land, destroy up to 2 {town}/{city}.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>

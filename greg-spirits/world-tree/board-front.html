@@ -51,7 +51,7 @@
       </special-rule>
       <special-rules-subtitle>Thriving Ecosystem</special-rules-subtitle>
       <special-rule>
-        If blight would be place in the world tree land, you may forget a power card to have it be placed in an adjacent land.
+        If blight would be place in one of your lands, you may forget a power card to have it be placed in an adjacent land.
       </special-rule>
     </special-rules-container>
 
@@ -66,14 +66,14 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-power-card;gain-power-card"></growth-group>
+        <growth-group values="reclaim;gain-power-card"></growth-group>
         <growth-group values="add-presence(1);add-presence(1)"></growth-group>
         <growth-group values="add-presence(4);gain-energy(2);gain-element(plant,moon,and)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="0,air,1,water,2,plant+air"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,plant,3,+1,4,5"></card-play-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,air,2+earth,moon,3,plant+air"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2+plant,plant,3,+1,4,5"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  
@@ -97,12 +97,12 @@
             Defend 1 in each of the targeted lands.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="target land"  note="Each use of this power can be targeted separately.">
+        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="target land" note="For this power, all of your lands are considered adjacent to one another.">
           <level threshold="1-air">
             Gather 1 {explorer}
           </level>
           <level threshold="2-air">
-            Gather 1 {explorer}/{town}
+            Gather 2 {explorer} or 1 {town}
           </level>
           <level threshold="3-air,1-earth">
             Gather 1 {town}/{city}
