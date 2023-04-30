@@ -61,15 +61,15 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-power-card"></growth-group>
-        <growth-group values="add-presence(3);add-presence(0)"></growth-group>
+        <growth-group values="reclaim;gain-power-card;gain-power-card"></growth-group>
+        <growth-group values="add-presence(3);add-presence(0);gain-element(fire,sun,air)"></growth-group>
         <growth-group values="add-presence(0);gain-card-play;gain-energy(1)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="2,3+sun,air,4,air,5,air">
+        <energy-track banner="example2.png" banner-v-scale="50%" values="2,3+sun,air,4,air,6,air+gain-card-play">
         </energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,move-presence(1),sun,move-presence(1),2,move-presence(2),3+fire">
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="1,move-presence(1),sun,2,move-presence(1),3+sun">
         </card-play-track>
       </presence-tracks>
 
@@ -87,7 +87,7 @@
             <br>
             You can move up to one {presence} with the invaders.
           </level>
-          <level threshold="3-sun,3-fire">
+          <level threshold="3-sun,2-fire">
             Repeat this power.
           </level>
           <level threshold="4-sun">
@@ -99,12 +99,11 @@
           <level threshold="0-any">
             When you use this power, pick a prime number P >= 3.
           </level>
-          <level threshold="3-sun">
-            Invaders in target land Lₛ and another land on the same board Lₜ each do damage to one another where Lₜ exists on the board and
-            <br>
-            Lₜ . Lₛ = 1 mod P.
+          <level threshold="1-sun">
+            Do 1 damage per {sun} split between the target land Lₜ and another land on the same board Lₛ, where Lₜ exists on the board
+            and Lₜ . Lₛ = 1 mod P. If you your {sun} = P, instead, do 1 damage per {sun} in both lands.
           </level>
-          <level threshold="4-air">
+          <level threshold="3-air,2-fire">
             Lₛ and Lₜ may be on different boards.
           </level>
         </quick-innate-power>

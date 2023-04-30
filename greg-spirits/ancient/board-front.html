@@ -44,12 +44,12 @@
       <special-rule>
         Whenever time passes, put all non-unique powers played into your knowledge pool instead of your discard. Whenever another spirit gains a power card,
         if they have {presence} in one of your lands, they may gain a specific card from your knowledge pool instead. If that power
-        is a major power card, they may gain it without forgetting a card if they pay 2 energy.
+        is a major power card, they may gain it without forgetting a card if they pay 2 energy. You can only reclaim your one unique power.
       </special-rule>
       <special-rules-subtitle>Growing Old</special-rules-subtitle>
       <special-rule>
         Whenever an action allows you to add {presence} from your track, you may instead return {presence} from the board to one of
-        your tracks.
+        your tracks, returning it to the rightmost empty slot.
       </special-rule>
     </special-rules-container>
 
@@ -65,16 +65,16 @@
 		-->
       <growth title="Growth (Pick Two)">
         <growth-group values="reclaim"></growth-group>
-        <growth-group values="gain-element(sun)"></growth-group>
-        <growth-group values="gain-element(moon)"></growth-group>
+        <growth-group values="gain-element(sun,sun,and)"></growth-group>
+        <growth-group values="gain-element(moon,moon,and)"></growth-group>
         <growth-group values="custom(Return Presence To Track,presence)"></growth-group>
         <growth-group values="custom(Draw 2 minor power - 1 in your hand - 1 in your knowledge pool,gain-card-play)"></growth-group>
         <growth-group values="custom(Draw 1 major power and put it in your knolwedge pool,gain-card-play)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,2,sun+moon,3,4,sun+moon,gain-card-play"></energy-track>
-        <card-play-track banner="example2.png" banner-v-scale="50%" values="2,3,sun+moon,4,5,sun+moon,6"></card-play-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="gain-card-play,7,sun+moon,4+moon,sun,2+moon,1"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="8,6,sun+moon,5+sun,moon,3+sun,2"></card-play-track>
       </presence-tracks>
 
       <!-- INNATE POWERS  

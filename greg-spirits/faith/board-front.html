@@ -47,9 +47,9 @@
         invaders do still count towards win conditions, and still generate fear when destroyed.
       </special-rule>
       <special-rule>
-        During ravage, converted invaders do damage at the same time as normal invaders. If there are no normal invaders in the land, converted invaders do damage as
-        normal to the land and {dahan}, and are counterattacked. If there are normal invaders in the land, the corrupted invaders only do damage to the normal invaders in
-        the land. The normal invaders in that land do damage to the land, but the damage they would do to {dahan} is first dealt to corrupted invaders, and then.
+        During ravage, converted invaders do damage at the same time as normal invaders. If there are no normal invaders in the land, converted invaders do damage if they were normal invaders.
+        If there are normal invaders in the land, the corrupted invaders only do damage to the normal invaders, not {dahan} or the land. The normal invaders in that land do damage to the land,
+        but the damage they would do to {dahan} is first dealt to corrupted invaders, and then any remaining damage is dealt to {dahan}.
       </special-rule>
     </special-rules-container>
 
@@ -81,13 +81,13 @@
 		-->
       <innate-powers>
         <quick-innate-power name="Touched by Faith" speed="fast" range="1" target="any" target-title="target land">
-          <level threshold="2-animal,1-sun">
+          <level threshold="2-animal,1-moon">
             Gather up to one of your {presence}. Convert 1 {explorer}.
           </level>
-          <level threshold="3-animal,1-sun">
+          <level threshold="3-animal,1-moon">
             Convert 1 {town}.
           </level>
-          <level threshold="5-animal,2-sun">
+          <level threshold="5-animal,2-moon">
             Convert 1 {town}.
           </level>
           <level threshold="1-air">
