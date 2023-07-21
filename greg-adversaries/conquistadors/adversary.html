@@ -19,16 +19,14 @@
 
 	<escalation-effect
 	name="Foreign Exports"
-	rules="The invaders earn 1 gold for each coastal land with invaders."
+	rules="After the normal explore step, the invaders earn 1 {gold} for each coastal land with invaders."
 	></escalation-effect>
 
 	<level-1
 	difficulty="2"
 	fear-cards="3/4/3"
 	name="Search for Gold"
-	rules="The conquistadors earn gold ({gold}) as part of the gameplay. Use energy tokens to track the amount. After setup, at the end of the invader phase, the invaders spend their {gold}. They must spend as much gold
-	as they can, but you choose how they spend it. 2 {gold} to upgrade an invader. 2 {gold} to add 1 {town} to land without {town}. 3 {gold} to add {city} to a land without {city}.
-	2 {gold} to destroy 1 {presence}. 1 {gold} to make a spirit with at least 2 energy lose 2 energy. When invaders ravage, if they do damage to that land, they get 2 {gold} and if that added {blight},
+	rules="When invaders ravage, if they do damage to that land, they get 2 {gold} and if that added {blight},
 	they get an additional 2 {gold}."
 	></level-1>
 
@@ -42,8 +40,8 @@
 	<level-3
 	difficulty="6"
 	fear-cards="3/4/4"
-	name="Plundering for Gold"
-	rules="When invaders ravage in a land with {dahan}, they earn 2 {gold}."
+	name="Plundering Gold"
+	rules="When invaders ravage in a land with {dahan}, they earn 2 {gold}. If they destroyed any {dahan}, they earn another 2 {gold} per {dahan} destroyed this way."
 	></level-3>
 	
 	<level-4
@@ -57,16 +55,16 @@
 	difficulty="8"
 	fear-cards="3/5/4"
 	name="Financing More Expeditions"
-	rules="After processing the Level 4 rule, if invaders have more than 4 {gold} per spirit and there is an invader card in the discard, they must 3 {gold} per spirit. If they do, take a card from the invader discard
-	and put into the build slot."
+	rules="If invaders have more than 4 {gold} per spirit and there is an invader card in the discard, they must 3 pay {gold} per spirit. If they do, take a random card from the discard
+	and put into the build slot. Process this after the level 4 rule but before the gold step."
 	></level-5>
 	
 	<level-6
 	difficulty="11"
 	fear-cards="3/5/5"
 	name="Finding El Dorado"
-	rules="Place a scenario token on land #8 on each board. If there are 2 or more invaders in one of those lands, remove the scenario token. When the last scenario token on the island is removed,
-	the invaders earn 8 {gold} per board."
+	rules="Place a scenario token on the highest numbered land on each board. If there are 2 or more invaders in one of those lands, remove the scenario token. When the last scenario token on the island is removed,
+	the invaders earn 9 {gold} per board."
 	></level-6>
   </quick-adversary>
 

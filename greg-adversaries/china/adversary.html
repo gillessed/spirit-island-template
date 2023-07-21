@@ -14,16 +14,16 @@
 	>
 	<loss-condition
 	name="Overcrowding"
-	rules="If there are more than 8 {explorer} in a single land, invaders win."
+	rules="If there are more than 8 {explorer} in a single land at the end of the fast phase, invaders win."
 	></loss-condition>
 
 	<escalation-effect
 	name="The Great Leap Forward"
-	rules="On the board with the most {explorer}, add 2 {explorer} to each land with no {town}/{city}."
+	rules="On the board with the fewest {explorer}, add 2 {explorer} to the N lands with the fewest {town}/{city}, where N is the number of spirits."
 	></escalation-effect>
 
 	<level-1
-	difficulty="2"
+	difficulty="1"
 	fear-cards="3/3/3"
 	name="Massive Population"
 	rules="When invaders would build {city} in an inland land, instead they add 3 {explorer}."
@@ -33,11 +33,11 @@
 	difficulty="3"
 	fear-cards="3/4/4"
 	name="Collective Economy"
-	rules="When invaders successfully explore into a land, they gather 1 {explorer}."
+	rules="When invaders successfully explore into a land with {explorer}, add 1 additional {explorer}."
 	></level-2>
 
 	<level-3
-	difficulty="6"
+	difficulty="5"
 	fear-cards="3/4/4"
 	name="Strength in Numbers"
 	rules="In lands with 4 or more {explorer}, {explorer} have +1 health. In lands with 7 or more {explorer}, instead {explorer} have +2 health."
@@ -54,14 +54,14 @@
 	difficulty="8"
 	fear-cards="4/4/4"
 	name="Forced Labor"
-	rules="When invaders ravage in a land, if that land has 4 or more {explorer} and they added {blight}, add 2 {explorer} to that land."
+	rules="When invaders build a town in a land with {explorer}, add an extra town for every 2 {explorer} beyond the first."
 	></level-5>
 	
 	<level-6
 	difficulty="11"
 	fear-cards="4/5/4"
 	name="Deplete the Land"
-	rules="Lands with 6 or more {explorer} and {blight} match the ravage card regardless of land type."
+	rules="After the normal ravage step, on each board, build in a land with 4 or more explorers."
 	></level-6>
   </quick-adversary>
 
