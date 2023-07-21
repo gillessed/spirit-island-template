@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="Eldritch Horror"
+    base-difficulty="1"
+    flag-image="./cthulhu.svg"
+	>
+	<loss-condition
+	name=""
+	rules=""
+	></loss-condition>
+
+	<escalation-effect
+	name=""
+	rules=""
+	></escalation-effect>
+
+	<level-1
+	difficulty="1"
+	fear-cards="1"
+	name="Corruption"
+	rules="Mythos cards have a number of keyword effects on them. They are 'Reckoning', 'Corrupt', 'Advance Omen Track', and 'Invader Surge'. Certain mechanics involve corruption. They are counters
+	that can be added to a land. Any power which moves or removes blight can instead be used to move or remove corruption."
+	></level-1>
+
+	<level-2
+	difficulty="1"
+	fear-cards="1"
+	name="Reckoning"
+	rules="On a reckoning, each Eldrith boss will have a different effect. On Cthulhu's Reckoning, on each board, add 1 corruption to a land with {blight}, and destroy 1 {presence} from each spirit in that."
+	></level-2>
+
+	<level-3
+	difficulty="1"
+	fear-cards="1"
+	name="Corrupt"
+	rules="When a mythos corrupts, on each board, add 1 corruption to the land with the most invaders (min 1)."
+	></level-3>
+
+	<level-4
+	difficulty="1"
+	fear-cards="1"
+	name="Omen Track"
+	rules="When a mythos advances the omen track, move the omen track to the next land type. Then advance Doom by 1 for each land matching the omen track with 2 or more corruption counters."
+	></level-4>
+
+	<level-5
+	difficulty="1"
+	fear-cards="1"
+	name="Invader Surge"
+	rules="On an invader surge, on each board, add 1 {explorer} and 1 {town} to a land matching the omen track."
+	></level-5>
+
+
+	<level-6
+	difficulty="1"
+	fear-cards="1"
+	name="Cthulhu Mega Invader"
+	rules="Once the mega invader has spawned, spirits must defeat the mega invader in addition to reaching the over victory conditions. The Cthulhu Mega Invader is an invader with 6 health per spirit.
+	It can be damaged by any power that can damage {town}/{city}. Any effects which would destroy it instead does 3 damage to it. When Cthulhu builds, it builds 3 times. During ravage,
+	it does 6 damage per spirit, and also does 3 damage to each adjacent land."
+	></level-6>
+
+  </quick-adversary>
+
+</body>
+</html>
