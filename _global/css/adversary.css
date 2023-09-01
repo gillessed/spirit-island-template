@@ -279,3 +279,7 @@ icon.wendigo {
 icon.gold {
   background-image: url('../images/gold-token.png');
 }
+
+icon.pyramid {
+  background-image: url('../images/pyramid.svg');
+}

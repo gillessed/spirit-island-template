@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="Venetian City State"
+    base-difficulty="2"
+    flag-image="./venice-icon.png"
+	>
+	<loss-condition
+	name="None"
+	rules="No additional loss condition."
+	></loss-condition>
+
+	<escalation-effect
+	name="War Profiteering"
+	rules="On each board, choose a costal land with at least two invaders. Invaders ravage there."
+	></escalation-effect>
+
+	<level-1
+	difficulty="3"
+	fear-cards="3/4/3"
+	name="Mercenary Armies"
+	rules="At the start of the invader phase, in each land with invaders that matches a ravage card, add 1 invader of the strongest type already in that land.
+	At the end of the invader phase, in each of those lands, remove 1 invader of the type added to that land. Isolation prevents this effect."
+	></level-1>
+
+	<level-2
+	difficulty="4"
+	fear-cards="3/4/4"
+	name="Buying Protection"
+	rules="Invaders cannot be destroyed. At the start of the {fast} phase, spirits may jointly pay 2 energy per player aided by an element of their choice to ignore this
+	rule for the rest of the turn."
+	></level-2>
+	
+	<level-3
+	difficulty="5"
+	fear-cards="3/4/4"
+	name="Canals"
+	rules="During setup, add 1 {town} to the two lowest numbered {wetland}."
+	></level-4>
+
+	<level-4
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="Economies of Scale"
+	rules="On each board, when invaders successfully build in the land with the most invaders (min. 3), they immediately ravage. There must be a unique such land for this to trigger."
+	></level-4>
+	
+	<level-5
+	difficulty="8"
+	fear-cards="4/4/4"
+	name="Mediterranean Trade Domination"
+	rules="The coastal invader card matches lands adjacent to coastal lands as well. Place the coastal card at the end of the stage two cards (111-222C-33333)"
+	></level-5>
+	
+	<level-6
+	difficulty="8"
+	fear-cards="4/4/5"
+	name="Financing the Crusades"
+	rules="On each board, add a scenario token to the highest numbered {sand}. Whenever invaders add {blight} from ravage in that land or an adjacent
+	land, add a {blight} to that land."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>
