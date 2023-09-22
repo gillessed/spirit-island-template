@@ -19,35 +19,35 @@
 
 	<escalation-effect
 	name="Spreading Influence"
-	rules="On each board, choose a land without invaders adjacent to a land with invaders. For each invader adjacent to the chosen land, add an invader of that type to the chosen land."
+	rules="On each board, choose a land with at least two invaders. In the adjacent land with the fewest invader, add a copy of each invader in the chosen land."
 	></escalation-effect>
 
 	<level-1
 	difficulty="2"
 	fear-cards="3/3/3"
 	name="The Horde"
-	rules="After setup, whenever {explorer} are added to a land ajacent to {mountain}, add an additional {explorer}. This effect takes place immediately as the invader cards shift."
+	rules="Whenever any number of {explorer} are added to {sand}/{jungle} ajacent to {mountain}, add 1 additional {explorer}."
 	></level-1>
 
 	<level-2
 	difficulty="3"
 	fear-cards="4/3/3"
-	name="Master of the Steppes"
-	rules="Invaders each have +1 health for each {mountain} invader card in the invader track."
+	name="Master of the Steppes" 
+	rules="Invaders each have +1 health for each {mountain} invader card in the invader track. This effect takes place immediately as the invader cards shift."
 	></level-2>
 
 	<level-3
 	difficulty="6"
 	fear-cards="4/3/4"
 	name="Descend to the Lowlands"
-	rules="Remove the {mountain}/{jungle} stage III invader card before setting up the invader deck. Replace the top card of the deck with it (311-2222-33333)"
+	rules="Put the {mountain} stage I and {sand}/{jungle} stage III cards on top of the invader deck, replacing two stage one cards. (131-2222-33333)"
 	></level-3>
 	
 	<level-4
 	difficulty="7"
 	fear-cards="4/4/4"
 	name="Vassal States"
-	rules="When invaders build in a {mountain}, they build in one adjacent land. This can affect lands without invaders."
+	rules="Lands with 3 or more {town}/{city} match the ravage card."
 	></level-4>
 	
 	<level-5
@@ -61,7 +61,7 @@
 	difficulty="10"
 	fear-cards="5/5/4"
 	name="The Biggest Horde"
-	rules="After setup, whenever {town}/{city} are added to a land ajacent to {mountain}, add an additional {town}/{city}."
+	rules="When invaders build in a {mountain}, add {explorer} to each adjacent land without {town}/{city}"
 	></level-6>
   </quick-adversary>
 
