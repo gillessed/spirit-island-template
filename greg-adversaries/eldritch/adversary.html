@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="../../_global/css/global.css" rel="stylesheet" />
+	<link href="../../_global/css/board_front.css" rel="stylesheet" />
+	<script type="text/javascript" src="../../_global/js/general.js"></script>
+	<script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+	<!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+	<style>
+		icon.custom1 {
+			background-image: url('demo_custom_icon.png');
+		}
+
+		icon.custom2 {
+			background-image: url('filename.png');
+		}
+
+		icon.custom3 {
+			background-image: url('filename.png');
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<board spirit-image="sacred-image-cropped.jpg" spirit-image-scale="100%" spirit-border="example2.png">
+		<artist-name>
+			Greg Cole
+		</artist-name>
+
+		<special-rules-container style="background-repeat: repeat; width: calc(100% - 30px); height: calc(100% - 10px)">
+			<section-title>ELDRITCH HORROR</section-title>
+			<section-title>MYTHOS DECK</section-title>
+			<special-rule>
+				Replace the event deck with a constructed mythos deck with a number of cards equal to invader deck. The deck
+				composition is [1y,1g], [1y,1g,2b], [2y,2g,1b].
+				Shuffle each set of cards together, and stack them on top of one another. Do not resolve a mythos card on the
+				first turn.
+				<br><br>
+				If you are playing with another adversary that removes invader cards from the deck, remove blue mythos cards,
+				while keeping the number of yellow and green cards the same.
+			</special-rule>
+
+			<section-title>DOOM TRACK</section-title>
+			<special-rule>
+				Each of the ancient ones has an initial doom level. When the doom level reaches zero, the ancient one awakens.
+				See the specific ancient one to determine what happens in that case. While the ancient one is on the board,
+				spirits cannot win the game.
+			</special-rule>
+			<section-title>TOKENS</section-title>
+			<special-rule>
+				This adversary uses the tokens from the Eldritch Horror board game.
+			</special-rule>
+			<special-rules-subtitle>Corruption {corruption}</special-rules-subtitle>
+			<special-rule>
+				Corruption tokens track how much the ancient ones have made progress in corrupting the land and those who live
+				on it.
+			</special-rule>
+			<special-rules-subtitle>Clues {clue}</special-rules-subtitle>
+			<special-rule>
+				Each spirit starts with an extra card named Investigate. This can be used to acquire clues. Spirits may spend
+				{clue} during either the {fast} or {slow} phase as an
+				action to remove {corruption} in one of their lands. When a clue token is spent this way, that spirit gains an
+				element of their choice.
+			</special-rule>
+
+			<section-title>MYTHOS CARDS</section-title>
+			<special-rule>
+				Mythos cards are used instead of the event deck. Each mythos card will do some of the following keyword effects,
+				and then also resolve a unique effect of their own.
+			</special-rule>
+			<special-rules-subtitle>Reckoning</special-rules-subtitle>
+			<special-rule>
+				See the specific rules for your elder one for the reckoning effect.
+			</special-rule>
+			<special-rules-subtitle>Advance Omen Track</special-rules-subtitle>
+			<special-rule>
+				The omen track is a cycle of the four land types: {jungle} -> {wetland} -> {sand} -> {mountain}. When the omen
+				track is advanced, move a marker from one land type to the next. Then
+				advance doom by 1 for each land matching the omen track with {corruption}.
+			</special-rule>
+			<special-rules-subtitle>Invader Surge</special-rules-subtitle>
+			<special-rule>
+				On an invader surge, on each board, add 1 {explorer} and 1 {town} to a land matching the omen track. If there is
+				no such land on a board, instead pick any land.
+			</special-rule>
+			<special-rules-subtitle>Spawn Clues</special-rules-subtitle>
+			<special-rule>
+				On each board, add {clue} in the land with the fewest invaders.
+			</special-rule>
+		</special-rules-container>
+	</board>
+</body>
+
+</html>

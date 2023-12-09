@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/adversary.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+</head>
+<body>
+
+  <quick-adversary
+    name="The Three Kingdoms"
+    base-difficulty="2"
+    flag-image="./han-flag.jpeg"
+	>
+	<loss-condition
+	name="None"
+	rules=""
+	></loss-condition>
+
+	<escalation-effect
+	name="Engulfed by War"
+	rules="On each board, choose two adjacent lands with invaders. They deal damage to each other and to each others' lands."
+	></escalation-effect>
+
+	
+	<level-1
+	difficulty="2"
+	fear-cards="3/4/3"
+	name="The Peerless Warrior Lu Bu"
+	rules="During setup, on each board, add a special invader Lu Bu to the lowest numbered land on each board. It counts as {explorer}, 
+	but cannot be destroyed or removed. If it would be destroyed or removed, instead it gets pushed and 1 {fear}. It does 3 damage during ravage.
+	After the normal build step, on each board, gather Lu Bu into a land matching the build card."
+	></level-1>
+
+	<level-2
+	difficulty="3"
+	fear-cards="3/4/3"
+	name="The Tyrant of Luoyang"
+	rules="Whenever {explorer} are destroyed by a spirit action, destroy one additional {explorer} in any land that action targeted. Explorers each deal +1 damage in lands with {town}/{city}."
+	></level-2>
+
+	<level-3
+	difficulty="4"
+	fear-cards="4/4/4"
+	name="Liu Bei of Shu"
+	rules="When invaders succesfully explore a {jungle}, add {explorer} to an adjacent non-{jungle}. When invaders are destroyed in {jungle}, gather 1 {explorer}/{town} from a land not matching a build or ravage cards."
+	></level-3>
+	
+	<level-4
+	difficulty="5"
+	fear-cards="4/4/4"
+	name="Sun Jian of Wu"
+	rules="When invaders successfully build in {wetland}, add {explorer}."
+	></level-4>
+
+	<level-5
+	difficulty="6"
+	fear-cards="4/4/4"
+	name="Cao Cao of Wei"
+	rules="Whenever {sand} ravage during the normal ravage step, on each board, ravage in one land with invaders not matching the build or ravage cards."
+	></level-5>
+	
+	<level-6
+	difficulty="8"
+	fear-cards="5/4/4"
+	name="Unification under the Jin"
+	rules="When invaders add the first blight (not cascades) from a ravage, add a blight in adjacent land with invaders and no blight. 2 damage to invaders in that land."
+	></level-6>
+  </quick-adversary>
+
+</body>
+</html>

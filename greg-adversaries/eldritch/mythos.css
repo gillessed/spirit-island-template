@@ -1,0 +1,47 @@
+.card {
+  width: 488px;
+  height: 682px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-inside {
+  width: 408px;
+  height: 602px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card-inside.blue {
+  background-image: linear-gradient(135deg, #88edf2, #0b5c8f);
+}
+
+.card-inside.yellow {
+  background-image: linear-gradient(135deg, #fce303, #916011);
+}
+
+.card-inside.green {
+  background-image: linear-gradient(135deg, #25e31b, #327a05);
+}
+
+.card-title {
+  font-size: 38px;
+  line-height: 32px;
+  font-family: 'DK Snemand', 'Mouse Memoirs';
+  margin-bottom: 20px;
+}
+
+.card-keywords {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'Noto Sans';
+  margin-bottom: 20px;
+}
+
+.card-rules {
+  font-size: 22px;
+  line-height: 25px;
+  font-family: 'JosefinSans-Regular';
+}

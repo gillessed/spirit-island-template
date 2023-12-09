@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="sacred-image-cropped.jpg" spirit-image-scale="100%" spirit-border="example2.png">
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container style="background-repeat: repeat; width: calc(100% - 30px); height: calc(100% - 10px)">
+      <section-title>CTHULHU</section-title>
+      <special-rule>
+        Initial doom: 13
+      </special-rule>
+
+      <section-title>RECKONING</section-title>
+      <special-rule>
+        On each board, add 1 {corruption} to a land with {blight}, and destroy 1 {presence} from each spirit in that
+        land.
+      </special-rule>
+      <section-title>ANCIENT ONE</section-title>
+      <special-rule>
+        When the doom track reaches 0, spawn Cthulhu in the land with the most corruption. Cthulhu is an invader with 6
+        health per spirit. The land with Cthulhu always matches the ravage.
+        It can be damaged by any power that can damage {town}/{city}. Any effect which would destroy it instead does 3
+        damage to it. When a land with Cthulhu builds, it builds 3 times. During ravage,
+        it does 6 damage per spirit, and also does 3 damage to each adjacent land.
+        Cthulhu only heals 1 health per spirit when time passes.
+      </special-rule>
+    </special-rules-container>
+  </board>
+</body>
+
+</html>
