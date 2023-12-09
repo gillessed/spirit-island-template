@@ -2,8 +2,8 @@ import { promises as fs } from "fs";
 import os from "os";
 import path from "path";
 import puppeteer from "puppeteer";
-import { v4 as uuidv4 } from 'uuid';
-import { ProjectDir, SourceFiles } from "./constants.js";
+import { v4 as uuidv4 } from "uuid";
+import { ProjectDir, SourceSpecs } from "./constants.js";
 import { exists } from "./utils.js";
 
 async function screenshot(sourceHtml, destinationFile, screensize) {
@@ -31,22 +31,30 @@ export async function renderImages(spiritGroup, spiritName) {
 
   console.log("Rendering " + spiritName);
   const imageFiles = [];
-  for (const [sourceType, windowSize, pageScale] of SourceFiles) {
-    const source = path.join(spiritDir, sourceType);
-    const sourceExists = await exists(source);
-    if (!sourceExists) {
+
+  const folderFiles = await fs.readdir(spiritDir);
+  for (const filename of folderFiles) {
+    if (path.extname(filename) !== ".html") {
       continue;
     }
-    const destPng = sourceType.substring(0, sourceType.length - 5) + ".png";
+    const spec = SourceSpecs[filename];
+    const source = path.join(spiritDir, filename);
+    if (spec == null) {
+      console.warn("Found html file with no spec: ", source);
+      continue;
+    }
+    const { size: windowSize, scale: pageScale } = SourceSpecs[filename];
+    const destPng = filename.substring(0, filename.length - 5) + ".png";
     const destImage = path.join(destDir, destPng);
     console.log("  Rendering " + destImage);
     await screenshot(source, destImage, windowSize);
     imageFiles.push({
       file: destImage,
-      sourceType,
+      sourceType: filename,
       windowSize,
       pageScale,
     });
-  }1
+  }
+
   return imageFiles;
 }

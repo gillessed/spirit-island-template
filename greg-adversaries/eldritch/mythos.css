@@ -34,10 +34,18 @@
 }
 
 .card-keywords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   line-height: 26px;
   font-family: 'Noto Sans';
   margin-bottom: 20px;
+  background: rgba(256, 256, 256, 0.8);
+  width: fit-content;
+  padding: 12px;
+  border-radius: 8px;
+  gap: 5px;
 }
 
 .card-rules {

@@ -141,6 +141,11 @@ icon.gain-range-3 { background-image: url('../images/board/NewIcons/Range Gain 3
 icon.gain-range-X, icon.gain-range-x { background-image: url('../images/board/NewIcons/Range Gain X.png'); }
 icon.corruption { background-image: url('../images/corruption.png'); }
 icon.clue { background-image: url('../images/clue.webp'); }
+icon.spawn-clue { background-image: url('../images/spawn_clue.webp'); }
+icon.reckoning { background-image: url('../images/reckoning.webp'); }
+icon.omen { background-image: url('../images/omen.webp'); }
+icon.surge { background-image: url('../images/surge.webp'); }
+icon.rumor { background-image: url('../images/rumor.png'); }
 
 
 icon.destroyed-presence, icon.destroy-presence { background-image: url('../images/board/NewIcons/Misc Presence Destroy.png');}

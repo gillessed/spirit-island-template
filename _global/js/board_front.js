@@ -46,13 +46,14 @@ function dynamicSpecialRuleHeight(board) {
 function addImages(board) {
 
 	const spiritImage = board.getAttribute('spirit-image');
+	const backgroundImage = board.getAttribute('background-image');
 	const artistCredit = document.getElementsByTagName('artist-name');
 	const spiritBorder = board.getAttribute('spirit-border');
+	const specialRules = board.querySelectorAll('special-rules-container')[0];
 
 	const imageSize = board.getAttribute('spirit-image-scale');
 
 
-	const specialRules = board.querySelectorAll('special-rules-container')[0]
 	let height = specialRules.getAttribute('height')
 	if (!height) {
 		const computedStyle = window.getComputedStyle(specialRules)
@@ -60,7 +61,6 @@ function addImages(board) {
 	}
 
 	if (spiritBorder) {
-		const specialRules = board.querySelectorAll('special-rules-container')[0]
 		const spiritBorderSize = board.getAttribute('spirit-border-scale');
 		if (spiritBorderSize) {
 			borderHeight = spiritBorderSize;
@@ -80,6 +80,13 @@ function addImages(board) {
 	const spiritName = document.getElementsByTagName('spirit-name');
 	if (spiritName[0]) {
 		spiritName[0].outerHTML += "<custom-meeple></custom-meeple>";
+	}
+
+	if (backgroundImage) {
+		specialRules.innerHTML = `
+			<div
+			  style="position:absolute; background-image: url(${backgroundImage}); top: 0; bottom: 0; right: 0; left: 0; background-size: cover; opacity: 0.5; z-index: -100;" >
+		  </div>` + specialRules.innerHTML;
 	}
 
 }

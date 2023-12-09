@@ -29,7 +29,7 @@
 
 <body>
 
-  <board spirit-image="sacred-image-cropped.jpg" spirit-image-scale="100%" spirit-border="example2.png">
+  <board background-image="cthulu.png" spirit-image-scale="100%">
     <artist-name>
       Greg Cole
     </artist-name>
@@ -42,17 +42,29 @@
 
       <section-title>RECKONING</section-title>
       <special-rule>
-        On each board, add 1 {corruption} to a land with {blight}, and destroy 1 {presence} from each spirit in that
-        land.
+        {reckoning}: On each board, add 1 {corruption} to a land with {blight}, and destroy 1 {presence} from each
+        spirit in that land.
       </special-rule>
+
+      <section-title>CULTISTS</section-title>
+      <special-rule>
+        All {explorer} in lands with {corruption} are considered cultists and gain the following effect: <br>
+        {reckoning}: This invader does +1 damage this turn.
+      </special-rule>
+
       <section-title>ANCIENT ONE</section-title>
       <special-rule>
-        When the doom track reaches 0, spawn Cthulhu in the land with the most corruption. Cthulhu is an invader with 6
-        health per spirit. The land with Cthulhu always matches the ravage.
-        It can be damaged by any power that can damage {town}/{city}. Any effect which would destroy it instead does 3
-        damage to it. When a land with Cthulhu builds, it builds 3 times. During ravage,
-        it does 6 damage per spirit, and also does 3 damage to each adjacent land.
-        Cthulhu only heals 1 health per spirit when time passes.
+        When the doom track reaches 0, spawn Cthulhu in the land with the most corruption.
+        <ul>
+          <li>Cthulhu is an invader with 6 health per spirit.</li>
+          <li>The land with Cthulhu always matches the ravage. During ravage, it does 6 damage per spirit, and also does
+            3 damage to each adjacent land.</li>
+          <li>It can be damaged by any power that can damage {town}/{city}. Any effect which would destroy it instead
+            does 3 damage to it.</li>
+          <li>When a land with or adjacent to Cthulhu builds, add {blight} (even if it has no invaders). </li>
+          <li>Cthulhu only heals 1 health per spirit when time passes. </li>
+        </ul>
+        <br>
       </special-rule>
     </special-rules-container>
   </board>

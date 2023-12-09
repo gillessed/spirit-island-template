@@ -4,14 +4,6 @@ import { SpiritPdfDir } from "./constants.js";
 import { assertExists, exists } from "./utils.js";
 import { promises as fs } from "fs";
 
-/*
-images: Array<{
-  file: string,
-  sourceType: string,
-  windowSize: [number, number],
-  pageScale: number,
-}
- */
 export async function renderToPdf(spiritName, imageDatas) {
   await assertExists(SpiritPdfDir);
   const destination = path.join(SpiritPdfDir, `${spiritName}.pdf`);

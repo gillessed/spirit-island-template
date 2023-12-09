@@ -16,7 +16,13 @@ card-back{
   position:relative;
 }
 
-card-back::after{
+card-back.mythos{
+  border:10px solid black;
+  border-radius: 10px;
+  background-color: black;
+}
+
+card-back:not(.mythos)::after{
   display:block;
   position:absolute;
   top:0px;
@@ -34,4 +40,8 @@ card-back::after{
   height: 100%;
   left: 0px;
   top: 0px;
+}
+
+card-back.mythos .image {
+  border-radius: 10px;
 }
