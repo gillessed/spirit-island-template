@@ -46,7 +46,7 @@
       </special-rule>
       <special-rules-subtitle>The Rage Subsides</special-rules-subtitle>
       <special-rule>
-        Whenever a {beast} is destroyed or removed, if your {presence} was in that land, destroy 1 of your {presence} in that land.
+        Whenever a {beast} is destroyed or removed, if your {presence} was in that land, destroy 1 of your {presence} in that land, and remove 1 {blight}.
       </special-rule>
       <special-rules-subtitle>Go Out With a Fight</special-rules-subtitle>
       <special-rule>
@@ -68,7 +68,7 @@
         <growth-group values="reclaim"></growth-group>
         <growth-group values="add-presence(1,dahan)"></growth-group>
         <growth-group values="add-presence(3,beasts)"></growth-group>
-        <growth-group values="gain-energy(3)"></growth-group>
+        <growth-group values="gain-energy(4)"></growth-group>
         <growth-group cost="1" values="gain-power-card"></growth-group>
       </growth>
 
@@ -83,7 +83,10 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Frenzied Attack" speed="fast" range="0" target="{dahan},{beast}" target-title="target land" note="Your {presence} in lands affected by this power are not destroyed by adding {blight}.">
+        <quick-innate-power name="Frenzied Attack" speed="fast" range="0" target="{dahan},{beast}" target-title="target land" note="">
+          <level threshold="1-animal">
+            Your {presence} in this land are not destroyed by adding {blight}.
+          </level>
           <level threshold="2-animal,1-fire">
             {dahan} and invaders in target land do +1 damage during ravage for each {beast} in target land <i>(total in land)</i>.
           </level>

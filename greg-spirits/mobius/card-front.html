@@ -10,7 +10,7 @@
 <body>
 
   <quick-card speed="fast" cost="0" name="Pinch" image="pinch-image.png"
-    elements="air" range="0" target="any" target-title="target land"
+    elements="air, fire" range="0" target="any" target-title="target land"
     artist-name="Greg Cole">
     <rules>
       For the rest of this turn, swap the land number of target land Lₜ and another land on the same board Lₛ where
@@ -33,10 +33,10 @@
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="4" name="Rotate" image="rotate-image.png" elements="air,sun,fire,plant,water"
+  <quick-card speed="fast" cost="1" name="Contort" image="rotate-image.png" elements="air,sun,fire"
     range="1" target="any" target-title="target board" artist-name="Greg Cole">
     <rules>
-      In each land on target board, move all {presence} from Lₛ to Lₛ + 1 mod K on the same board. Then do 1 damage in each land on that board for each of your {presence} in that land.
+      Whenever invaders are moved into target land (Lₜ), they take damage equal to <br> Lₜ mod ({fire} + 1).
     </rules>
   </quick-card>
 </body>

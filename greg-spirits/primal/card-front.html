@@ -10,7 +10,7 @@
 <body>
 
   <quick-card speed="slow" cost="1" name="A Great Battle Unfolds" image="rage.png"
-    elements="animal" range="2" target="any" target-title="target land"
+    elements="fire,animal" range="2" target="any" target-title="target land"
     artist-name="Greg Cole">
     <rules>
       Gather up to 1 {explorer}.
@@ -26,19 +26,21 @@
   <quick-card speed="slow" cost="1" name="The Scarred Land Fights Back" image="scarred.png"
     elements="animal,plant" range="2" target="{blight}" target-title="target land" artist-name="Greg Cole">
     <rules>
-      Remove 1 {blight}. You may add a destroyed {presence} to target land.
+      Remove 1 {blight}. Add 1 {beast}.
     </rules>
     <threshold condition="2-fire">
       2 damage
     </threshold>
   </quick-card>
 
-  <quick-card speed="slow" cost="1" name="Ritual Worship" image="ritual.png" elements="animal,fire"
+  <quick-card speed="slow" cost="1" name="Ritual Worship" image="ritual.png" elements="animal,plant,fire"
     range="1" target="{dahan}" target-title="target land" artist-name="Greg Cole">
     <rules>
       Add 1 {dahan}.
       <br>
       Push up to 4 {dahan}.
+      <br>
+      You may remove up to 1 {beast}.
     </rules>
   </quick-card>
 

@@ -42,12 +42,8 @@
       <section-title>SPECIAL RULES</section-title>
       <special-rules-subtitle>The Living Dead</special-rules-subtitle>
       <special-rule>
-        Whenever an invader or {dahan} is destroyed in a land with or adjacent to your presence, you can place them on
-        your spirit board. You may discard 2 health worth of invaders or {dahan} on your spirit board at any time to place
-        a {skeleton} in one of your lands. You cannot have more than 2 health worth of invaders per spirit in the game saved on your board.
-        <br><br>
-        You may only have as many {skeleton} as you have revealed {moon} on your presence tracks. If you would place a
-        skeleton on the board that would push you above your limit, you must then sacrifice a skeleton.
+        Your powers allow to you place and move {skeleton}. You may only have as many {skeleton} as you have revealed {moon} on your presence tracks. If you would place a
+        skeleton on the board that would push you above your limit, you must then remove {skeleton} until you are at the limit.
       </special-rule>
     </special-rules-container>
 
@@ -62,9 +58,9 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;move-presence(1)"></growth-group>
-        <growth-group values="add-presence(1);add-presence(1)"></growth-group>
-        <growth-group values="move-presence(2);gain-power-card;gain-power-card"></growth-group>
+        <growth-group values="reclaim;gain-power-card;custom(Add 1 skeleton, skeleton)"></growth-group>
+        <growth-group values="add-presence(1);add-presence(1);custom(Add 2 skeletons, skeleton)"></growth-group>
+        <growth-group values="gain-power-card;add-presence(3)"></growth-group>
       </growth>
 
       <presence-tracks>
