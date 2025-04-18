@@ -20,7 +20,7 @@
   </quick-card>
 
   <quick-card speed="fast" cost="0" name="Soil Absorption" image="soil-absorption-image.png"
-    elements="earth" range="0" target="ANY" target-title="target land" artist-name="Greg Cole">
+    elements="earth,plant" range="0" target="ANY" target-title="target land" artist-name="Greg Cole">
     <rules>
       {blight} does not cascade when added to target land this turn.
       <br>
@@ -28,17 +28,19 @@
     </rules>
   </quick-card>
 
-  <quick-card speed="slow" cost="2" name="Wave of Vitriol" image="vitriol-image.png" elements="earth,air,plant"
+  <quick-card speed="slow" cost="2" name="Wave of Vitriol" image="vitriol-image.png" elements="earth,air"
     range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
     <rules>
       1 damage per {blight} <i>(max 6)</i>.
+      <br>
+      If the island is blighted, 1 damage per {blight}.
     </rules>
   </quick-card>
 
   <quick-card speed="slow" cost="1" name="The Land Recycles" image="recycle-image.png" elements="earth,plant"
     range="1" target="ANY" target-title="target land" artist-name="Greg Cole">
     <rules>
-      Replace up two of your {presence} with blight from outside of the blight pool. Put those {presence} in the blight pool.
+      Replace up two of your {presence} with {blight} from the box. Put those {presence} in the blight pool.
     </rules>
   </quick-card>
 </body>

@@ -13,7 +13,9 @@
     elements="moon,sun,plant,fire" range="1" target="any" target-title="target land"
     artist-name="GREG COLE">
     <rules>
-      In target land, any time {dahan}/{wilds}/{disease}/{strife}/{beast}/{badland} would be removed this turn, instead an extra token of that type.
+      This turn, if {wilds}/{disease}/{strife}/{beast}/{badland} would be removed from target land instead an extra token of that type.
+      <br>
+      This turn, if a {dahan} in target land would be destroyed by an event effect, instead add 1 {dahan}.
     </rules>
   </quick-card>
 
@@ -27,15 +29,16 @@
   <quick-card speed="fast" cost="1" name="Prediction of Growth" image="growth.png" elements="sun,plant,moon,earth"
     range="sacred-site,2" target="any" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Anytime an event would add an invader to one of your lands this turn, destroy it. Replacing, exploring, gathering, pushing and building count as adding.
+      Anytime an event would add an invader to one of your lands this turn, destroy it.
     </rules>
   </quick-card>
 
-  <quick-card speed="fast" cost="1" name="Predictions of Progress" image="progress.png" elements="moon,sun,air,fire,water"
-    range="none" target="any {spirit}" target-title="target-spirit" artist-name="GREG COLE">
+  <quick-card speed="slow" cost="1" name="Predictions of Wilderness" image="progress.png" elements="moon,sun,air,fire,water"
+    range="2" target="any" target-title="target land" artist-name="GREG COLE">
     <rules>
-      Target spirit may repeat any number of event effects up to one time for each event they participate in this turn. If this is an
-      effect that happens for each board, they only repeat it on their board.
+      Add 1 {beast} and 1 {wilds}.
+      <br>
+      Push up to 2 {dahan}.
     </rules>
   </quick-card>
 </body>

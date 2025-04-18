@@ -49,7 +49,7 @@
       <special-rules-subtitle>Karmic Payment</special-rules-subtitle>
       <special-rule>
         During spirit phase, you gain 1 energy that is kept in a separate pool. This energy can only be used to pay for
-        choice events. This increases to 2 energy if you are playing with 5 or more players.
+        choice events.
       </special-rule>
       </special-rule>
     </special-rules-container>
@@ -83,7 +83,7 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Accurate Foresight" speed="fast" range="2" target="any" target-title="TARGET LAND">
+        <quick-innate-power name="Accurate Foresight" speed="fast" range="2" target="any" target-title="target land">
           <level threshold="1-sun,1-moon">
             Invaders' damage in target land cannot be modified this turn by powers, events or fear cards. If they would
             do extra damage, that damage is then instead done to the invaders after they ravage.
@@ -98,14 +98,12 @@
             Repeat this power.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Tracing the Invisible Patterns" speed="fast" range="none" target="none"
+        <quick-innate-power name="Tracing the Invisible Patterns" speed="fast" range="none" target="any {spirit}" target-title="target spirit"
           target-title="TARGET">
-          <level threshold="2-sun,2-moon,1-plant">
-            Resolve a drafted event card. When an effect says each player, only do it for you. When an effect says each board,
-            only perform it on your board. All other event actions happen as written.
-          </level>
-          <level threshold="2-sun,2-moon,1-air">
-            Resolve a drafted event card.
+          <level threshold="2-sun,2-moon,1-plant,1-air">
+            Target spirit resolves one of your a drafted event card. When an effect says each player, only do it for the spirit. When an effect says each board,
+            only perform it for that spirit's board. All global effects of the event only affect that spirit's board. Any effects which count
+            occurances only count that spirit's board, and the lands on that spirit's board.
           </level>
         </quick-innate-power>
       </innate-powers>
