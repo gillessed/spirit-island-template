@@ -40,18 +40,17 @@
 
     <special-rules-container>
       <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Anchoring the World</special-rules-subtitle>
+      <special-rule>
+        The land containing {world-tree} matches all land types.
+      </special-rule>
       <special-rules-subtitle>Bound by the Deepest Roots</special-rules-subtitle>
       <special-rule>
-        Any powers that target your lands that grants defense, does damage or gathers/pushes invaders, or adds or removes tokens, must instead do so as evenly
-        as possible between all of you lands, but broken up into integer chunks. For example, if you would grant defend 7 to one of your lands, if you have 4 lands, you must grant defend
-        2 to 3 of your lands, and defend 1 to the other. If you card has an effect based on the number of invaders, for example, 1 damage to each invader, instead you must total that up first,
-        and then divide the effect between your lands.
-        <br><br>
-        Your powers can never target lands without your {presence}.
+        All lands with your {presence} are adjacent to the land with {world-tree}.
       </special-rule>
-      <special-rules-subtitle>Thriving Ecosystem</special-rules-subtitle>
+      <special-rules-subtitle>Worldly Connections</special-rules-subtitle>
       <special-rule>
-        If blight would be place in one of your lands, you may forget a power card to have it be placed in an adjacent land.
+        All spirits whose {presence} you have remove from the game may pay 2 energy. If 
       </special-rule>
     </special-rules-container>
 
@@ -66,8 +65,8 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-power-card"></growth-group>
-        <growth-group values="add-presence(1);add-presence(1)"></growth-group>
+        <growth-group values="reclaim;add-presence(1)"></growth-group>
+        <growth-group values="add-presence(2);gain-power-card"></growth-group>
         <growth-group values="add-presence(4);gain-energy(2);gain-element(plant,moon,and)"></growth-group>
       </growth>
 
@@ -82,22 +81,22 @@
 			speed: "fast" or "slow"
 		-->
       <innate-powers>
-        <quick-innate-power name="Deep Connection" speed="fast" range="0" target="any" target-title="target land" note="This power can only target the world tree land.">
+        <quick-innate-power name="Deep Connection" speed="fast" range="0" target="{world-tree}" target-title="target land">
           <level threshold="2-plant,2-moon">
-            Choose another target land with your {presence}. Defend 1 in each of those lands. All damage invaders would do during ravage in any of those lands is instead totalled up and divided as equally as possible among
+            Choose another land adjacent to target land. All damage invaders would do during ravage in either of those lands is instead totalled up and divided as equally as possible among
             the two target lands. All damage that {dahan} do in each of those lands is also totalled up and divided evenly between the target lands.
           </level>
-          <level threshold="4-plant,3-moon">
-            Instead, choose two other target lands.
+          <level threshold="1-earth">
+            Defend 1 in target land. Defend 1 in a land adjacent to target land.
           </level>
-          <level threshold="5-plant,3-moon,1-water">
-            Instead, choose three other target lands.
+          <level threshold="2-earth,1-water">
+            Defend 1 in target land. Defend 1 in a land adjacent to target land.
           </level>
-          <level threshold="3-plant,1-water,4-earth">
-            Defend 1 in each of the targeted lands.
+          <level threshold="3-earth,2-water">
+            Defend 1 in target land. Defend 1 in a land adjacent to target land.
           </level>
         </quick-innate-power>
-        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="0" target="any" target-title="target land" note="For this power, all of your lands are considered adjacent to one another.">
+        <quick-innate-power name="Splendour Attracts Attention" speed="slow" range="1" target="{world-tree}" target-title="target land">
           <level threshold="1-air">
             Gather 1 {explorer}
           </level>

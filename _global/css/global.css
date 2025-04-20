@@ -150,6 +150,8 @@ icon.rumor { background-image: url('../images/rumor.png'); }
 
 icon.destroyed-presence, icon.destroy-presence { background-image: url('../images/board/NewIcons/Misc Presence Destroy.png');}
 
+icon.world-tree { background-image: url("../images/customIcons/world-tree.svg"); }
+
 range{
   width:50px;
   height:32px;
