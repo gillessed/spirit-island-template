@@ -1,73 +1,46 @@
 <!DOCTYPE html>
+
 <head>
-  <link href="../../_global/css/global.css" rel="stylesheet" />
-  <link href="../../_global/css/adversary.css" rel="stylesheet" />
-  <script type="text/javascript" src="../../_global/js/general.js"></script>
-  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+	<link href="../../_global/css/global.css" rel="stylesheet" />
+	<link href="../../_global/css/adversary.css" rel="stylesheet" />
+	<script type="text/javascript" src="../../_global/js/general.js"></script>
+	<script type="text/javascript" src="../../_global/js/adversary.js"></script>
 </head>
+
 <body>
 
-  <quick-adversary
-    name="Egypt"
-    base-difficulty="1"
-    flag-image="./pharoah.svg"
-	>
-	<loss-condition
-	name="The River through the Desert"
-	rules="If all lands are either {sand} or {wetland}, invaders win."
-	></loss-condition>
+	<quick-adversary name="Egypt" base-difficulty="1" flag-image="./pharoah.svg">
+		<loss-condition name="The River through the Desert"
+			rules="If all lands are either {sand} or {wetland}, invaders win."></loss-condition>
 
-	<escalation-effect
-	name="Defense against Pillagers"
-	rules="On each board, add 1 {explorer} and 1 {town} to a land with {pyramid}."
-	></escalation-effect>
+		<escalation-effect name="Preparing for the Afterlife"
+			rules="On each board, add a scenario marker to a land with {town}."></escalation-effect>
 
-	<level-1
-	difficulty="3"
-	fear-cards="3/4/4"
-	name="Eternal Tombs"
-	rules="When invaders are destroyed in a land, if the land doesn't have {pyramid}, add {pyramid}. Lands with {pyramid} are {sand} in addition to their normal land type.
-	During the spirit phase, spirits may play a power card face down as a 1-cost range 1 slow power which reads 'Destroy 1 {pyramid}. Pay 1 energy
-	to destroy {pyramid} in an adjacent land.' {pyramid} generates 1 {fear} when destroyed."
-	></level-1>
+		<level-1 difficulty="1" fear-cards="3/4/4" name="Eternal Tombs"
+			rules="When invaders are destroyed in a land, if the land doesn't
+		have two scenario markers, add a scenario marker. When time passes, if a land has a scenario marker, add another scenario marker, or if a land has two scenario markers,
+		replace them with {pyramid}. Lands with {pyramid} are {sand} in addition to their normal land type.
+		During the spirit phase, spirits use an extra card play to play a power card face down as a 0-cost range 1 cost slow power which reads
+		'Destroy 1 {pyramid}. Pay 1 energy to destroy {pyramid} in an adjacent land. Pay 1 energy to make it fast.' {pyramid} generates 2 {fear} when destroyed."></level-1>
 
-	<level-2
-	difficulty="4"
-	fear-cards="3/4/4"
-	name="Floodplains"
-	rules="The lowest number non-{wetland} on each board also counts as a {wetland}. Track this with a scenario token."
-	></level-2>
+		<level-2 difficulty="3" fear-cards="4/5/4" name="Eternal Afterlife"
+			rules="{town}/{city} cannot be changed in lands with {pyramid}."></level-2>
 
-	<level-3
-	difficulty="5"
-	fear-cards="4/4/4"
-	name="Desert Power"
-	rules="Invaders do +1 damage (total in the land) in {sand}/{wetland}."
-	></level-3>
-	
-	<level-4
-	difficulty="6"
-	fear-cards="4/4/4"
-	name="The Old Kingdom"
-	rules="During setup, add 1 {town}, 1 {city} and 1 {pyramid} to the lowest numbered {wetland}."
-	></level-4>
-	
-	<level-5
-	difficulty="8"
-	fear-cards="4/5/4"
-	name="The New Kingdom"
-	rules="Whenever {pyramid} is destroyed, add it to this adversary card. When there are 2 {pyramid} per spirit on here, remove them all
-	and immediately perform an invader phase. If this happens during an existing invader phase, resume where you left off when you finish the special one.
-	Do this once per game."
-	></level-5>
-	
-	<level-6
-	difficulty="9"
-	fear-cards="4/5/4"
-	name="Eternal Afterlife"
-	rules="{town}/{city} cannot be destroyed or removed in lands with {pyramid}."
-	></level-6>
-  </quick-adversary>
+		<level-3 difficulty="5" fear-cards="3/4/4" name="Worship the Dead"
+			rules="Invaders do +1 damage in lands with {pyramid}."></level-3>
+
+		<level-4 difficulty="6" fear-cards="4/4/4" name="The Old Kingdom"
+			rules="During setup, add 1 scenario marker to the lowest numbered {wetland} and the lowest numbered {jungle}."></level-4>
+
+		<level-5 difficulty="8" fear-cards="4/5/4" name="The New Kingdom" rules="Whenever {pyramid} is destroyed, add it to this adversary card.
+		When there are 2 {pyramid} per spirit on here, destroy all {pyramid} and immediately perform an invader phase. If this happens during an existing
+		invader phase, resume where you left off when you finish the special one.
+		Do this once per game."></level-5>
+
+		<level-6 difficulty="9" fear-cards="4/5/4" name="Mass Labor"
+			rules="When invaders build in lands with {pyramid}, add {blight} to an adjacent land."></level-6>
+	</quick-adversary>
 
 </body>
+
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/card.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script src="../../_global/js/card.js" defer></script>
+</head>
+
+<body>
+
+  <quick-card speed="fast" cost="0" name="Stalk the Prey" image="stalk.png" elements="plant,moon,air,animal" range="1"
+    target="any" target-title="target land" artist-name="GREG COLE">
+    <rules>
+      Push up to 3 {dahan} and up to 1 {beast} to a land with invaders.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="fast" cost="1" name="Blessing of the Huntsman" image="blessing.png"
+    elements="animal,plant,earth,sun" range="1" target="any" target-title="target land" artist-name="GREG COLE">
+    <rules>
+      Target land and adjacent lands each have defend 3 if they have {hunting-party}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="1" name="Coordinated Attack" image="coordinated.png" elements="animal,sun" range="0"
+    target="{dahan}{beast}" target-title="target land" artist-name="GREG COLE">
+    <rules>
+      1 damage per {dahan}/{beast}.
+    </rules>
+  </quick-card>
+
+  <quick-card speed="slow" cost="0" name="Hunting Outpost" image="hunting.png" elements="plant,air,sun,animal" range="2"
+    target="{no-dahan}" target-title="TARGET LAND" artist-name="GREG COLE">
+    <rules>
+      If target land has no invaders, add {hunting-party}.
+    </rules>
+  </quick-card>
+</body>
+
+</html>

@@ -58,6 +58,7 @@ icon.damage-1 { background-image: url('../../images/board/NewIcons/Damage 1.png'
 icon.damage-2 { background-image: url('../../images/board/NewIcons/Damage 2.png'); }
 
 icon.dahan { background-image: url('../../images/board/dahan.png'); }
+icon.hunting-party { background-image: url('../../images/board/huntingparty.png'); }
 
 icon.discard-cards, icon.discard-2-cards {
   background-image: url('../../images/board/discard_power_cards.png');

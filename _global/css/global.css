@@ -146,6 +146,7 @@ icon.reckoning { background-image: url('../images/reckoning.webp'); }
 icon.omen { background-image: url('../images/omen.webp'); }
 icon.surge { background-image: url('../images/surge.webp'); }
 icon.rumor { background-image: url('../images/rumor.png'); }
+icon.hunting-party { background-image: url('../images/25px-HuntingPartyicon.png'); }
 
 
 icon.destroyed-presence, icon.destroy-presence { background-image: url('../images/board/NewIcons/Misc Presence Destroy.png');}

@@ -1,69 +1,40 @@
 <!DOCTYPE html>
+
 <head>
-  <link href="../../_global/css/global.css" rel="stylesheet" />
-  <link href="../../_global/css/adversary.css" rel="stylesheet" />
-  <script type="text/javascript" src="../../_global/js/general.js"></script>
-  <script type="text/javascript" src="../../_global/js/adversary.js"></script>
+	<link href="../../_global/css/global.css" rel="stylesheet" />
+	<link href="../../_global/css/adversary.css" rel="stylesheet" />
+	<script type="text/javascript" src="../../_global/js/general.js"></script>
+	<script type="text/javascript" src="../../_global/js/adversary.js"></script>
 </head>
+
 <body>
 
-  <quick-adversary
-    name="The USSR"
-    base-difficulty="2"
-    flag-image="./ussr-flag.png"
-	>
-	<loss-condition
-	name="Communism Succeeded"
-	rules="If there is an {explorer} in every land, invaders win."
-	></loss-condition>
+	<quick-adversary name="The USSR" base-difficulty="2" flag-image="./ussr-flag.png">
+		<loss-condition name="Communism Succeeded"
+			rules="If there is an {explorer} in every land, invaders win."></loss-condition>
 
-	<escalation-effect
-	name="Comrade"
-	rules="On each board, add 1 {explorer} to a land with {dahan} and no invaders."
-	></escalation-effect>
+		<escalation-effect name="Comrade"
+			rules="On each board, add 1 {explorer} to a land with {dahan} and no invaders."></escalation-effect>
 
-	<level-1
-	difficulty="2"
-	fear-cards="3/3/3"
-	name="Seizing the Means of Production"
-	rules="After the normal build step, if the invaders succesfully built, add an {explorer} to a land with no invaders adjacent to a land where they built."
-	></level-1>
-	
-	<level-2
-	difficulty="4"
-	fear-cards="3/4/3"
-	name="Hearty Populace"
-	rules="{explorer} have +1 health. Effects that would destroy {explorer} instead do 1 damage to it."
-	></level-4>
+		<level-1 difficulty="2" fear-cards="3/3/3" name="Seizing the Means of Production"
+			rules="After the normal build step, if the invaders succesfully built, add an {explorer} to a land with no invaders adjacent to a land where they built."></level-1>
 
-	<level-3
-	difficulty="5"
-	fear-cards="3/4/3"
-	name="Rapid Industrialization"
-	rules="During setup, perform an additional explore action."
-	></level-3>
-	
-	<level-4
-	difficulty="7"
-	fear-cards="3/4/3"
-	name="For the Motherland"
-	rules="During the invader phase, if you did not resolve any fear cards, invaders do +1 damage during ravage (total per land)."
-	></level-2>
+		<level-2 difficulty="4" fear-cards="3/4/3" name="Hearty Populace"
+			rules="{explorer} have +1 health. Effects that would destroy {explorer} instead do 1 damage to it. 1 {fear} whenever two or more explorers are destroyed."></level-4>
 
-	<level-5
-	difficulty="8"
-	fear-cards="4/4/3"
-	name="Corrupt Dictators"
-	rules="During ravage, if a land matches the ravage card and has no invaders on it, add {explorer} if it is adjacent to {town}/{city}."
-	></level-5>
-	
-	<level-6
-	difficulty="10"
-	fear-cards="4/5/4"
-	name="Gulags"
-	rules="When invaders build a {city} in a land, destroy 1 {presence} from each spirit in that land. 1 {fear} for each {presence} destroyed this way."
-	></level-6>
-  </quick-adversary>
+			<level-3 difficulty="5" fear-cards="3/4/3" name="Rapid Industrialization"
+				rules="During setup, perform an additional explore action."></level-3>
+
+			<level-4 difficulty="7" fear-cards="3/4/3" name="For the Motherland"
+				rules="During the invader phase, if you did not resolve any fear cards, invaders do +1 damage during ravage (total per land)."></level-2>
+
+		<level-5 difficulty="8" fear-cards="4/4/3" name="Corrupt Dictators"
+			rules="During ravage, if a land matches the ravage card and has no invaders on it, add {explorer} if it is adjacent to {town}/{city}."></level-5>
+
+		<level-6 difficulty="10" fear-cards="4/5/4" name="Gulags"
+			rules="When invaders build a {city} in a land, destroy 1 {presence} from each spirit in that land. 1 {fear} for each {presence} destroyed this way."></level-6>
+	</quick-adversary>
 
 </body>
+
 </html>

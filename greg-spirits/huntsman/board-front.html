@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="../../_global/css/global.css" rel="stylesheet" />
+  <link href="../../_global/css/board_front.css" rel="stylesheet" />
+  <script type="text/javascript" src="../../_global/js/general.js"></script>
+  <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+
+  <!-- 	Custom Icons. Instructions 
+				1) place image in same folder as HTLM (this file) 
+				2) replace demo file name with your file name below 
+				3) use custom1, custom2, or custom3 in your HTLM to reference 
+-->
+  <style>
+    icon.custom1 {
+      background-image: url('demo_custom_icon.png');
+    }
+
+    icon.custom2 {
+      background-image: url('filename.png');
+    }
+
+    icon.custom3 {
+      background-image: url('filename.png');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <board spirit-image="huntsman-image.png" spirit-image-scale="100%" spirit-border="example2.png">
+
+    <spirit-name>
+      The Huntsman
+    </spirit-name>
+    <artist-name>
+      Greg Cole
+    </artist-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>Spirit of the Dahan</special-rules-subtitle>
+      <special-rule>
+        Your incarna cannot be moved or placed into lands without {dahan}.
+      </special-rule>
+      <special-rules-subtitle>Dahan Hunting Parties</special-rules-subtitle>
+      <special-rule>
+        Your spirit can create dahan hunting parties {hunting-party}. These count as {dahan}.
+        They have 3 health and do 3 damage when fighting back in a ravage. After a {hunting-party} fights back in a
+        ravage, it is removed from the game. During ravage, damage should be dealt to {hunting-party}
+        before normal {dahan}.
+      </special-rule>
+      <special-rules-subtitle>Man's Best Friend</special-rules-subtitle>
+      <special-rule>
+        {hunting-party} have +1 health and do +1 damage in lands with {beast}.
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+      <!-- GROWTH  
+			Examples include: reclaim-all; reclaim-one; move-presence(1); gain-energy(2);
+			Gaining Elements: gain-element(water,fire); gain-element(water,2);
+			Adding Presence: add-presence(1); add-presence(1,jungle); add-presence(2,town,city,blight,or); add-presence(2,strife,city,and);
+			
+			Sub-Groups of Growth are possible (think Lure)
+			Example: <sub-growth title="pick one of:" bordered>   here 'bordered' creates the double line border
+					 </sub-growth>
+		-->
+      <growth title="Growth (Pick One)">
+        <growth-group values="reclaim;add-presence(1)"></growth-group>
+        <growth-group values="add-presence(3);gain-power-card"></growth-group>
+        <growth-group values="add-presence(1);gain-energy(1);custom(Move Incarna,range-2)"></growth-group>
+      </growth>
+
+      <presence-tracks>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="0,1,plant,2,plant,3,4"></energy-track>
+        <card-play-track banner="example2.png" banner-v-scale="50%" values="2,3,animal,4,sun,5,6+animal">
+        </card-play-track>
+      </presence-tracks>
+
+      <!-- INNATE POWERS  
+			To create powers which scale with elements ("For Each"), use the shortcut {fire,2} to include the numeral
+			Tokens can be included in level thresholds (as seen on Many Minds). Try '1-dahan','2-beast','3-wilds',etc.
+			speed: "fast" or "slow"
+		-->
+      <innate-powers>
+        <quick-innate-power name="Band Together" speed="fast" range="0" target="incarna+{dahan}"
+          target-title="TARGET LAND">
+          <level threshold="2-animal,2-plant,2-dahan">
+            Add a {hunting-party}.
+          </level>
+          <level threshold="3-sun,3-dahan">
+            Add a {hunting-party}.
+          </level>
+          <level threshold="4-animal,4-plant,4-sun">
+            Add a {hunting-party} for every 3 {dahan}.
+          </level>
+          <level threshold="1-air">
+            Push up to 1 {dahan}/{beast}.
+          </level>
+          <level threshold="2-air">
+            Push up to 2 {dahan}/{beast}.
+          </level>
+          <level threshold="3-air">
+            Push up to 3 {dahan}/{beast}.
+          </level>
+        </quick-innate-power>
+        <quick-innate-power name="Pass Down Traditions" speed="slow" range="0" target="INCARNA+{dahan}"
+          target-title="TARGET LAND">
+          <level threshold="2-animal,1-sun">
+            Push 1 {dahan} and your incarna from target land to a land with no {dahan} and add {dahan}
+            there.
+          </level>
+          <level threshold="3-sun,3-plant">
+            If this power moved your incarna to a land, remove 1 {blight} from that land.
+          </level>
+          <level threshold="2-air">
+            If this power moved your incarna to a land, gather up to 3 {dahan} into that land.
+          </level>
+        </quick-innate-power>
+      </innate-powers>
+    </right>
+  </board>
+</body>
+
+</html>
