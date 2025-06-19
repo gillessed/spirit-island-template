@@ -44,12 +44,15 @@
       <special-rule>
         Your abilities can convert enemy invaders to your side. Enemies that are converted only remain so as long as they are in lands with your {presence}. Whenever an action moves
         invaders, it can move both normal and corrupted invaders. Whenever corrupted invaders move out of your lands, you can move up to 1 {presence} per invader with them. Converted
-        invaders do still count towards win conditions, and still generate fear when destroyed.
+        invaders do not count towards the win condition, but still generate fear when destroyed. If converted invaders are every in a land without your {presence}, they become normal
+        invaders once again.
       </special-rule>
       <special-rule>
-        During ravage, converted invaders do damage at the same time as normal invaders. If there are no normal invaders in the land, converted invaders do damage if they were normal invaders.
-        If there are normal invaders in the land, the corrupted invaders only do damage to the normal invaders, not {dahan} or the land. The normal invaders in that land do damage to the land,
-        but the damage they would do to {dahan} is first dealt to corrupted invaders, and then any remaining damage is dealt to {dahan}.
+        During ravage, converted invaders do damage at the same time as normal invaders. They only do damage to normal invaders. Normal invaders do their damage to converted invaders in
+        addition to the land and {dahan}.
+      </special-rule>
+      <special-rule>
+        Lands with converted invaders get defend 1 for each of your {presence}.
       </special-rule>
     </special-rules-container>
 
@@ -64,13 +67,13 @@
 					 </sub-growth>
 		-->
       <growth title="Growth (Pick One)">
-        <growth-group values="reclaim;gain-power-card"></growth-group>
+        <growth-group values="reclaim;gain-power-card;add-presence(0)"></growth-group>
         <growth-group values="add-presence(4,invaders);custom(Add converted explorer to one of your lands,explorer)"></growth-group>
         <growth-group values="add-presence(1);gain-energy(2)"></growth-group>
       </growth>
 
       <presence-tracks>
-        <energy-track banner="example2.png" banner-v-scale="50%" values="1,animal,2,fire,3,animal,4"></energy-track>
+        <energy-track banner="example2.png" banner-v-scale="50%" values="1,animal,2+fire,custom(Push converted invader;town),3,animal,4"></energy-track>
         <card-play-track banner="example2.png" banner-v-scale="50%" values="1,2,3+air,4,5,air+reclaim-one"></card-play-track>
       </presence-tracks>
 
@@ -82,13 +85,13 @@
       <innate-powers>
         <quick-innate-power name="Touched by Faith" speed="fast" range="1" target="any" target-title="target land">
           <level threshold="2-animal,1-moon">
-            Gather up to one of your {presence}. Convert 1 {explorer}.
+            Convert 1 {explorer}.
           </level>
           <level threshold="3-animal,1-moon">
             Convert 1 {town}.
           </level>
           <level threshold="5-animal,2-moon">
-            Convert 1 {town}.
+            Convert 1 {city}.
           </level>
           <level threshold="1-air">
             Push up to 1 converted invader per {air}.
@@ -96,13 +99,13 @@
         </quick-innate-power>
         <quick-innate-power name="Inquisition" speed="slow" range="0" target="any" target-title="target land">
           <level threshold="2-fire">
-            If you have at least 1 converted {town} in target land, destroy up to 2 {explorer}.
+            1 damage for every converted {explorer}. Destroy 1 converted {explorer}.
           </level>
           <level threshold="3-fire">
-            If you have at least 2 converted {town} in target land, destroy up to 1 {town}.
+            2 damage for every converted {town}. Destroy 1 converted {town}.
           </level>
           <level threshold="5-fire">
-            If you have at least 3 converted {town} in target land, destroy up to 2 {town}/{city}.
+            3 damage for every converted {city}. Destroy 1 converted {city}.
           </level>
         </quick-innate-power>
       </innate-powers>
